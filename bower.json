@@ -1,0 +1,7 @@
+{
+  "name": "suzukimotor",
+  "version": "0.0.0",
+  "dependencies": {
+    "foundation-sites": "~6.1.1"
+  }
+}
