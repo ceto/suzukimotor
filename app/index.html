@@ -1,11 +1,16 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Table of Contents
 ---
 
 <section class="home posts">
-  <h1>Blog Posts</h1>
-  {% for post in site.posts %}
-    <article><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></article>
-  {% endfor %}
+  <div class="row">
+    <div class="columns">
+        <h1>Built pages</h1>
+        <ul>
+          <li><a href="page-product-single.html">Single product page</a></li>
+          <li><a href="page-product-category.html">Product category/group page</a></li>
+        </ul>
+    </div>
+  </div>
 </section>

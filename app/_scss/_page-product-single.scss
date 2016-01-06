@@ -1,0 +1,33 @@
+.prodhead {
+  text-align: center;
+}
+.prodhead__yearselect {
+  margin:0;
+  list-style-type: none;
+  > li {
+    display:inline-block;
+  }
+}
+
+.prodhead__slogan {
+  font-size: 2rem;
+}
+
+
+.prodfeat {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.prodfeat__text {
+  margin:50vh 0 12.5vh;
+  //background-color: rgba(#fff,.5);
+  color:$medium-gray;
+  font-size: 112.5%;
+}
+
+.prodfeat__descr {
+  font-weight: $global-weight-bold;
+}
