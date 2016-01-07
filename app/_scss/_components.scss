@@ -1,0 +1,34 @@
+.blocktitle {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.deflist {
+  dt {
+    float:left;
+    clear:left;
+    width:33.333%;
+    max-width: 20rem;
+    padding-right: 1rem;
+    margin-bottom: $paragraph-margin-bottom;
+  }
+  dd {
+    width:66.666%;
+    float:left;
+    padding-left: 1rem;
+    margin-bottom: $paragraph-margin-bottom;
+
+  }
+}
+
+.doublelist {
+  @include clearfix();
+  >li {
+    @include breakpoint(medium) {
+      width:50%;
+      float:left;
+      &:nth-of-type(2n+1) {
+        clear:left;
+      }
+    }
+  }
+}

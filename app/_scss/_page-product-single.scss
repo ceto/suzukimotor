@@ -1,4 +1,5 @@
 .prodhead {
+  padding:4rem 0;
   text-align: center;
 }
 .prodhead__yearselect {
@@ -13,21 +14,127 @@
   font-size: 2rem;
 }
 
+.prodfeats {
+  margin:0 -1%;
+}
 
 .prodfeat {
+  background-color: $white;
+  @include clearfix();
 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include breakpoint(medium) {
+    width: 48%;
+    margin:1rem 1%;
+    float:left;
+    padding:1rem;
+    &:nth-of-type(2n+1) {
+      clear:left;
+    }
+  }
+
+  @include breakpoint(large) {
+    width: 31.333%;
+    &:nth-of-type(2n+1) {
+      clear:none;
+    }
+    &:nth-of-type(3n+1) {
+      clear:left;
+    }
+  }
+}
+
+.prodfeat__ill {
+  margin:0;
+}
+
+.prodfeat__name {
+  font-size: 1.25rem;
 }
 
 .prodfeat__text {
-  margin:50vh 0 12.5vh;
-  //background-color: rgba(#fff,.5);
-  color:$medium-gray;
-  font-size: 112.5%;
+  padding:1rem;
 }
 
 .prodfeat__descr {
-  font-weight: $global-weight-bold;
+  font-size: .875rem;
+}
+
+.prodfeatblock {
+  background-color: $medium-gray;
+
+  padding:4rem 0;
+}
+
+.prodfeats {
+  @include clearfix();
+}
+
+.prodfeatmore {
+  margin-top: 4rem;
+  padding:4rem 0;
+  border-top:1px solid $medium-gray;
+}
+
+.prodgalitem{
+  display: block;
+  position: relative;
+  height: 0;
+  padding-top: 56.25%; //16x9
+  background-color: $black;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.prodgalitem__inner {
+  color:$white;
+  text-align: center;
+  position: absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+}
+
+.prodspecblock {
+  padding:4rem 0;
+  background-color: $light-gray;
+}
+
+.featprodspec {
+  margin-bottom: 2rem;
+}
+.featprodspec__item {
+
+}
+.featprodspec__item__name {
+  line-height: 1;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.featprodspec__item__value {
+  font-size: 2.5rem;
+  line-height: 1;
+  small {
+    font-size:33.333%;
+  }
+  @include breakpoint(medium) {
+    font-size: 3vw;
+    small {
+      font-size:25%;
+    }
+  }
+}
+
+.prodspec__fig {
+  margin:0;
+}
+
+
+.prodaccblock {
+  padding:4rem 0;
+}
+
+.prodrelblock {
+  padding:4rem 0;
 }

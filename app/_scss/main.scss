@@ -2,4 +2,9 @@
 @import "settings";
 @include foundation-everything;
 
+@import "owl-carousel/owl-carousel/owl.carousel";
+@import "owl-carousel/owl-carousel/owl.theme";
+@import "owl-carousel/owl-carousel/owl.transitions";
+@import "components";
 @import "page-product-single";
+
