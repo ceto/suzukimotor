@@ -5,9 +5,29 @@
 .prodhead__yearselect {
   margin:0;
   list-style-type: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: $global-weight-extrabold;
   > li {
     display:inline-block;
+    &:not(:last-child):after {
+      content:' /';
+    }
+    a {
+      color:$secondary-color;
+      &.active {
+       color:$primary-color;
+      }
+      &:hover {
+        color:$success-color;
+      }
+    }
   }
+}
+
+.prodhead__name {
+  font-weight: $global-weight-extrabold;
+  text-transform: uppercase;
 }
 
 .prodhead__slogan {
@@ -19,14 +39,12 @@
 }
 
 .prodfeat {
-  background-color: $white;
-  @include clearfix();
+
 
   @include breakpoint(medium) {
     width: 48%;
     margin:1rem 1%;
     float:left;
-    padding:1rem;
     &:nth-of-type(2n+1) {
       clear:left;
     }
@@ -43,20 +61,11 @@
   }
 }
 
-.prodfeat__ill {
-  margin:0;
-}
 
-.prodfeat__name {
-  font-size: 1.25rem;
-}
 
-.prodfeat__text {
-  padding:1rem;
-}
 
 .prodfeat__descr {
-  font-size: .875rem;
+
 }
 
 .prodfeatblock {
@@ -105,23 +114,31 @@
   margin-bottom: 2rem;
 }
 .featprodspec__item {
+  color: $dark-gray;
+  white-space:nowrap;
 
 }
 .featprodspec__item__name {
   line-height: 1;
   font-size: 1rem;
   margin-bottom: 0;
+  font-weight: $global-weight-normal;
+  text-transform: uppercase;
 }
 .featprodspec__item__value {
   font-size: 2.5rem;
   line-height: 1;
+  font-weight: $global-weight-bold;
   small {
+    display:inline-block;
+    margin-left:2%;
     font-size:33.333%;
+    font-weight: $global-weight-normal;
   }
   @include breakpoint(medium) {
     font-size: 3vw;
     small {
-      font-size:25%;
+      font-size:50%;
     }
   }
 }

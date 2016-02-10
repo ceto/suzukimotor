@@ -56,6 +56,7 @@ module.exports = function (grunt) {
               "<%= yeoman.app %>"
             ]
           },
+          open: "external",
           watchTask: true
         }
       },
@@ -84,6 +85,7 @@ module.exports = function (grunt) {
               "<%= yeoman.app %>"
             ]
           },
+          open: "external",
           watchTask: true
         }
       }

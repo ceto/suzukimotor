@@ -1,6 +1,8 @@
 .blocktitle {
   text-align: center;
   margin-bottom: 4rem;
+  font-weight: $global-weight-extrabold;
+  text-transform: uppercase;
 }
 .deflist {
   dt {
@@ -31,4 +33,29 @@
       }
     }
   }
+}
+
+.card {
+
+}
+
+.card {
+  background-color: #fff;
+}
+
+.card__fig {
+  margin:0;
+  border-bottom: .25rem solid $alert-color;
+}
+.card__title {
+  margin:0;
+  padding:1rem 1rem 0;
+  a {
+    color:$secondary-color;
+  }
+}
+
+.card__text {
+  padding:1rem 1rem 0;
+  font-size: .875rem;
 }
