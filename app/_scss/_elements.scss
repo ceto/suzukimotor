@@ -1,0 +1,10 @@
+.squarepost {
+  margin-bottom: $paragraph-margin-bottom;
+  .card__title {
+    @include breakpoint('large') {
+      min-height: 5rem;
+    }
+  }
+
+}
+

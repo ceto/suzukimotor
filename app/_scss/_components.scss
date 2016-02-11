@@ -1,9 +1,39 @@
 .blocktitle {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   font-weight: $global-weight-extrabold;
   text-transform: uppercase;
+  &:after {
+    content:'';
+    display: block;
+    margin:.333em auto 0 auto;
+    width:5%;
+    height:.25rem;
+    background-color: $secondary-color;
+  }
 }
+
+.decorlined {
+
+  &:after {
+    content:'';
+    display: block;
+    margin:.333em auto 0 auto;
+    width:5%;
+    height:.25rem;
+    background-color: $alert-color;
+  }
+}
+
+.ps__buttonmore {
+  display: block;
+  margin:0 auto;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin:2rem calc(50% - 5rem) 0;
+  //max-width: 12rem;
+}
+
 .deflist {
   dt {
     float:left;
@@ -35,17 +65,67 @@
   }
 }
 
-.card {
+.banner {
+  text-align: center;
+}
+
+.banner__title {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 2.5rem;
+  margin:1.5rem 0 0 0;
+  font-weight: $global-weight-extrabold;
+  text-shadow:0 -.075em 6px rgba($black,.125);
+  transform:translateY(.225em);
+  @include breakpoint(tablet) {
+    font-size: 7vw;
+    margin:2vw 0 0 0;
+  }
 
 }
 
+
+.promoblock {
+  text-align: center;
+}
+
+.promoblock__title {
+  text-transform: uppercase;
+  font-weight: $global-weight-extrabold;
+  margin: 0;
+}
+.promoblock__info {
+  margin:0 0;
+}
+.promoblock__more {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.card {
+  position: relative;
+}
+
+.card__label {
+  position: absolute;
+  left:1rem;
+  text-transform: uppercase;
+  color:#fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: $global-weight-extrabold;
+  transform:translateY(-.8em);
+  text-shadow:0 -2px 2px rgba(#000,.3);
+  display: inline-block;
+}
 .card {
   background-color: #fff;
+  padding:0 0 1rem;
 }
 
 .card__fig {
   margin:0;
-  border-bottom: .25rem solid $alert-color;
+  border-bottom: 2px solid $alert-color;
 }
 .card__title {
   margin:0;

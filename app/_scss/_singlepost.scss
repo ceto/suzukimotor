@@ -1,0 +1,35 @@
+.singlepost__header {
+  //text-align: center;
+  .lead {
+
+  }
+}
+
+.singlepost__lead {
+  font-weight: $global-weight-bold;
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.singlepost__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: .5em;
+}
+
+.singlepost__meta {
+  font-size: 1.25rem;
+  line-height: 1;
+  text-align: center;
+  font-variant: small-caps;
+  font-weight: $global-weight-extrabold;
+  margin:0 0 .5rem;
+  //color:$dark-gray;
+  @include breakpoint('medium') {
+    font-size: 1.5rem;
+  }
+}
+
+.singlepost__copybody {
+  padding-bottom: 4rem;
+}

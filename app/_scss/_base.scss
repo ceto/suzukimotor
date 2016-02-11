@@ -1,0 +1,51 @@
+html {
+  @include breakpoint('tablet') {
+    font-size: 87.5%;
+  }
+  @include breakpoint('large') {
+    font-size: 100%;
+  }
+  @include breakpoint('xxlarge') {
+    font-size: 112.5%;
+  }
+}
+
+main {
+  @include clearfix();
+  position: relative;
+}
+figure {
+  margin:0 0 $paragraph-margin-bottom 0;
+  padding:0;
+}
+
+figcaption {
+ color:$dark-gray;
+ font-size: .875rem;
+ text-align: center;
+ margin-top: .5em;
+
+}
+blockquote {
+  @include clearfix();
+  background-color: $light-gray;
+}
+.copybody {
+  h2,h3,h4,h5,h6 {
+
+  }
+
+  p a:not(.button), li a {
+    text-shadow: 0.04545em 0 0 #fff,0.09091em 0 0 #fff,0.13636em 0 0 #fff,-0.04545em 0 0 #fff,-0.09091em 0 0 #fff,-0.13636em 0 0 #fff,0 0.04545em 0 #fff,0 0.09091em 0 #fff,0 -0.04545em 0 #fff,0 -0.09091em 0 #fff;
+    background-image: linear-gradient($dark-gray, $dark-gray);
+    background-position: 0 1.125em;
+    background-size: 1px 1px;
+    background-repeat: repeat-x;
+    &:hover {
+      text-shadow: 0.04545em 0 0 #fff,0.09091em 0 0 #fff,0.13636em 0 0 #fff,-0.04545em 0 0 #fff,-0.09091em 0 0 #fff,-0.13636em 0 0 #fff,0 0.04545em 0 #fff,0 0.09091em 0 #fff,0 -0.04545em 0 #fff,0 -0.09091em 0 #fff;
+      background-image: linear-gradient($alert-color, $alert-color);
+      background-position: 0 1em;
+      background-size: 3px 3px;
+    }
+  }
+}
