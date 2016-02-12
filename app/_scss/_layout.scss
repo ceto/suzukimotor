@@ -26,6 +26,10 @@
 .ps--gray {
   background-color: $light-gray;
 }
+
+.ps--darken {
+  background-color: $medium-gray;
+}
 .ps--inverse {
   background-color: $primary-color;
   background-color: linear-gradient(180deg, $warning-color 0%, $primary-color 100%);

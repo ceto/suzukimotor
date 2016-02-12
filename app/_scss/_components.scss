@@ -66,6 +66,7 @@
 }
 
 .banner {
+  @include clearfix();
   text-align: center;
 }
 

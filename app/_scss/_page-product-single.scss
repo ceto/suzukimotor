@@ -145,21 +145,16 @@
 
 }
 
-.prodfeatblock {
-  background-color: $medium-gray;
-
-  padding:4rem 0;
-}
 
 .prodfeats {
   @include clearfix();
 }
 
-.prodfeatmore {
-  margin-top: 4rem;
-  padding:4rem 0;
-  border-top:1px solid $medium-gray;
-}
+// .prodfeatmore {
+//   margin-top: 4rem;
+//   padding:4rem 0;
+//   border-top:1px solid $medium-gray;
+// }
 
 .prodgalitem{
   display: block;
@@ -183,8 +178,6 @@
 }
 
 .prodspecblock {
-  padding:4rem 0;
-  background-color: $light-gray;
 }
 
 .featprodspec {
@@ -226,7 +219,7 @@
 
 
 .prodaccblock {
-  padding:4rem 0;
+
 }
 
 .prodrelblock {
