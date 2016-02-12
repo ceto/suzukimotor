@@ -8,3 +8,19 @@
 
 }
 
+.squareacc.card {
+  background-color: $dark-gray;
+  margin-bottom: $paragraph-margin-bottom;
+  //text-align: center;
+  .card__fig {
+    //border-bottom:: 2px solid $primary-color;
+  }
+  .card__label {
+    //margin-left:33.333%;
+  }
+  .card__title {
+    a {
+      color:#fff;
+    }
+  }
+}

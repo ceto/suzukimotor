@@ -14,19 +14,37 @@ title: Single Product Page
       <h1 class="prodhead__modellname">GSX-S1000</h1>
     </div>
     <div class="columns medium-3 medium-text-right">
-      <ul class="prodhead__colorselect">
-        <li><a href="#" class="active"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
+      <ul class="prodhead__colorselect" data-tabs data-options="linkClass: colitem;" id="product__colorvariants">
+        <li class="colitem atabs-title is-active"><a href="#colvarpanel-1" aria-selected="true"></a></li>
+        <li class="colitem atabs-title"><a href="#colvarpanel-2"></a></li>
+        <li class="colitem atabs-title"><a href="#colvarpanel-3"></a></li>
       </ul>
     </div>
   </div>
 </header>
 
 <section class="prodhero text-center">
-  <div class="row">
-    <div class="columns">
-      <img src="img/GSX-S1000-red.jpg" alt="">
+  <div class="tabs-content" data-tabs-content="product__colorvariants">
+    <div class="tabs-panel is-active" id="colvarpanel-1">
+      <div class="row">
+        <div class="columns">
+          <img class="prodhero__img"src="img/GSX-S1000-red.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="tabs-panel" id="colvarpanel-2">
+      <div class="row">
+        <div class="columns">
+          <img class="prodhero__img"src="img/GSX-S1000-gray.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="tabs-panel" id="colvarpanel-3">
+      <div class="row">
+        <div class="columns">
+          <img class="prodhero__img"src="http://placehold.it/1600x1025/ffffff/?text=Termékfotó+kis+fehér+kifutóval+fent+balra+jobbra" alt="">
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -254,12 +272,25 @@ title: Single Product Page
   <div class="row">
     <div class="columns">
       <h2 class="blocktitle">Kiegészítők</h2>
-      <p>Consectetur adipisicing elit. Consequatur, ea unde ad! Commodi eligendi perferendis dolor itaque iste, nesciunt quod neque eum deleniti qui, tempore, placeat harum repellat eveniet architecto?</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, ea unde ad! Commodi eligendi perferendis dolor itaque iste, nesciunt quod neque eum deleniti qui, tempore, placeat harum repellat eveniet architecto? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, ea unde ad! Commodi eligendi perferendis dolor itaque iste, nesciunt quod neque eum deleniti qui, tempore, placeat harum repellat eveniet architecto?</p>
-      <a href="#">Továábi termékek</a>
+      <div class="relposts row small-up-1 medium-up-2 large-up-3">
+         {% include squareaccs.html %}
+      </div>
+      <a href="#" class="button ps__buttonmore">További termékek</a>
     </div>
   </div>
 </aside>
+
+<section class="ps ps--gray relatedposts">
+  <div class="row">
+    <div class="columns tablet-10 large-12 tablet-centered">
+      <h2 class="blocktitle">Kapcsolódó írások</h2>
+      <div class="relposts row small-up-1 medium-up-2 large-up-3">
+         {% include squareposts.html %}
+      </div>
+      <a href="#" class="button ps__buttonmore">Összes hír</a>
+    </div>
+  </div>
+</section>
 
 
 <section class="prodrelblock">

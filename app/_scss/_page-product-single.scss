@@ -6,6 +6,7 @@
     left:0;
     width:100%;
     padding:7vh 0 0;
+    z-index: 1;
   }
 }
 .prodhead__yearselect {
@@ -40,6 +41,13 @@
   > li {
     display:inline-block;
     margin-left: .25rem;
+    &.is-active a {
+      border:.25rem solid $dark-gray;
+      &:hover {
+        border:.25rem solid $dark-gray;
+        cursor: default;
+      }
+    }
     a {
       display: block;
       border-radius:50%;
@@ -47,10 +55,7 @@
       width:2.5rem;
       height:2.5rem;
       border:.25rem solid $medium-gray;
-      &.active {
-       border:.25rem solid $dark-gray;
-      }
-      &:not(.active):hover {
+      &:hover {
         border:.25rem solid $light-gray;
       }
     }
@@ -69,14 +74,37 @@
 }
 
 .prodhero {
-
+  overflow: hidden;
+  margin:1rem 0;
   @include breakpoint('tablet') {
-    margin-top: 2vh;
+    margin: 5vh 0;
+    border-bottom: 1px solid $light-gray;
   }
 
-  img {
-    border:1px solid $light-gray;
+
+  .tabs-content {
+    background: transparent;
+    transition: all 0.5s ease;
+    border: none;
   }
+
+  .tabs-panel {
+    padding:0;
+  }
+}
+
+.prodhero__img {
+  border:1px solid $light-gray;
+
+  @include breakpoint('xlarge') {
+    max-width: none;
+    //width:auto;
+    height:75vh;
+    min-height: 40rem;
+    transform: translateX(-50%);
+    margin-left:50%;
+  }
+
 }
 
 .prodhead__slogan {

@@ -1,3 +1,20 @@
+.row {
+  @include breakpoint('tablet') {
+    max-width:95%;
+  }
+  @include breakpoint('large') {
+    max-width:85%;
+  }
+  @include breakpoint('xxxlarge') {
+    max-width:$global-width;
+  }
+  .row {
+    @include breakpoint('tablet') {
+      max-width:$global-width;
+    }
+  }
+}
+
 .ps {
   padding-top: 2rem;
   padding-bottom: 2rem;

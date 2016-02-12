@@ -10,14 +10,19 @@
   p:last-of-type {
     margin-bottom: 0;
   }
+  @include breakpoint('tablet') {
+    //text-align: center;
+  }
 }
 .singlepost__title {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: .5em;
+  line-height: 1.125;
 }
 
 .singlepost__meta {
+
   font-size: 1.25rem;
   line-height: 1;
   text-align: center;
