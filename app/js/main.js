@@ -27,19 +27,93 @@ jQuery(document).foundation();
 
 $(document).ready(function() {
 
+
+    $('.modelcat__carousel1').owlCarousel({
+
+      slideSpeed : 300,
+      paginationSpeed : 800,
+      singleItem:true,
+      pagination: true,
+      navigation : false,
+      afterInit: customPager,
+      afterUpdate: customPager,
+      afterAction: function(el){
+         this.$owlItems.find('.modelcat__item').removeClass('is_active');
+         this.$owlItems.find('.modelcat__item').removeClass('is_next');
+         this.$owlItems.find('.modelcat__item').removeClass('is_prev');
+
+         this.$owlItems.eq(this.currentItem).find('.modelcat__item').addClass('is_active');
+
+         this.$owlItems.eq(this.currentItem+1).find('.modelcat__item').addClass('is_next');
+
+         this.$owlItems.eq(this.currentItem-1).find('.modelcat__item').addClass('is_prev');
+      }
+
+    });
+
+    $('.modelcat__carousel2').owlCarousel({
+
+      slideSpeed : 300,
+      paginationSpeed : 800,
+      singleItem:true,
+      pagination: true,
+      navigation : false,
+      afterInit: customPager2,
+      afterUpdate: customPager2,
+      afterAction: function(el){
+         this.$owlItems.find('.modelcat__item').removeClass('is_active');
+         this.$owlItems.find('.modelcat__item').removeClass('is_next');
+         this.$owlItems.find('.modelcat__item').removeClass('is_prev');
+
+         this.$owlItems.eq(this.currentItem).find('.modelcat__item').addClass('is_active');
+
+         this.$owlItems.eq(this.currentItem+1).find('.modelcat__item').addClass('is_next');
+
+         this.$owlItems.eq(this.currentItem-1).find('.modelcat__item').addClass('is_prev');
+      }
+
+    });
+
+
+
+    $('.modelcat__item a').on('click', function(e){
+      var actowl =  $(this).closest('.modelcat__carousel').data('owlCarousel');
+      if ( $(this).closest('.modelcat__item').hasClass('is_next') ) {
+        e.preventDefault();
+        actowl.next();
+      } else {
+          if ( $(this).closest('.modelcat__item').hasClass('is_prev') ) {
+            e.preventDefault();
+            actowl.prev();
+          }
+      }
+    });
+
+
+    function customPager() {
+      $.each(this.owl.userItems, function (i) {
+        var titleData = jQuery(this).find('.modelcat__item__title').text();
+        var paginationLinks = jQuery('.modelcat__carousel1 .owl-controls .owl-pagination .owl-page');
+        $(paginationLinks[i]).append(titleData);
+      });
+    }
+
+    function customPager2() {
+      $.each(this.owl.userItems, function (i) {
+        var titleData = jQuery(this).find('.modelcat__item__title').text();
+        var paginationLinks = jQuery('.modelcat__carousel2 .owl-controls .owl-pagination .owl-page');
+        $(paginationLinks[i]).append(titleData);
+      });
+    }
+
+
   $('.owl-prodgal').owlCarousel({
 
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
+      navigation : false,
+      pagination: false,
       paginationSpeed : 400,
       singleItem:true,
 
-      // "singleItem:true" is a shortcut for:
-      //items : 1
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
 
   });
 
