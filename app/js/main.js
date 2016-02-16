@@ -30,6 +30,24 @@ $(document).ready(function() {
   $('.main').fitVids();
 
 
+    function customPager() {
+      $.each(this.owl.userItems, function (i) {
+        var titleData = jQuery(this).find('.modelcat__item__title').text();
+        var paginationLinks = jQuery('.modelcat__carousel1 .owl-controls .owl-pagination .owl-page');
+        $(paginationLinks[i]).append(titleData);
+      });
+    }
+
+    function customPager2() {
+      $.each(this.owl.userItems, function (i) {
+        var titleData = jQuery(this).find('.modelcat__item__title').text();
+        var paginationLinks = jQuery('.modelcat__carousel2 .owl-controls .owl-pagination .owl-page');
+        $(paginationLinks[i]).append(titleData);
+      });
+    }
+
+
+
     $('.modelcat__carousel1').owlCarousel({
 
       slideSpeed : 300,
@@ -92,25 +110,33 @@ $(document).ready(function() {
     });
 
 
-    function customPager() {
-      $.each(this.owl.userItems, function (i) {
-        var titleData = jQuery(this).find('.modelcat__item__title').text();
-        var paginationLinks = jQuery('.modelcat__carousel1 .owl-controls .owl-pagination .owl-page');
-        $(paginationLinks[i]).append(titleData);
-      });
-    }
 
-    function customPager2() {
-      $.each(this.owl.userItems, function (i) {
-        var titleData = jQuery(this).find('.modelcat__item__title').text();
-        var paginationLinks = jQuery('.modelcat__carousel2 .owl-controls .owl-pagination .owl-page');
-        $(paginationLinks[i]).append(titleData);
-      });
-    }
 
 
     /*** Nagyon durva galéria carousel szinronban tartva ******/
 
+
+  function syncPosition(el){
+    var current = this.currentItem;
+    this.$owlItems.find('.gallery__item').removeClass('is_active');
+    this.$owlItems.eq(current).find('.gallery__item').addClass('is_active');
+
+    this.$owlItems.find('.gallery__item').removeClass('is_next');
+    this.$owlItems.find('.gallery__item').removeClass('is_prev');
+
+    this.$owlItems.eq(current+1).find('.gallery__item').addClass('is_next');
+    this.$owlItems.eq(current-1).find('.gallery__item').addClass('is_prev');
+
+
+    $('#thethumbs')
+      .find('.owl-item')
+      .removeClass('synced')
+      .eq(current)
+      .addClass('synced');
+    if($('#thethumbs').data('owlCarousel') !== undefined){
+      center(current);
+    }
+  }
 
 
   var sync1 = $('.gallery__carousel');
@@ -159,27 +185,7 @@ $(document).ready(function() {
 
 
 
-  function syncPosition(el){
-    var current = this.currentItem;
-    this.$owlItems.find('.gallery__item').removeClass('is_active');
-    this.$owlItems.eq(current).find('.gallery__item').addClass('is_active');
 
-    this.$owlItems.find('.gallery__item').removeClass('is_next');
-    this.$owlItems.find('.gallery__item').removeClass('is_prev');
-
-    this.$owlItems.eq(current+1).find('.gallery__item').addClass('is_next');
-    this.$owlItems.eq(current-1).find('.gallery__item').addClass('is_prev');
-
-
-    $('#thethumbs')
-      .find('.owl-item')
-      .removeClass('synced')
-      .eq(current)
-      .addClass('synced')
-    if($('#thethumbs').data('owlCarousel') !== undefined){
-      center(current)
-    }
-  }
 
   $('#thethumbs').on('click', '.owl-item', function(e){
     e.preventDefault();
@@ -194,13 +200,13 @@ $(document).ready(function() {
     var found = false;
     for(var i in sync2visible){
       if(num === sync2visible[i]){
-        var found = true;
+        found = true;
       }
     }
 
     if(found===false){
       if(num>sync2visible[sync2visible.length-1]){
-        sync2.trigger('owl.goTo', num - sync2visible.length+2)
+        sync2.trigger('owl.goTo', num - sync2visible.length+2);
       }else{
         if(num - 1 === -1){
           num = 0;
@@ -208,9 +214,9 @@ $(document).ready(function() {
         sync2.trigger('owl.goTo', num);
       }
     } else if(num === sync2visible[sync2visible.length-1]){
-      sync2.trigger('owl.goTo', sync2visible[1])
+      sync2.trigger('owl.goTo', sync2visible[1]);
     } else if(num === sync2visible[0]){
-      sync2.trigger('owl.goTo', num-1)
+      sync2.trigger('owl.goTo', num-1);
     }
 
   }
