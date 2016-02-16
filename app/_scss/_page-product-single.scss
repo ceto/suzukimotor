@@ -156,27 +156,6 @@
 //   border-top:1px solid $medium-gray;
 // }
 
-.prodgalitem{
-  display: block;
-  position: relative;
-  height: 0;
-  padding-top: 56.25%; //16x9
-  background-color: $black;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.prodgalitem__inner {
-  color:$white;
-  text-align: center;
-  position: absolute;
-  width:100%;
-  height:100%;
-  left:0;
-  top:0;
-}
-
 .prodspecblock {
 }
 
