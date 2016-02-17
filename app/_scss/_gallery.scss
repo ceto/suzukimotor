@@ -17,13 +17,17 @@
 .gallery__carousel {
 
   .owl-wrapper-outer {
-    overflow:visible;
+    @include breakpoint('tablet') {
+      overflow:visible;
+    }
     &.autoHeight {
     }
   }
 
   .owl-wrapper {
-    overflow:hidden;
+    @include breakpoint('tablet') {
+      overflow:hidden;
+    }
   }
 
   .item {
@@ -48,7 +52,7 @@
   &.is_next, &.is_prev {
     &:hover {
       cursor: pointer;
-      opacity:.5;
+      opacity:.75;
     }
     &:before {
       position: absolute;
@@ -97,9 +101,15 @@
 .item__thumb {
   border:2px solid transparent;
   padding:1px;
+  position: relative;
+  > * {
+    //display: none;
+    //position: absolute;
+  }
   &:hover {
     border-color:$success-color;
   }
+
   .synced & {
     border-color:$secondary-color;
   }

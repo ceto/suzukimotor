@@ -43,14 +43,14 @@ blockquote {
   p a:not(.button), li a {
     text-shadow: 0.04545em 0 0 #fff,0.09091em 0 0 #fff,0.13636em 0 0 #fff,-0.04545em 0 0 #fff,-0.09091em 0 0 #fff,-0.13636em 0 0 #fff,0 0.04545em 0 #fff,0 0.09091em 0 #fff,0 -0.04545em 0 #fff,0 -0.09091em 0 #fff;
     background-image: linear-gradient($dark-gray, $dark-gray);
-    background-position: 0 1.125em;
+    background-position: 0 1.1em;
     background-size: 1px 1px;
     background-repeat: repeat-x;
     &:hover {
       text-shadow: 0.04545em 0 0 #fff,0.09091em 0 0 #fff,0.13636em 0 0 #fff,-0.04545em 0 0 #fff,-0.09091em 0 0 #fff,-0.13636em 0 0 #fff,0 0.04545em 0 #fff,0 0.09091em 0 #fff,0 -0.04545em 0 #fff,0 -0.09091em 0 #fff;
       background-image: linear-gradient($alert-color, $alert-color);
-      background-position: 0 1em;
-      background-size: 3px 3px;
+      background-position: 0 1.0975em;
+      background-size: 2px 2px;
     }
   }
 }

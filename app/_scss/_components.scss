@@ -69,7 +69,7 @@
   @include clearfix();
   text-align: center;
   background-color: $primary-color;
-  background-color: linear-gradient(180deg, $warning-color 0%, $primary-color 100%);
+  background-image: linear-gradient(180deg, $warning-color 0%, $primary-color 100%);
   color:$white;
   background-position: center center;
   background-size: cover;
@@ -79,6 +79,7 @@
 
 .banner--gray {
   background-color: $light-gray;
+  background-image: none;
   color:$primary-color;
 }
 

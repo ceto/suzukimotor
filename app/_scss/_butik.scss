@@ -1,0 +1,141 @@
+.butikheader {
+  background-color: $primary-color;
+  padding-bottom: 3vw;
+
+
+
+}
+
+.smarthead {
+  color:$white;
+  font-weight: 900;
+  margin:3vw 0 0;
+  font-size: 2.5rem;
+  h2 {
+    line-height: 1;
+    margin:0;
+    display: inline-block;
+    font-size: inherit;
+  }
+  a {
+    line-height: 1;
+    display: inline-block;
+    color:$dark-gray;
+    &:hover, &:focus {
+      color:$success-color;
+    }
+  }
+  span {
+    color:$alert-color;
+  }
+}
+
+.menu--innermain {
+  //font-size: 1rem;
+  color: $medium-gray;
+  text-transform: uppercase;
+  > li {
+    display: inline-block;
+    &:not(:last-child)::after {
+      content:'/';
+      display: inline-block;
+      margin:0 0 0 .25em;
+    }
+    > a {
+      display: inline-block;
+      color: $medium-gray;
+      padding: 0.25em .25em;
+      &:hover, &:focus {
+        color:$success-color;
+      }
+      &.active {
+        color:$white;
+      }
+    }
+  }
+}
+.sidenav {
+  h3 {
+    font-size: 1.25rem;
+    color:$medium-gray;
+    text-transform: uppercase;
+    margin:.125rem 0 2.5rem;
+  }
+  .disclaimer {
+    margin:.25rem 0 0;
+    font-size: .75rem;
+    line-height: 1.2;
+    color:$medium-gray;
+    text-transform: uppercase;
+
+  }
+  margin-bottom: 2rem;
+}
+.menu--innerside {
+  a {
+    &:hover {
+      color:$success-color !important;
+    }
+  }
+  > li {
+    > a {
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 1.125rem;
+    }
+  }
+
+  > li > .submenu {
+    > li {
+      > a {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 400;
+        padding:.5em 0;
+        color:#fff;
+        color:$medium-gray;
+      }
+    }
+  }
+
+  > li > .submenu > li > .submenu {
+    > li {
+      > a {
+        font-size: .875rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding:.5em 0;
+        color:$medium-gray;
+      }
+    }
+  }
+
+
+
+
+
+}
+
+.butikblock {
+  .breadcrumbs {
+    //text-align: inherit;
+    margin:0 0 .5rem;
+    li {
+      color: $dark-gray;
+      //float:none;
+      //display: inline-block;
+    }
+    li:not(:last-child)::after {
+      //margin:0 .25rem 0 .5rem;
+      top:0;
+    }
+
+    a {
+      color:$medium-gray;
+      &:hover, &:focus {
+        color:$success-color;
+      }
+
+    }
+  }
+}

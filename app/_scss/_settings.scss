@@ -223,11 +223,11 @@ $badge-font-size: 0.6rem;
 // ---------------
 
 $breadcrumbs-margin: 0 0 $global-margin 0;
-$breadcrumbs-item-font-size: rem-calc(11);
+$breadcrumbs-item-font-size: rem-calc(12);
 $breadcrumbs-item-color: $primary-color;
 $breadcrumbs-item-color-current: $black;
 $breadcrumbs-item-color-disabled: $medium-gray;
-$breadcrumbs-item-margin: 0.75rem;
+$breadcrumbs-item-margin: 0.5rem;
 $breadcrumbs-item-uppercase: true;
 $breadcrumbs-item-slash: true;
 
@@ -378,7 +378,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
+$menu-item-padding: 0.7rem 0;
 $menu-icon-spacing: 0.25rem;
 $menu-expand-max: 6;
 

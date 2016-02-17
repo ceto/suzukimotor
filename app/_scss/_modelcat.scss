@@ -15,7 +15,9 @@
 
 .modelcat__carousel  {
   .owl-wrapper-outer {
-    overflow:visible;
+    @include breakpoint('tablet') {
+      overflow:visible;
+    }
   }
 
   .owl-controls {

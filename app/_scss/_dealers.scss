@@ -1,0 +1,60 @@
+.dealersblock {
+  background-color: $primary-color;
+  background-image: linear-gradient(180deg, $warning-color 0%, $primary-color 100%);
+  color:$white;
+}
+
+.dealers {
+  margin:4rem 0;
+  h2 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem;
+  }
+}
+.dealerslist {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  > li {
+    padding:.5rem 0;
+    line-height: 1;
+  }
+
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      color:$success-color;
+      small {
+        color:#fff;
+      }
+    }
+  }
+
+  h3 {
+    display: inline-block;
+    margin:0;
+    color:$dark-gray;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    font-size: 1.125rem;
+
+    small {
+      font-weight: 700;
+      color:$white;
+      font-size: 95%;
+      display: inline-block;
+      color:$light-gray;
+      //margin-left: .125em;
+    }
+  }
+
+  .actions {
+    display: inline-block;
+    float:right;
+  }
+}
+
+.mapblock {
+  padding:4rem 0;
+}

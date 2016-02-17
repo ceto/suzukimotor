@@ -32,7 +32,7 @@
 }
 .ps--inverse {
   background-color: $primary-color;
-  background-color: linear-gradient(180deg, $warning-color 0%, $primary-color 100%);
+  background-image: linear-gradient(0deg, $warning-color 0%, $primary-color 100%);
   color:$white;
   a.ps__more {
     color:$success-color;
