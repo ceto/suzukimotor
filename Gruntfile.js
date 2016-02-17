@@ -287,7 +287,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: './',
+          remote: 'https://github.com/ceto/suzukimotor.git',
           branch: 'gh-pages',
           commit: true,
           push: true
