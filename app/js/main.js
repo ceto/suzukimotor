@@ -30,6 +30,15 @@ $(document).ready(function() {
   $('.main').fitVids();
 
 
+  $('.prodhero__carousel').owlCarousel({
+      slideSpeed : 300,
+      paginationSpeed : 800,
+      singleItem: true,
+      pagination: true,
+      navigation : false,
+      autoHeight: true
+  });
+
     function customPager() {
       $.each(this.owl.userItems, function (i) {
         var titleData = jQuery(this).find('.modelcat__item__title').text();
@@ -96,7 +105,7 @@ $(document).ready(function() {
 
 
 
-    $('.modelcat__item a').on('click', function(e){
+    $('.modelcat__item').on('click', function(e){
       var actowl =  $(this).closest('.modelcat__carousel').data('owlCarousel');
       if ( $(this).closest('.modelcat__item').hasClass('is_next') ) {
         e.preventDefault();

@@ -7,11 +7,12 @@
 
     }
   }
+}
 
+.grabbing {
+  cursor: move;
+}
 
-
-
- }
 
 .modelcat__carousel  {
   .owl-wrapper-outer {
@@ -35,6 +36,7 @@
           display: inline-block;
           content:'/';
           margin:0 .125rem 0 .25rem;
+          color: $primary-color !important;
         }
 
         &.active {
@@ -77,6 +79,7 @@
   }
 
   &.is_next, &.is_prev {
+    cursor: move;
     &:hover {
       opacity: .75;
     }

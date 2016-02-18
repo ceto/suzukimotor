@@ -11,7 +11,7 @@ title: Single Product Page
         <li><a href="#">2015</a></li>
         <li><a href="#">2014</a></li>
       </ul>
-      <h1 class="prodhead__modellname">GSX-S1000</h1>
+      <h1 class="prodhead__modellname">DR-Z 70</h1>
     </div>
     <div class="columns medium-3 medium-text-right">
       <ul class="prodhead__colorselect" data-tabs data-options="linkClass: colitem;" id="product__colorvariants">
@@ -25,13 +25,27 @@ title: Single Product Page
 
 <section class="prodhero text-center">
   <div class="tabs-content" data-tabs-content="product__colorvariants">
+
     <div class="tabs-panel is-active" id="colvarpanel-1">
-      <div class="row">
-        <div class="columns">
-          <img src="img/GSX-S1000-red.jpg" class="prodhero__img" alt="">
-        </div>
+      <div class="prodhero__carousel">
+        <div class="item"><div class="row"><div class="columns">
+            <img src="img/GSX-S1000-red.jpg" class="prodhero__img" alt="">
+        </div></div></div>
+
+        <div class="item"><div class="row"><div class="columns">
+          <img src="img/bandit_s-front-cut.jpg" class="prodhero__img" alt="">
+        </div></div></div>
+
+        <div class="item"><div class="row"><div class="columns">
+          <img src="img/bandit_s-front.jpg" class="prodhero__img" alt="">
+        </div></div></div>
+
+        <div class="item"><div class="row"><div class="columns">
+          <img src="img/bandit_s-top.jpg" class="prodhero__img" alt="">
+        </div></div></div>
       </div>
     </div>
+
     <div class="tabs-panel" id="colvarpanel-2">
       <div class="row">
         <div class="columns">
@@ -39,13 +53,15 @@ title: Single Product Page
         </div>
       </div>
     </div>
+
     <div class="tabs-panel" id="colvarpanel-3">
       <div class="row">
         <div class="columns">
-          <img class="prodhero__img" src="http://placehold.it/1600x1025/ffffff/?text=Termékfotó+kis+fehér+kifutóval+fent+balra+jobbra" alt="">
+          <img class="prodhero__img" src="img/DR-Z70-yellow.jpg" alt="">
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -180,7 +196,7 @@ title: Single Product Page
 
 {% include gallery.html %}
 
-<section class="prodspecblock ps ps--gray">
+<section class="prodspecblock ps">
   <div class="row">
     <div class="columns">
       <h2 class="blocktitle">GSX-S1000 műszaki adatok</h2>
@@ -252,7 +268,7 @@ title: Single Product Page
         </div>
         <div class="columns medium-4 medium-pull-8 large-6 large-pull-6">
           <figure class="prodspec__fig">
-            <img src="http://placehold.it/1200x1800/?text=itt+lesz+egy+motor" alt="">
+            <img src="img/bandit_s-front.jpg" alt="">
           </figure>
 
         </div>
@@ -266,7 +282,7 @@ title: Single Product Page
 
 
 <aside class="prodaccblock">
-  <header class="banner banner--gray">
+  <header class="banner banner--white">
     <h2 class="banner__title">Kiegészítők</h2>
   </header>
   <div class="ps ps--inverse">

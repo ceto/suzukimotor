@@ -76,9 +76,13 @@
 .prodhero {
   overflow: hidden;
   margin:1rem 0;
+  border-bottom: 1px solid $light-gray;
   @include breakpoint('tablet') {
     margin: 5vh 0;
-    border-bottom: 1px solid $light-gray;
+
+  }
+  .columns {
+
   }
 
 
@@ -93,16 +97,35 @@
   }
 }
 
+.prodhero__carousel {
+  .owl-controls {
+    margin: 0;
+    .owl-pagination {
+      position: absolute;
+      left:0;
+      bottom:0rem;
+      width:100%;
+      @include breakpoint('tablet') {
+        bottom:1vw;
+      }
+
+    }
+  }
+}
+
+
 .prodhero__img {
-  border:1px solid $light-gray;
+  //border:1px solid $light-gray;
+  //cursor: move;
 
   @include breakpoint('xlarge') {
-    max-width: none;
-    //width:auto;
-    height:75vh;
-    min-height: 40rem;
+    display: block;
+    margin:0 auto;
     transform: translateX(-50%);
     margin-left:50%;
+    max-width: none;
+    height:75vh;
+    min-height: 40rem;
   }
 
 }
@@ -197,6 +220,19 @@
 
 .prodspec__fig {
   margin:0;
+
+  //border:1px solid $light-gray;
+  @include breakpoint('large') {
+    text-align: right;
+    position: relative;
+    top:0;
+    left::-25%;
+    width:125%;
+    //height:100vh;
+
+
+
+  }
 }
 
 
