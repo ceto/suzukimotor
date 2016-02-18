@@ -135,30 +135,30 @@
 }
 
 .prodfeats {
-  margin:0 -1%;
+ // margin:0 -1%;
 }
 
 .prodfeat {
 
 
-  @include breakpoint(medium) {
-    width: 48%;
-    margin:1rem 1%;
-    float:left;
-    &:nth-of-type(2n+1) {
-      clear:left;
-    }
-  }
+  // @include breakpoint(medium) {
+  //   width: 48%;
+  //   margin:1rem 1%;
+  //   float:left;
+  //   &:nth-of-type(2n+1) {
+  //     clear:left;
+  //   }
+  // }
 
-  @include breakpoint(large) {
-    width: 31.333%;
-    &:nth-of-type(2n+1) {
-      clear:none;
-    }
-    &:nth-of-type(3n+1) {
-      clear:left;
-    }
-  }
+  // @include breakpoint(large) {
+  //   width: 31.333%;
+  //   &:nth-of-type(2n+1) {
+  //     clear:none;
+  //   }
+  //   &:nth-of-type(3n+1) {
+  //     clear:left;
+  //   }
+  // }
 }
 
 
@@ -226,7 +226,7 @@
     text-align: right;
     position: relative;
     top:0;
-    left::-25%;
+    left:-25%;
     width:125%;
     //height:100vh;
 

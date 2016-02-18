@@ -140,8 +140,13 @@
 }
 .card {
   background-color: #fff;
-  padding:0 0 1rem;
+  //padding:0 0 1rem;
+  &.card--transparent {
+    background-color: transparent;
+  }
 }
+
+
 
 .card__fig {
   margin:0;
@@ -149,13 +154,20 @@
 }
 .card__title {
   margin:0;
-  padding:1rem 1rem 0;
+  padding:1rem 1rem 1rem;
   a {
     color:$secondary-color;
+  }
+  .card--transparent &{
+    padding:.75rem 0 0;
   }
 }
 
 .card__text {
   padding:1rem 1rem 0;
   font-size: .875rem;
+  .card--transparent &{
+    padding:.125rem 0 1rem 0;
+    //display: none;
+  }
 }
