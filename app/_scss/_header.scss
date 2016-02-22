@@ -1,0 +1,145 @@
+.mobilehead {
+  background-color: $primary-color;
+  //border-bottom: 1px solid $black;
+  .button {
+    margin:0;
+  }
+  color:$white;
+  a {
+    color:inherit;
+  }
+}
+
+.mobileheadlogo {
+  margin:0;
+  padding:0;
+  a {
+    display: block;
+    height:3.666rem;
+    width:3.666rem;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url('../img/logo.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: auto 100%;
+  }
+}
+
+
+.off-canvas-wrapper-inner {
+  &.is-open-left {
+    @include breakpoint(tablet) {
+      transform: none;
+      .js-off-canvas-exit.is-visible {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.off-canvas {
+  &.position-left {
+    @include breakpoint(tablet) {
+      left:0;
+      width:auto;
+      position: static;
+      max-height: none;
+      overflow: hidden;
+    }
+  }
+}
+
+.sitehead {
+  //background-color: $primary-color;
+  .row {
+    //background-color: #fff;
+  }
+  @include breakpoint(tablet) {
+    height:5rem;
+    background-image: linear-gradient(0deg, $dark-gray 50%, $alert-color 50%, $alert-color 52%, $secondary-color 52%);
+
+    background-image: linear-gradient(0deg, $dark-gray 50%,  $secondary-color 50%);
+
+  }
+}
+.headlogo {
+  margin:0;
+  padding:0;
+  @include breakpoint(tablet) {
+    float:left;
+  }
+  a {
+    display: block;
+    height:5rem;
+    width:10rem;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url('../img/logodouble.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: auto 100%;
+  }
+}
+
+.sitenavs {
+  @include clearfix();
+  //background-color: #fff;
+  @include breakpoint(tablet) {
+    float:left;
+  }
+}
+.menu--pri {
+  @include clearfix();
+  font-weight: $global-weight-extrabold;
+  font-size: 1.333rem;
+  text-transform: uppercase;
+  margin:1rem 0;
+  @include breakpoint(tablet) {
+    margin:0;
+
+  }
+  > li {
+    display: block;
+    @include breakpoint(tablet) {
+      float:left;
+    }
+    > a {
+      padding:.666em .666em .333em;
+      color:$white;
+    }
+
+
+  }
+
+
+}
+
+
+.menu--sec {
+  //background-color: #fff;
+  @include clearfix();
+  font-weight: $global-weight-extrabold;
+  font-size: 1.125rem;
+  margin:1rem 0;
+  @include breakpoint(tablet) {
+    margin:0;
+
+    padding: 0 0 0 .75rem;
+  }
+  > li {
+    display: block;
+    @include breakpoint(tablet) {
+      float:left;
+    }
+    > a {
+      padding:.666em .333em .333em;
+      //color:$white;
+      //color:$secondary-color;
+    }
+
+
+  }
+}

@@ -20,13 +20,25 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <div role="document">
-      <main class="main">
-        {{ content }}
-      </main>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <div class="off-canvas position-left offCanvasLeft ps--inverse" id="offCanvasLeft" data-off-canvas data-position="left">
+          {% include header.html %}
+        </div>
+        <div class="off-canvas-content" data-off-canvas-content>
+          {% include mobilehead.html %}
+          <div role="document" class="document">
+            <main class="main">
+              {{ content }}
+            </main>
+          </div>
+          {% include footer.html %}
+        </div>
+        <div class="off-canvas position-right offCanvasRight ps--inverse" id="offCanvasRight" data-off-canvas data-position="right">
+          {% include testdrive.html %}
+        </div>
+      </div>
     </div>
-    {% include footer.html %}
 
     {% include scripts.html %}
 

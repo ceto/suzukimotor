@@ -1,0 +1,36 @@
+.off-canvas-wrapper {
+  background-color: $warning-color;
+}
+.is-open-right {
+  @include breakpoint(medium) {
+    transform: translateX(-420px);
+  }
+  @include breakpoint(tablet) {
+    transform: translateX(-480px);
+  }
+  @include breakpoint(xxlarge) {
+    transform: translateX(-33.333%);
+  }
+}
+
+.off-canvas.position-right {
+  @include breakpoint(medium) {
+    right:-420px;
+    width:420px;
+  }
+  @include breakpoint(tablet) {
+    right:-480px;
+    width:480px;
+  }
+  @include breakpoint(xxlarge) {
+    right:-33.333%;
+    width:33.333%;
+  }
+}
+
+
+.testdriveblock {
+  margin:0 auto;
+  padding:6vh calc(50% - 12.5em) 2vh;
+  min-height: 100vh;
+}

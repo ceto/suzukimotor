@@ -1,0 +1,25 @@
+.archivenav {
+  padding:1rem 0;
+  //border-bottom: 3px solid $secondary-color;
+
+  .menu--innermain {
+    //font-size: 1.5rem;
+    //color:$alert-color;
+    font-weight: $global-weight-extrabold;
+    > li {
+      > a {
+        color:$dark-gray;
+        &:hover, &:focus {
+          color:$success-color;
+        }
+        &.active {
+          color:$secondary-color;
+        }
+      }
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.125rem;
+    }
+  }
+}
