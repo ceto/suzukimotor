@@ -1,4 +1,4 @@
-<div class="testdriveblock">
+<div id="testdriveblock" class="testdriveblock">
   <div class="row">
     <div class="columns">
       <h3 class="blocktitle">Jelentkezés tesztmotorozásra</h3>
@@ -6,9 +6,15 @@
       <form>
         <fieldset>
           <legend>Személyes adatok</legend>
-          <label for="testdrive__name">Név
-            <input name="testdrive__name" id="testdrive__name" type="text" placeholder="Adja meg nevét">
-          </label>
+
+          <div class="row">
+            <div class="columns">
+              <label for="testdrive__name">Név
+                <input name="testdrive__name" id="testdrive__name" type="text" placeholder="Adja meg nevét">
+              </label>
+            </div>
+          </div>
+
           <div class="row">
             <div class="tablet-6 columns">
               <label for="testdrive__email">E-mail
@@ -26,7 +32,7 @@
           <legend>Helyszín és modell</legend>
           <label for="testdirve__Model">Model
             <select name="testdrive__model" id="testdrive__model">
-               <option value="0">Válassz modelt</option>
+              <option value="0">Válassz modelt</option>
               <option value="1">GSX S1000 F ABS</option>
               <option value="2">Hayabusha</option>
               <option value="3">FSA MX 300</option>

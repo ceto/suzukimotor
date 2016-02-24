@@ -29,6 +29,16 @@ $(document).ready(function() {
 
   $('.main').fitVids();
 
+  $('.popup-video').magnificPopup({
+    disableOn: 767,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: true
+  });
+
 
   $('.prodhero__carousel').owlCarousel({
       slideSpeed : 300,
