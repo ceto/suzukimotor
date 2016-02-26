@@ -1,0 +1,51 @@
+.heroes {
+  background-color: #000;
+}
+.hero {
+  padding:2rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  @include breakpoint(tablet) {
+    display: table;
+    width:100%;
+    height: calc(100vh - 5rem);
+    min-height: 48vw;
+    max-height: 54vw;
+  }
+}
+
+.hero__text {
+  color:$white;
+  text-align: center;
+  @include breakpoint(tablet) {
+    display: table-cell;
+    vertical-align: bottom;
+    height:20%;
+
+    padding-bottom: 5vh;
+  }
+}
+
+.hero__title {
+  margin: 1em auto 0;
+  text-transform: uppercase;
+  @include breakpoint(tablet) {
+    max-width: 75%;
+    font-size: 4vw;
+
+  }
+}
+
+.hero__discl {
+  margin: 0 auto 1em;
+  font-weight: $global-weight-extrabold;
+  @include breakpoint(tablet) {
+    max-width: 66.666%;
+    font-size: 2.25vw;
+  }
+}
+
+.hero__more {
+  margin-bottom: 0;
+}

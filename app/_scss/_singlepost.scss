@@ -21,8 +21,8 @@
   line-height: 1.125;
 }
 
-.singlepost__meta {
-
+.singlepost__header__time {
+  display: block;
   font-size: 1.25rem;
   line-height: 1;
   text-align: center;
@@ -37,4 +37,10 @@
 
 .singlepost__copybody {
   padding-bottom: 4rem;
+}
+
+.singlepost {
+  .gallery {
+    background-color: $light-gray;
+  }
 }

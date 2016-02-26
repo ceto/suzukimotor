@@ -1,32 +1,71 @@
 ---
 layout: default
-title: Table of Contents
+title: Suzuki Motors - Magyarország
 ---
-<header class="postheader">
-  <div class="banner ps--inverse">
-    <div class="row">
-      <div class="columns">
-        <h1 class="banner__title">Demo pages</h1>
+
+<section class="heroes">
+  <div class="hero hero--01">
+    <style>
+      .hero--01 { background-image: url('img/herohome1.jpg');}
+      @media screen and (min-width: 48em) {.hero--01 { background-image: url('img/herohome1-tablet.jpg');}}
+      @media screen and (min-width: 90em) { .hero--01 { background-image: url('img/herohome1.jpg');} }
+      @media screen and (min-width: 100em) { .hero--01 { background-image: url('img/herohome1.jpg');} }
+    </style>
+
+        <div class="hero__text">
+          <h3 class="hero__title">Hero heading ipsum dolor sit amet</h3>
+          <p class="hero__discl">Subheader comes here ipsum placeholder árvíztrűrő tükörfúrógép</p>
+          <a href="#" class="button hero__more">Bővebben</a>
+        </div>
+  </div>
+</section>
+
+
+
+<section class="modelgroupselector ps ps--gray">
+  <div class="row">
+    <div class="columns small-6 tablet-3">
+      <div class="">
+        <h3><a href="page-product-category.html">Motorok</a></h3>
+        <a href="page-product-category.html"><img src="http://placehold.it/640x320/?text=motorok" alt=""></a>
+      </div>
+    </div>
+    <div class="columns small-6 tablet-3">
+      <div class="">
+        <h3><a href="page-product-category.html">Robogók</a></h3>
+        <a href="page-product-category.html"><img src="http://placehold.it/640x320/?text=robogók" alt=""></a>
+      </div>
+    </div>
+    <div class="columns small-6 tablet-3">
+      <div class="">
+        <h3><a href="page-product-category.html">Quadok</a></h3>
+        <a href="page-product-category.html"><img src="http://placehold.it/640x320/?text=quadok" alt=""></a>
+      </div>
+    </div>
+    <div class="columns small-6 tablet-3">
+      <div class="">
+        <h3><a href="page-product-category.html">Kiegészítő</a></h3>
+        <a href="page-product-category.html"><img src="http://placehold.it/640x320/?text=kiegészítő" alt=""></a>
       </div>
     </div>
   </div>
-</header>
+</section>
 
-<section class="home posts ps">
+
+{% include promo.html %}
+
+<section class="ps ps--gray">
   <div class="row">
-    <div class="columns medium-6">
-        <h2>Table of contents</h2>
-        <ul>
-          <li><a href="page-product-category.html">Product category page</a></li>
-          <li><a href="page-product-single.html">Single product page</a></li>
-          <li><a href="post-single.html">Single post page</a></li>
-          <li><a href="news.html">News / Blog / Archive layout</a></li>
-          <li><a href="dealers.html">Dealers' list</a></li>
-          <li><a href="accessories.html">Accessories page</a></li>
-        </ul>
+    <div class="columns tablet-8 xlarge-9 homenews">
+      <h3>Hírek és események</h3>
+      <div class="row small-up-2 medium-up-2 xlarge-up-3">
+        {% include squareposts.html %}
+        {% include squareposts.html %}
+      </div>
     </div>
-    <div class="columns medium-6">
-      <p><a class="popup-video button" href="https://www.youtube.com/watch?v=AvmuhxvEZ1I">Click to see popup video</a></p>
+    <div class="columns tablet-4 xlarge-3">
+      <h3>Suzuki a Facebookon</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem rerum aut debitis nemo ad modi nesciunt, eum facere, ipsa dolorum praesentium, animi ab nostrum fugiat voluptates. At accusantium pariatur eos!</p>
     </div>
   </div>
 </section>

@@ -156,12 +156,38 @@
 .card__fig {
   margin:0;
   border-bottom: 2px solid $alert-color;
+  position: relative;
+  a {
+    display: block;
+    &:hover, &:focus {
+      &:before {
+        opacity: 0;
+
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left:0; top:0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(#000,.25);
+      opacity: 1;
+      transition: opacity .4s ease;
+    }
+  }
 }
+
+
 .card__title {
+  font-size: 1.125rem;
   margin:0;
-  padding:1rem 1rem 1rem;
+  padding:1rem 1rem 0;
   a {
     color:$secondary-color;
+    &:hover, &:focus {
+      color:$alert-color;
+    }
   }
   .card--transparent &{
     padding:.75rem 0 0;
@@ -178,6 +204,22 @@
 }
 
 
+.card__footer {
+  font-size: .875rem;
+  line-height: 1;
+  padding:.75rem 1rem;
+  // background-color: $medium-gray;
+  color:$dark-gray;
+  .card--transparent & {
+    padding:.125rem 0 1rem;
+  }
+}
+
+.card__time {
+  display: block;
+  font-variant: small-caps;
+  font-weight: $global-weight-extrabold;
+}
 
 .mfp-iframe-holder .mfp-content {
   max-width: 80%;
