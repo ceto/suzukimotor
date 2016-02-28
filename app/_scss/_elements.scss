@@ -1,24 +1,35 @@
 .squarepost {
-  margin-bottom: $paragraph-margin-bottom;
+  //margin-bottom: $paragraph-margin-bottom;
   .card__title {
-    @include breakpoint('large') {
-      min-height: 2.5rem;
-    }
+    // @include breakpoint('large') {
+    //   min-height: 2.5rem;
+    // }
+  }
+
+  .item &{
+    //margin:0;
   }
 
 }
 
+.relpost-carousel, .relacc-carousel {
+  .item {
+    @include grid-col;
+    float:none;
+  }
+  .card__text {
+    display: none;
+  }
+}
+
+
+
 .squareacc.card {
   background-color: $dark-gray;
-  margin-bottom: $paragraph-margin-bottom;
-  //text-align: center;
-  .card__fig {
-    //border-bottom:: 2px solid $primary-color;
-  }
-  .card__label {
-    //margin-left:33.333%;
-  }
   .card__title {
+    // @include breakpoint('large') {
+    //   min-height: 2.5rem;
+    // }
     a {
       color:#fff;
     }
@@ -47,3 +58,41 @@
 .promo__more {
   margin-bottom: 0;
 }
+
+
+.isotopegrid {
+  margin-left: - rem-calc(10);
+  margin-right: - rem-calc(10);
+  @include breakpoint('medium') {
+    margin-left: - rem-calc(15);
+    margin-right: - rem-calc(15);
+  }
+  .item, .itemsizer {
+    width:100%;
+    @include breakpoint('medium') {
+      width:50%;
+    }
+    @include breakpoint('xxlarge') {
+      width:33.333%;
+    }
+  }
+  .item {
+    padding:0 rem-calc(10) rem-calc(20) ;
+    @include breakpoint('medium') {
+      float:left;
+      padding:0 rem-calc(15) rem-calc(30);
+      &:nth-of-type(2n+2) {
+        clear:both;
+      }
+    }
+    @include breakpoint('xxlarge') {
+      &:nth-of-type(2n+2) {
+        clear:none;
+      }
+      &:nth-of-type(3n+2) {
+        clear:both;
+      }
+    }
+  }
+}
+

@@ -1,26 +1,49 @@
 .mobilehead {
-  background-color: $primary-color;
+  //background-color: $dark-gray;
   //border-bottom: 1px solid $black;
-  .button {
-    margin:0;
-  }
   color:$white;
   a {
     color:inherit;
+  }
+  .button {
+
+    display: block;
+    font-size: .25rem;
+    margin:0;
+    height:3.666rem;
+    width:3.666rem;
+    background-color: $alert-color;
+    i {
+      display: block;
+      font-size: 1.5rem;
+    }
+  }
+  .openmenu {
+    float:left;
+  }
+  .dealersmenu {
+    background-color: $white;
+    color:$primary-color;
+    float:right;
+    width:auto;
+    border-left: 1px solid $medium-gray;
+    //padding-left: 1rem;
+    //padding-right: 1rem;
   }
 }
 
 .mobileheadlogo {
   margin:0;
   padding:0;
+  float:left;
   a {
     display: block;
     height:3.666rem;
-    width:3.666rem;
+    width:7.333rem;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background-image: url('../img/logo.jpg');
+    background-image: url('../img/logodouble.jpg');
     background-repeat: no-repeat;
     background-position: left top;
     background-size: auto 100%;
@@ -53,12 +76,17 @@
 }
 
 .sitehead {
-  //background-color: $primary-color;
+  position: relative;
+  background-color: $warning-color;
+  height: 100vh;
+  min-height: 32rem;
   .row {
     //background-color: #fff;
   }
   @include breakpoint(tablet) {
     height:5rem;
+    min-height: 5rem;
+
     background-image: linear-gradient(0deg, $dark-gray 50%, $alert-color 50%, $alert-color 52%, $secondary-color 52%);
 
     background-image: linear-gradient(0deg, $dark-gray 50%,  $secondary-color 50%);
@@ -68,13 +96,14 @@
 .headlogo {
   margin:0;
   padding:0;
+  background-color: $white;
   @include breakpoint(tablet) {
     float:left;
   }
   a {
     display: block;
-    height:5rem;
-    width:10rem;
+    height:3.666rem;
+    width:7.333rem;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -82,6 +111,10 @@
     background-repeat: no-repeat;
     background-position: left top;
     background-size: auto 100%;
+    @include breakpoint(tablet) {
+      height:5rem;
+      width:10rem;
+    }
   }
 }
 
@@ -94,13 +127,21 @@
 }
 .menu--pri {
   @include clearfix();
-  font-weight: $global-weight-extrabold;
-  font-size: 1.333rem;
-  text-transform: uppercase;
-  margin:1rem 0;
-  @include breakpoint(tablet) {
-    margin:0;
+  //background-color: $white;
+  position: absolute;
+  top:3.666rem;
 
+  font-weight: $global-weight-extrabold;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  margin:0 0;
+  padding:10vh .25rem 1rem;
+  @include breakpoint(tablet) {
+    position: static;
+    margin:0;
+    padding:0;
+    font-size: 1.333rem;
+    //background-color: transparent;
   }
   > li {
     display: block;
@@ -109,7 +150,8 @@
     }
     > a {
       padding:.666em .666em .333em;
-      color:$white;
+      //color:$white;
+      //color:$secondary-color;
     }
 
 
@@ -120,25 +162,32 @@
 
 
 .menu--sec {
-  //background-color: #fff;
+  //background-color: $warning-color;
   @include clearfix();
   font-weight: $global-weight-extrabold;
-  font-size: 1.125rem;
-  margin:1rem 0;
+  font-size: 1.25rem;
+  padding:1rem 1rem 1rem;
+  margin:0;
+  position: absolute;
+  bottom:0;
+  border-top: 3px solid $alert-color;
   @include breakpoint(tablet) {
-    margin:0;
-
     padding: 0 0 0 .75rem;
+    font-size: 1.125rem;
+    position: static;
+    ///background-color: transparent;
+    border-top: none;
   }
   > li {
-    display: block;
+    display: inline-block;
     @include breakpoint(tablet) {
       float:left;
+      display: block;
     }
     > a {
       padding:.666em .333em .333em;
       //color:$white;
-      //color:$secondary-color;
+      //color:$medium-gray;
     }
 
 

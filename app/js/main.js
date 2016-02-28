@@ -40,6 +40,43 @@ $(document).ready(function() {
   });
 
 
+  $('.isotopegrid').isotope({
+    // set itemSelector so .grid-sizer is not used in layout
+    itemSelector: '.item',
+    percentPosition: true,
+    masonry: {
+      // use element for option
+      columnWidth: '.itemsizer'
+    }
+  })
+
+
+  $('.relpost-carousel').owlCarousel({
+      slideSpeed : 300,
+      paginationSpeed : 800,
+      pagination: false,
+      navigation : false,
+      autoHeight: true,
+      items : 4,
+      itemsDesktop : [1280,3],
+      itemsDesktopSmall : [1024,3],
+      itemsTablet: [768,2],
+      itemsMobile: [480,2]
+  });
+
+  $('.relacc-carousel').owlCarousel({
+      slideSpeed : 300,
+      paginationSpeed : 800,
+      pagination: false,
+      navigation : false,
+      autoHeight: true,
+      items : 4,
+      itemsDesktop : [1440,3],
+      itemsDesktopSmall : [1024,3],
+      itemsTablet: [768,2],
+      itemsMobile: [480,1]
+  });
+
   $('.prodhero__carousel').owlCarousel({
       slideSpeed : 300,
       paginationSpeed : 800,
