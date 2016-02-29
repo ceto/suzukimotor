@@ -23,6 +23,19 @@
     padding-bottom: 4rem;
   }
 }
+
+.ps--narrow {
+  @include breakpoint('medium') {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+.ps--large {
+  @include breakpoint('medium') {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
 .ps--gray {
   background-color: $light-gray;
 }

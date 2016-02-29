@@ -166,6 +166,54 @@ $(document).ready(function() {
     });
 
 
+    /**** Timeline Carousel ****/
+
+    function timelinePager() {
+      $.each(this.owl.userItems, function (i) {
+        var titleData = jQuery(this).find('.timeline__date').text();
+        var paginationLinks = jQuery('.timeline__carousel .owl-controls .owl-pagination .owl-page');
+        $(paginationLinks[i]).append(titleData);
+      });
+    }
+
+    $('.timeline__carousel').owlCarousel({
+
+      slideSpeed : 300,
+      paginationSpeed : 800,
+      singleItem:true,
+      pagination: true,
+      navigation : false,
+      afterInit: timelinePager,
+      afterUpdate: timelinePager,
+      afterAction: function(el){
+         this.$owlItems.find('.timeline__item').removeClass('is_active');
+         this.$owlItems.find('.timeline__item').removeClass('is_next');
+         this.$owlItems.find('.timeline__item').removeClass('is_prev');
+
+         this.$owlItems.eq(this.currentItem).find('.timeline__item').addClass('is_active');
+
+         this.$owlItems.eq(this.currentItem+1).find('.timeline__item').addClass('is_next');
+
+         this.$owlItems.eq(this.currentItem-1).find('.timeline__item').addClass('is_prev');
+      }
+
+    });
+
+
+
+    $('.timeline__item').on('click', function(e){
+      var actowl =  $(this).closest('.timeline__carousel').data('owlCarousel');
+      if ( $(this).closest('.timeline__item').hasClass('is_next') ) {
+        e.preventDefault();
+        actowl.next();
+      } else {
+          if ( $(this).closest('.timeline__item').hasClass('is_prev') ) {
+            e.preventDefault();
+            actowl.prev();
+          }
+      }
+    });
+
 
 
 

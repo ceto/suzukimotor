@@ -2,7 +2,7 @@
   background-color: #000;
 }
 .hero {
-  padding:2rem 0;
+  padding:4rem 0 2rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -12,6 +12,14 @@
     height: calc(100vh - 5rem);
     min-height: 48vw;
     max-height: 54vw;
+  }
+
+  .heroes--narrow &{
+    @include breakpoint(tablet) {
+      height: 66vw;
+      min-height: 30vh;
+      max-height: 60vh;
+    }
   }
 }
 

@@ -99,7 +99,7 @@
   text-transform: uppercase;
   line-height: 1;
   font-size: 2.5rem;
-  margin:1.5rem 0 0 0;
+  margin:1.5rem auto 0 auto;
   font-weight: $global-weight-extrabold;
   text-shadow:0 -.075em 6px rgba($black,.125);
   transform:translateY(.225em);
@@ -107,9 +107,16 @@
     font-size: 7vw;
     margin:3vw 0 0 0;
   }
-
 }
 
+.banner__title--small {
+  font-size: 1.5rem;
+  @include breakpoint(tablet) {
+    font-size: 5vw;
+    margin:3vw auto 0 auto;
+    max-width: 58vw;
+  }
+}
 
 .promoblock {
   text-align: center;
