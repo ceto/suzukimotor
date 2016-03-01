@@ -13,7 +13,7 @@
   display: block;
   position: relative;
   text-align: center;
-  border-top:1px solid #000;
+  //border-top:1px solid #000;
   overflow: hidden;
   &:after {
     position: absolute;
@@ -41,8 +41,9 @@
     margin:0;
     text-shadow: 0 0 .0125em rgba(#000,25);
     color:$white;
-    font-size: 2vw;
+    font-size: 1.5rem;
     line-height: 1;
+    font-weight: $global-weight-bold;
 
   }
   img {

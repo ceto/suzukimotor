@@ -1,12 +1,17 @@
 .heroes {
   background-color: #000;
 }
+
 .hero {
+
+  box-shadow: inset 0px -.125rem .125rem -.125rem rgba(#000,.5), inset 0px .125rem .125rem -.125rem rgba(#000,.5);
+
   padding:4rem 0 2rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   @include breakpoint(tablet) {
+    padding:0;
     display: table;
     width:100%;
     height: calc(100vh - 12.5vw - 4.875rem);

@@ -119,12 +119,21 @@
 }
 
 .promoblock {
+  border-top:1px solid $primary-color;
+  border-bottom:1px solid $primary-color;
   text-align: center;
+  background-color: $warning-color;
+  padding:3rem 0;
+  color:$white;
 }
-
+.promo__textcol {
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
 .promoblock__title {
-  text-transform: uppercase;
-  font-weight: $global-weight-extrabold;
+  font-size: 2rem;
+  //text-transform: uppercase;
+  //font-weight: $global-weight-extrabold;
   margin: 0;
 }
 .promoblock__info {
