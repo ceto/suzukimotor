@@ -4,5 +4,91 @@
 
 
 .sitefooter {
+  color:$white;
+  a {
+    &:hover, &:focus {
+      color:$success-color;
+    }
+  }
+}
+
+.sitefooter__top {
+  @include clearfix();
+  background-color: $warning-color;
+
+}
+.sitefooter__bottom {
+  @include clearfix();
+  background-color: $primary-color;
   padding:1rem 0;
+  font-size: .75rem;
+}
+.sitefooter__slogan {
+  font-weight: $global-weight-extrabold;
+  line-height: 1;
+  font-size: 1.75rem;
+  float:left;
+  @include breakpoint(tablet) {
+    margin-right: 5%;
+  }
+}
+
+
+.sitefooter__copy {
+  padding:.5rem 0;
+  display: block;
+}
+
+.sitefooter__socialnav {
+  float:right;
+}
+
+.sitefooter__suzukinav {
+  font-size: 1rem;
+  line-height: 1;
+  //font-weight: $global-weight-bold;
+  text-transform: uppercase;
+  clear:both;
+  margin-top: 3rem;
+  @include breakpoint(tablet) {
+    clear:none;
+    margin-top: 0;
+  }
+  a {
+    display:block;
+    padding:.25rem;
+    @include breakpoint(tablet) {
+      display: inline-block;
+      padding:.4rem 2% .125rem 0;
+    }
+  }
+}
+
+.sitefooter__copy {
+  @include breakpoint(tablet) {
+    float:left;
+  }
+}
+
+.sitefooter__sitelinks {
+  @include breakpoint(tablet) {
+    float:right;
+  }
+}
+
+.menu--sitelinks {
+  @include breakpoint(tablet) {
+    text-align:right;
+  }
+  > li {
+    display: inline-block;
+    > a {
+      margin-left: 1em;
+      @include breakpoint(tablet) {
+        margin-left: 0;
+        padding-left:.75em;
+      }
+    }
+  }
+
 }

@@ -9,9 +9,9 @@
   @include breakpoint(tablet) {
     display: table;
     width:100%;
-    height: calc(100vh - 5rem);
-    min-height: 48vw;
-    max-height: 54vw;
+    height: calc(100vh - 12.5vw - 4.875rem);
+    min-height: 40vw;
+    max-height: 46vw;
   }
 
   .heroes--narrow &{
@@ -24,19 +24,18 @@
 }
 
 .hero__text {
-  color:$white;
+  color:#fff;
   text-align: center;
+  text-shadow: 0 0 15px rgba(#000,.75);
   @include breakpoint(tablet) {
     display: table-cell;
-    vertical-align: bottom;
-    height:20%;
-
-    padding-bottom: 5vh;
+    vertical-align: middle;
+    //height:20%;
   }
 }
 
 .hero__title {
-  margin: 1em auto 0;
+  margin: 0 auto;
   text-transform: uppercase;
   @include breakpoint(tablet) {
     max-width: 75%;
@@ -46,7 +45,7 @@
 }
 
 .hero__discl {
-  margin: 0 auto 1em;
+  margin: 0 auto;
   font-weight: $global-weight-extrabold;
   @include breakpoint(tablet) {
     max-width: 66.666%;
@@ -56,4 +55,5 @@
 
 .hero__more {
   margin-bottom: 0;
+  display: none;
 }
