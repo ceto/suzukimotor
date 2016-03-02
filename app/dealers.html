@@ -14,75 +14,87 @@ title: Suzuki motor márkakereskedők
   </div>
 </header> -->
 <section class="dealersblock">
-  <div class="row">
-    <div class="columns tablet-5 xlarge-4 xxlarge-4 xxxlarge-6">
+  <div class="row collapse">
+    <div class="columns tablet-5 xlarge-4 xxxlarge-6">
       <div class="dealers">
         <h2>Válassz nárkakereskedőt</h2>
         <ul class="dealerslist">
-          <li>
+          <li class="onedealer" data-lat="47.350280" data-lng="19.045346" data-name="Full Gas">
             <h3><a href="#">Balatonboglár <small>Full Gas</small></a></h3>
             <div class="actions">
               <a href="#"><i class="icon">t</i></a>
               <a href="#"><i class="icon">i</i></a>
             </div>
+            <div class="dealerinfo">
+              <p>6500 Baja, Garibaldi u. 30.<br>
+              Tel.: <a href="tel:+36 79 422 761">+36 79 422 761</a><br>
+              Tel.: <a href="tel:+36 79 422 761">+36 30 123 256</a><br>
+              Email: <a href="mailto:info@forger.hu">info@forger.hu</a>
+              </p>
+              <p><strong>Nyitva tartás</strong><br>
+                Hétköznap 10-18 óráig<br>
+                Szombaton 10-13 óráig
+              </p>
+              <p><small><a href="http://www.forger.hu" target="_blank">Kereskedő honlapja</a></small></p>
+            </div>
           </li>
-          <li>
-            <h3><a href="#">Biscske <small>suzuki interat</small></a></h3>
+          <li class="onedealer" data-lat="46.350280" data-lng="19.304534" data-name="Suzuki Interat">
+            <h3><a href="#">Biscske <small>Suzuki Interat</small></a></h3>
             <div class="actions">
               <a href="#"><i class="icon">t</i></a>
               <a href="#"><i class="icon">i</i></a>
             </div>
           </li>
-          <li>
+          <li class="onedealer" data-lat="47.035028" data-lng="19.4304534" data-name="Motor Center Gyulai">
             <h3><a href="#">Budapest <small>Motor Center Gyulai</small></a></h3>
             <div class="actions">
               <a href="#"><i class="icon">t</i></a>
               <a href="#"><i class="icon">i</i></a>
             </div>
           </li>
-          <li>
+          <li class="onedealer">
             <h3><a href="#">Budapest <small>Suzuki Motorrad</small></a></h3>
             <div class="actions">
               <a href="#"><i class="icon">t</i></a>
               <a href="#"><i class="icon">i</i></a>
             </div>
           </li>
-          <li>
+          <li class="onedealer">
             <h3><a href="#">Eger <small>Zweirad Motorrad</small></a></h3>
             <div class="actions">
               <a href="#"><i class="icon">t</i></a>
               <a href="#"><i class="icon">i</i></a>
             </div>
           </li>
-          <li>
+          <li class="onedealer">
             <h3><a href="#">Győr <small>Full Gas</small></a></h3>
             <div class="actions">
               <a href="#"><i class="icon">t</i></a>
               <a href="#"><i class="icon">i</i></a>
             </div>
           </li>
-          <li>
+          <li class="onedealer">
             <h3><a href="#">Kecsekmét <small>Suzuki interat</small></a></h3>
             <div class="actions">
               <a href="#"><i class="icon">t</i></a>
               <a href="#"><i class="icon">i</i></a>
             </div>
           </li>
-          <li>
+          <li class="onedealer">
             <h3><a href="#">Pécs <small>Enduro Motorosbolt</small></a></h3>
             <div class="actions">
               <a href="#"><i class="icon">t</i></a>
               <a href="#"><i class="icon">i</i></a>
             </div>
           </li>
-          <li>
+          <li class="onedealer">
             <h3><a href="#">Törökbálint <small>Suzuki Motorrad</small></a></h3>
             <div class="actions">
               <a href="#"><i class="icon">t</i></a>
               <a href="#"><i class="icon">i</i></a>
             </div>
           </li>
-          <li>
+          <li class="onedealer">
             <h3><a href="#">Zalaegerszeg <small>Moto-Center</small></a></h3>
             <div class="actions">
               <a href="#"><i class="icon">t</i></a>
@@ -93,10 +105,41 @@ title: Suzuki motor márkakereskedők
       </div>
 
     </div>
-    <div class="columns tablet-7 xlarge-8 xxlarge-8 xxxlarge-6">
+    <div class="columns tablet-7 xlarge-8 xxxlarge-6">
       <div class="mapblock">
-        <h2>Térkép helye</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis alias reprehenderit recusandae voluptate ipsa explicabo, veritatis qui praesentium, temporibus blanditiis eos. Accusamus amet nisi natus unde magni! Impedit, cupiditate, possimus.</p>
+        <div id="map"></div>
+        <script>
+          var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 47.350280, lng: 19.045346},
+              zoom: 6
+            });
+            var marker = [];
+            var dname = [];
+            var dcont = [];
+            var dealerinfo = [];
+            var dealers = document.querySelectorAll('.onedealer');
+
+            var infowindow = null;
+
+            infowindow = new google.maps.InfoWindow({
+              content: "holding..."
+            });
+
+            for (var i = 0, len = dealers.length; i < len; i++) {
+              if (dealers[i].getAttribute('data-lat') && dealers[i].getAttribute('data-lng')) {
+                dname[i] = dealers[i].getAttribute('data-name');
+                marker[i] = new google.maps.Marker({
+                  position: {lat: Number(dealers[i].getAttribute('data-lat')), lng: Number(dealers[i].getAttribute('data-lng'))},
+                  map: map,
+                  title: dealers[i].getAttribute('data-name')
+                });
+              }
+            }
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsWskVN4oYCTYSEq_cPZj2wtXpqFeEqBU&callback=initMap" async defer></script>
       </div>
     </div>
   </div>

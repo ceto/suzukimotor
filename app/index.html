@@ -4,17 +4,52 @@ title: Suzuki Motors - Magyarország
 ---
 
 <section class="heroes">
-  <div class="hero hero--01">
-    <style>
-      .hero--01 { background-image: url('img/herohome1.jpg');}
-      @media screen and (min-width: 48em) {.hero--01 { background-image: url('img/herohome1-tablet.jpg');}}
-      @media screen and (min-width: 90em) { .hero--01 { background-image: url('img/herohome1.jpg');} }
-      @media screen and (min-width: 100em) { .hero--01 { background-image: url('img/herohome1.jpg');} }
-    </style>
-    <div class="hero__text">
-      <h3 class="hero__title">Hero heading ipsum dolor sit amet</h3>
-      <p class="hero__discl">Subheader comes here ipsum placeholder árvíztrűrő tükörfúrógép</p>
-      <a href="#" class="button hero__more">Bővebben</a>
+  <div class="owl-carousel hero__carousel">
+    <div class="item">
+      <div class="hero hero--01">
+        <style>
+          .hero--01 { background-image: url('img/herohome6.jpg');}
+          @media screen and (min-width: 48em) {.hero--01 { background-image: url('img/herohome6.jpg');}}
+          @media screen and (min-width: 90em) { .hero--01 { background-image: url('img/herohome6.jpg');} }
+          @media screen and (min-width: 100em) { .hero--01 { background-image: url('img/herohome6.jpg');} }
+        </style>
+        <div class="hero__text">
+          <h3 class="hero__title"><a href="page-product-single.html">Hero heading ipsum dolor sit amet</a></h3>
+          <p class="hero__discl">Subheader comes here ipsum placeholder árvíztrűrő tükörfúrógép</p>
+          <a href="#" class="button hero__more">Bővebben</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="hero hero--02">
+        <style>
+          .hero--02 { background-image: url('img/herohome1.jpg');}
+          @media screen and (min-width: 48em) {.hero--02 { background-image: url('img/herohome1-tablet.jpg');}}
+          @media screen and (min-width: 90em) { .hero--02 { background-image: url('img/herohome1.jpg');} }
+          @media screen and (min-width: 100em) { .hero--02 { background-image: url('img/herohome1.jpg');} }
+        </style>
+        <div class="hero__text">
+          <h3 class="hero__title"><a href="accessories.html">Ez lehet egy szép felütés</a></h3>
+          <p class="hero__discl">A háttékép sötét tónusú és kető egy arányú</p>
+          <a href="#" class="button hero__more">Bővebben</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="hero hero--03">
+        <style>
+          .hero--03 { background-image: url('img/herohome5.jpg');}
+          @media screen and (min-width: 48em) {.hero--03 { background-image: url('img/herohome5.jpg');}}
+          @media screen and (min-width: 90em) { .hero--03 { background-image: url('img/herohome5.jpg');} }
+          @media screen and (min-width: 100em) { .hero--03 { background-image: url('img/herohome5.jpg');} }
+        </style>
+        <div class="hero__text">
+          <h3 class="hero__title"><a href="#">Feliratot ne tegyünk a képre soha</a></h3>
+          <a href="#" class="button hero__more">Bővebben</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -48,10 +83,11 @@ title: Suzuki Motors - Magyarország
     </div>
   </div>
 </section>
-{% include dealerpromo.html %}
-
 
 {% include promo.html %}
+
+
+{% include dealerpromo.html %}
 
 <section class="ps ps--gray">
   <div class="row">

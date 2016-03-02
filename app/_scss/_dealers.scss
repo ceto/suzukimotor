@@ -1,14 +1,19 @@
 .dealersblock {
+  position: relative;
   background-color: $primary-color;
   background-image: linear-gradient(180deg, $warning-color 0%, $primary-color 100%);
   color:$white;
+  @include breakpoint(tablet) {
+    min-height:75vh;
+  }
+
 }
 
 .dealers {
   margin:4rem 0;
   h2 {
     font-size: 1.25rem;
-    margin: 0 0 1rem;
+    margin: 0 1rem 1rem;
   }
 }
 .dealerslist {
@@ -16,7 +21,7 @@
   padding:0;
   list-style-type: none;
   > li {
-    padding:.5rem 0;
+    padding:.5rem 1rem;
     line-height: 1;
   }
 
@@ -53,8 +58,38 @@
     display: inline-block;
     float:right;
   }
+
+  .dealerinfo {
+    display: none;
+    padding-top: 1rem;
+  }
 }
 
+
 .mapblock {
-  padding:4rem 0;
+  height:20rem;
+
+  @include breakpoint(tablet) {
+    position: absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    width:56%;
+    height:auto;
+  }
+
+  @include breakpoint(xlarge) {
+    width:62.5%;
+  }
+
+  @include breakpoint(xxxlarge) {
+    width:50%;
+  }
 }
+
+
+#map {
+  height:100%;
+}
+
+

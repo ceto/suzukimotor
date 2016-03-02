@@ -51,6 +51,19 @@ $(document).ready(function() {
   })
 
 
+
+  $('.hero__carousel').owlCarousel({
+    slideSpeed : 300,
+    paginationSpeed : 800,
+    singleItem:true,
+    pagination: false,
+    navigation : true,
+    autoHeight: true,
+    navigationText: ['<i class="icon icon"></i><','><i class="icon icon"></i>']
+  });
+
+
+
   $('.relpost-carousel').owlCarousel({
       slideSpeed : 300,
       paginationSpeed : 800,
@@ -326,7 +339,17 @@ $(document).ready(function() {
   }
 
 
-
+  /**** Dealers Map *******/
+  // $('.onedealer').each(function(index) {
+  //   var dealeritem = $(this);
+  //   if (dealeritem.attr('data-lat')!=='') {
+  //     var marker = new google.maps.Marker({
+  //       position: {lat: dealeritem.attr('data-lat'), lng: dealeritem.attr('data-lng') },
+  //       map: map,
+  //       title: dealeritem.attr('data-name')
+  //     });
+  //   }
+  // });
 
 
 });
