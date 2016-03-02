@@ -167,7 +167,7 @@
   width:100%;
   //
   background-color: $light-gray;
-  background-image: linear-gradient(90deg, $dark-gray 0, $dark-gray 50%, $secondary-color 50%);
+  background-image: linear-gradient(90deg, $light-gray 0, $light-gray 50%, $secondary-color 50%);
 
   //border-top: 1px solid $alert-color;
   > .row {
@@ -181,11 +181,11 @@
   display: inline-block;
   font-size: 1.125rem;
   line-height: 1;
-  padding:.75rem 2.333rem .75rem 1rem;
+  padding:.875rem 1rem .5rem 1rem;
   margin:0;
-  background-color: $dark-gray;
-  background-image: linear-gradient(-75deg, $light-gray 0, $light-gray .666rem, $dark-gray .666rem);
-  color:$white;
+  //background-color: $dark-gray;
+  //background-image: linear-gradient(-75deg, $light-gray 0, $light-gray .666rem, $dark-gray .666rem);
+  color:$dark-gray;
   small {
     display: inline-block;
     margin-left: .5rem;
@@ -203,10 +203,10 @@
 .anchornav__actions {
   display: block;
   line-height: 1;
-  padding:0 1rem 0 1.333rem;
+  padding:0 0 0 2.5rem;
   float:right;
-  background-color: $dark-gray;
-  background-image: linear-gradient(105deg, $light-gray 0, $light-gray .75rem, $secondary-color .75rem);
+  background-color: $light-gray;
+  background-image: linear-gradient(120deg, $light-gray 0, $light-gray 1.25rem, $secondary-color 1.25rem);
   a {
     display: inline-block;
     color:$white;
@@ -214,7 +214,7 @@
     line-height: 1;
     text-transform: uppercase;
     //font-weight: $global-weight-extrabold;
-    padding: 1em .25em 1em;
+    padding: .875em .25em .875em;
   }
 }
 .menu--anchor {
@@ -222,7 +222,7 @@
   color: $medium-gray;
   text-transform: uppercase;
   display: inline-block;
-  font-weight: $global-weight-bold;
+  //font-weight: $global-weight-normal;
   > li {
     display: inline-block;
     line-height: 1;

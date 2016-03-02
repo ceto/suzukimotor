@@ -6,7 +6,7 @@
 
   box-shadow: inset 0px -.125rem .125rem -.125rem rgba(#000,.5), inset 0px .125rem .125rem -.125rem rgba(#000,.5);
 
-  padding:12vw 0;
+  padding:24vw 0 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -14,9 +14,9 @@
     padding:0;
     display: table;
     width:100%;
-    height: calc(100vh - 12.5vw );
-    min-height: 40vw;
-    max-height: 46vw;
+    height: calc(100vh - 5rem );
+    min-height: 42vw;
+    max-height: 48vw;
   }
 
   .heroes--narrow &{
@@ -32,13 +32,13 @@
   color:#fff;
   text-align: center;
   text-shadow: 0 0 15px rgba(#000,.5), 3px 3px 3px rgba(#000,.75), -3px -3px 3px rgba(#000,.125), 3px -3px 3px rgba(#000,.125), -3px 3px 3px rgba(#000,.125);
-  padding:1rem 1rem;
+  padding:0 0;
   z-index: 4;
+  line-height: 1;
   @include breakpoint(tablet) {
-
     display: table-cell;
     vertical-align: bottom;
-    padding-bottom: 4vw;
+    padding: 0;
     //height:20%;
   }
 }
@@ -48,21 +48,36 @@
   text-transform: uppercase;
   position: relative;
   z-index: 1000;
+  background-color: rgba(#000,.5);
+  line-height: 1;
+  padding: .5em 12.5% .25em;
   @include breakpoint(tablet) {
-    max-width: 75%;
+
     font-size: 4vw;
   }
   a {
     &:hover, &:focus {
       &:after {
-        color:$alert-color;
+        color:$success-color;
       }
     }
     &:after {
       display: inline-block;
       margin-left: .25em;
-      content:'>>';
-      color:$success-color;
+      content:'\e91f';
+      //color:$success-color;
+      transform:translateY(.1em);
+      font-family: 'suzuki' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
   }
 }
@@ -70,8 +85,11 @@
 .hero__discl {
   margin: 0 auto;
   font-weight: $global-weight-extrabold;
+  background-color: rgba(#000,.5);
+  line-height: 1;
+  padding: 0 16.666% 1em;
   @include breakpoint(tablet) {
-    max-width: 66.666%;
+
     font-size: 2.25vw;
   }
 }
@@ -93,9 +111,9 @@
       position: absolute;
       width:100%;
 
-      bottom:49.5%;
+      //bottom:49.5%;
       //bottom: calc( 50% - 2rem);
-      bottom: 4vw;
+      bottom: 0;
       //z-index: -1;
       pointer-events:none;
       > div {
@@ -103,9 +121,10 @@
         border-radius: 0;
         margin:0;
         padding:1em .5em;
-        font-size: 1.5rem;
+        font-size: 4vw;
         line-height: 1;
-        background-color: $secondary-color;
+        background-color: transparent;
+        color:$success-color;
         opacity: 1;
         &:hover &:focus {
         }
