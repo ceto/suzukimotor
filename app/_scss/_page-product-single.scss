@@ -42,21 +42,21 @@
     display:inline-block;
     margin-left: .25rem;
     &.is-active a {
-      border:.25rem solid $dark-gray;
+      border:.125rem solid $medium-gray;
       &:hover {
-        border:.25rem solid $dark-gray;
+        border:.125rem solid $medium-gray;
         cursor: default;
       }
     }
     a {
       display: block;
-      border-radius:50%;
-      background-image:linear-gradient(45deg, $primary-color 33%, $secondary-color 66%);
-      width:2.5rem;
-      height:2.5rem;
-      border:.25rem solid $medium-gray;
+      //border-radius:50%;
+      background-image:linear-gradient(135deg, $success-color 33%, #000 66%);
+      width:3rem;
+      height:2.25rem;
+      border:.125rem solid $light-gray;
       &:hover {
-        border:.25rem solid $light-gray;
+        border:.125rem solid $light-gray;
       }
     }
   }
@@ -66,11 +66,22 @@
 .prodhead__modellname {
   //font-weight: $global-weight-extrabold;
   text-transform: uppercase;
-  margin: .125em 0 0;
+  margin: 0 0;
   line-height: 1;
   @include breakpoint('tablet') {
     font-size: 6vw;
   }
+}
+
+.prodhead__badge {
+  border-radius: 0;
+  background-color: $alert-color;
+  font-size: 1rem;
+  font-weight: $global-weight-extrabold;
+  text-transform: uppercase;
+  padding:.5em .5em;
+  line-height: 1;
+  //display: none;
 }
 
 .prodhero {
@@ -129,11 +140,18 @@
   }
 
 }
-
+.prodhead__modellogo {
+  max-width: 25rem;
+  margin-bottom: 1rem;
+}
 .prodhead__slogan {
   text-transform: uppercase;
+  //display: none;
 }
 
+.prodhead__jogsi {
+  font-weight: $global-weight-extrabold;
+}
 .sticky-container {
     background-color: $light-gray;
   background-image: linear-gradient(90deg, $dark-gray 0, $dark-gray 50%, $secondary-color 50%);

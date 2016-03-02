@@ -1,0 +1,18 @@
+.priceblock {
+  padding:2rem 0;
+
+  .tabs {
+    margin-left:50%;
+    transform:translateX(-50%);
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+}
+
+.prices__cattitle {
+  text-align: center;
+}
+.prices__subcattitle {
+  text-align: center !important;
+  display: block;
+}
