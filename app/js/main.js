@@ -59,7 +59,7 @@ $(document).ready(function() {
     pagination: false,
     navigation : true,
     autoHeight: true,
-    navigationText: ['<i class="icon icon"></i><','><i class="icon icon"></i>']
+    navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>']
   });
   $('.promo__carousel').owlCarousel({
     slideSpeed : 300,
@@ -68,7 +68,7 @@ $(document).ready(function() {
     pagination: false,
     navigation : true,
     autoHeight: true,
-    navigationText: ['<i class="icon icon"></i><','><i class="icon icon"></i>']
+    navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>']
   });
 
 

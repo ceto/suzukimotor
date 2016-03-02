@@ -1,5 +1,7 @@
 .modelgroupselector {
   //background-color: #fff;
+  padding-bottom: 4rem;
+  padding-top: 0;
 
   .columns:not(:last-child) {
     //border-right: 1px solid #000;
@@ -10,6 +12,7 @@
   }
 }
 .bigselect {
+  margin-top:2rem;
   display: block;
   position: relative;
   text-align: center;
@@ -19,31 +22,37 @@
     position: absolute;
     content: '';
     display: block;
-    background-color: rgba(#000,.75);
+    background-color: rgba(#000,.5);
     left:0;
-    top:0;
+    top:2.5rem;
+    bottom:0;
     width:100%;
-    height:100%;
+
     transition: opacity .4s ease;
   }
   &:hover:after , &:focus:after {
     opacity: 0;
-  }
 
+  }
+  &:hover, &:focus {
+    h3 {
+      color:$alert-color;
+    }
+  }
   h3 {
-    display: inline-block;
-    position: absolute;
-    z-index: 1;
-    top:50%;
-    left:0;
-    width:100%;
-    transform: translateY(-50%);
-    margin:0;
-    text-shadow: 0 0 .0125em rgba(#000,25);
-    color:$white;
-    font-size: 1.5rem;
-    line-height: 1;
-    font-weight: $global-weight-bold;
+    // display: inline-block;
+    // position: absolute;
+    // z-index: 1;
+    // top:50%;
+    // left:0;
+    // width:100%;
+    // transform: translateY(-50%);
+    // margin:0;
+    // text-shadow: 0 0 .0125em rgba(#000,25);
+    // color:$white;
+    // font-size: 1.5rem;
+    // line-height: 1;
+    // font-weight: $global-weight-bold;
 
   }
   img {
@@ -73,7 +82,7 @@
         border-radius: 0;
         margin:0;
         padding:1em .5em;
-        font-size: 1.5rem;
+        font-size: 2rem;
         line-height: 1;
         background-color: transparent;
         color:$success-color;

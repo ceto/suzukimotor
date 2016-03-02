@@ -127,7 +127,7 @@
   top:0;
   bottom:50%;
   right:0;
-  width:15rem;
+  width:17rem;
 
   .button {
     position: relative;
@@ -138,7 +138,7 @@
     margin:0;
     height:2.5rem;
     overflow: hidden;
-    padding:.875rem 1.5rem 0 .5rem;
+    padding:.875rem 2.25rem 0 .5rem;
     font-size: .75rem;
     background-color: $primary-color;
     background-color: transparent;
@@ -151,6 +151,7 @@
     }
 
     .icon {
+
       position: absolute;
       display: block;
       top:.5rem;

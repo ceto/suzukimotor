@@ -57,6 +57,11 @@
   .actions {
     display: inline-block;
     float:right;
+    a {
+      display: inline-block;
+      font-size: 1.5em;
+      transform:translateY(-.125em);
+    }
   }
 
   .dealerinfo {
