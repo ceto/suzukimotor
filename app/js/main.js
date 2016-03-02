@@ -61,6 +61,15 @@ $(document).ready(function() {
     autoHeight: true,
     navigationText: ['<i class="icon icon"></i><','><i class="icon icon"></i>']
   });
+  $('.promo__carousel').owlCarousel({
+    slideSpeed : 300,
+    paginationSpeed : 800,
+    singleItem:true,
+    pagination: false,
+    navigation : true,
+    autoHeight: true,
+    navigationText: ['<i class="icon icon"></i><','><i class="icon icon"></i>']
+  });
 
 
 

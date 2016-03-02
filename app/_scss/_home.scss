@@ -2,7 +2,7 @@
   //background-color: #fff;
 
   .columns:not(:last-child) {
-    border-right: 1px solid #000;
+    //border-right: 1px solid #000;
   }
 
  .columns:last-child:not(:first-child) {
@@ -48,5 +48,46 @@
   }
   img {
     display: block;
+  }
+}
+
+
+
+.promo__carousel {
+  .owl-controls {
+    margin:0;
+    // position: absolute;
+    // bottom:0;
+    // width:100%;
+
+    .owl-buttons {
+      position: absolute;
+      width:100%;
+
+      bottom:49.5%;
+      bottom: calc( 50% - 2rem);
+      //z-index: -1;
+      pointer-events:none;
+      > div {
+        pointer-events:auto;
+        border-radius: 0;
+        margin:0;
+        padding:1em .5em;
+        font-size: 1.5rem;
+        line-height: 1;
+        background-color: transparent;
+        color:$success-color;
+        opacity: 1;
+        &:hover &:focus {
+        }
+      }
+      .owl-prev {
+        float:left;
+      }
+      .owl-next {
+        float:right;
+      }
+
+    }
   }
 }

@@ -14,7 +14,7 @@
     padding:0;
     display: table;
     width:100%;
-    height: calc(100vh - 12.5vw - 4.875rem);
+    height: calc(100vh - 12.5vw );
     min-height: 40vw;
     max-height: 46vw;
   }
@@ -35,8 +35,10 @@
   padding:1rem 1rem;
   z-index: 4;
   @include breakpoint(tablet) {
+
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: bottom;
+    padding-bottom: 4vw;
     //height:20%;
   }
 }
@@ -93,6 +95,7 @@
 
       bottom:49.5%;
       bottom: calc( 50% - 2rem);
+      bottom: 5vw;
       //z-index: -1;
       pointer-events:none;
       > div {
