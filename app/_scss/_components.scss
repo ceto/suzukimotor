@@ -40,14 +40,16 @@
     clear:left;
     width:33.333%;
     max-width: 20rem;
-    padding-right: 1rem;
-    margin-bottom: $paragraph-margin-bottom;
+    padding:.75rem 1rem .75rem 0;
+    margin-bottom: $paragraph-margin-bottom/2;
+    //border-top: 1px solid $light-gray;
   }
   dd {
     width:66.666%;
     float:left;
-    padding-left: 1rem;
-    margin-bottom: $paragraph-margin-bottom;
+    padding:.75rem 0 .75rem 1rem;
+    margin-bottom: $paragraph-margin-bottom/2;
+    //border-top: 1px solid $light-gray;
 
   }
 }
