@@ -50,7 +50,45 @@
         }
       }
     }
+
+    .owl-buttons {
+      position: absolute;
+      width:160%;
+      left:-30%;
+
+      //bottom:49.5%;
+      bottom: calc( 50% - 3.125rem);
+      //z-index: -1;
+      pointer-events:none;
+      > div {
+        pointer-events:auto;
+        border-radius: 0;
+        margin:0;
+        padding:1em 5vw;
+        font-size: 4rem;
+        line-height: 1;
+        background-color: transparent;
+        color:$success-color;
+        opacity: 1;
+        &:hover &:focus {
+
+        }
+      }
+      > .owl-prev {
+        float:left;
+        padding-right: 1rem;
+      }
+      > .owl-next {
+        float:right;
+        padding-left: 1rem;
+      }
+
+    }
+
   }
+
+
+
 
 }
 .modelcat__item {

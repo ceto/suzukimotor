@@ -157,15 +157,23 @@
 
 .card__label {
   position: absolute;
-  left:1rem;
+  left:0;
   text-transform: uppercase;
-  color:#fff;
-  font-size: 1.25rem;
+  color:$light-gray;
+  font-size: 1rem;
   line-height: 1;
   font-weight: $global-weight-extrabold;
-  transform:translateY(-.8em);
-  text-shadow:0 -2px 2px rgba(#000,.3);
+  transform:translateY(-1.6em);
+  //text-shadow:0 -2px 2px rgba(#000,.3);
   display: inline-block;
+  padding:.333em 2.125em .25em 1rem;
+  //background-color:$alert-color;
+  background-image:linear-gradient(-120deg, transparent 1.333em, rgba($alert-color,.666) 1.333em);
+  .card--transparent & {
+    font-size: .75rem;
+    padding:.333em 1.8em .125em .666em;
+    transform:translateY(-1.5em);
+  }
 }
 .card {
   background-color: #fff;
@@ -199,6 +207,9 @@
       opacity: 1;
       transition: opacity .4s ease;
     }
+  }
+  img {
+    display: block;
   }
 }
 

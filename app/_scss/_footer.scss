@@ -1,3 +1,26 @@
+.tothetop {
+  display: block;
+  width:1.666em;
+  height: 1.666em;
+  background-color: rgba(#000,.333);
+  opacity: .5;
+  color:$white;
+  font-size: 2rem;
+  line-height: 1;
+  text-align: center;
+  padding-top: .333em;
+  position: fixed;
+  bottom:2vw;
+  right:2vw;
+  text-align: center;
+  color:rgba(#fff,.5);
+  border:1px solid currentColor;
+  &:hover, &:focus {
+    background-color: rgba($success-color,1);
+    opacity: .75;
+    color:rgba(#fff,.75);
+  }
+}
 .bottomsidebar {
 
 }

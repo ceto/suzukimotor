@@ -109,6 +109,49 @@
   .item {
     padding:.5rem;
   }
+
+  .owl-controls {
+    margin:0;
+    // position: absolute;
+    // bottom:0;
+    // width:100%;
+
+    .owl-buttons {
+      position: absolute;
+      width:115%;
+      left:-7.5%;
+
+      //bottom:49.5%;
+      bottom: calc( 50% - 3.125rem);
+      //z-index: -1;
+      pointer-events:none;
+      > div {
+        pointer-events:auto;
+        border-radius: 0;
+        margin:0;
+        padding:1em .5em;
+        font-size: 2rem;
+        line-height: 1;
+        background-color: transparent;
+        color:$success-color;
+        opacity: 1;
+        &:hover &:focus {
+
+        }
+      }
+      .owl-prev {
+        float:left;
+      }
+      .owl-next {
+        float:right;
+      }
+
+    }
+  }
+
+
+
+
 }
 
 .item__thumb {

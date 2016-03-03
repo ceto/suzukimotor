@@ -132,7 +132,8 @@ $(document).ready(function() {
       paginationSpeed : 800,
       singleItem:true,
       pagination: true,
-      navigation : false,
+      navigation : true,
+      navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
       afterInit: customPager,
       afterUpdate: customPager,
       afterAction: function(el){
@@ -284,7 +285,8 @@ $(document).ready(function() {
       itemsDesktopSmall     : [1024,5],
       itemsTablet       : [768,4],
       itemsMobile       : [480,3],
-      navigation : false,
+      navigation : true,
+      navigationText: ['<i class="icon icon--chevron-circle-left"></i>','<i class="icon icon--chevron-circle-right"></i>'],
       pagination: false,
       paginationSpeed : 400,
       afterInit : function(el){
