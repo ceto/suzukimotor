@@ -12,10 +12,11 @@
   }
 }
 .timeline {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .timeline__carousel  {
+  padding-top: 3rem;
   .owl-wrapper-outer {
     @include breakpoint('tablet') {
       overflow:visible;
@@ -25,11 +26,15 @@
   .owl-controls {
     margin:0;
     .owl-pagination {
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
       text-transform: uppercase;
       font-weight: 900;
       font-size: 1.125rem;
       line-height: 1;
-      margin:3.5rem auto 0;
+      margin:0 auto 0;
 
       .owl-page {
         padding:.25rem .125rem;

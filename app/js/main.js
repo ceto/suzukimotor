@@ -40,7 +40,9 @@ $(document).ready(function() {
   });
 
 
-  $('.isotopegrid').isotope({
+  var $butikgrid = $('.butiklist');
+
+  $butikgrid.isotope({
     // set itemSelector so .grid-sizer is not used in layout
     itemSelector: '.item',
     percentPosition: true,
@@ -48,7 +50,13 @@ $(document).ready(function() {
       // use element for option
       columnWidth: '.itemsizer'
     }
-  })
+  });
+
+  $butikgrid.imagesLoaded( function() {
+    $butikgrid.isotope('layout');
+    $('.js-isotopegrid').addClass('is-loaded');
+  });
+
 
 
 

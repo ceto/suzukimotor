@@ -135,8 +135,11 @@
   background-image: url('../img/pricebg.jpg');
 }
 .promo__textcol {
-  margin-top: 4%;
-  margin-bottom: 4%;
+
+  @include breakpoint('xlarge') {
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
 }
 .promoblock__title {
   font-size: 2rem;

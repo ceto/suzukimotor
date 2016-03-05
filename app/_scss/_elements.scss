@@ -72,7 +72,7 @@
     @include breakpoint('medium') {
       width:50%;
     }
-    @include breakpoint('xxlarge') {
+    @include breakpoint('xlarge') {
       width:33.333%;
     }
   }
@@ -85,7 +85,7 @@
         clear:both;
       }
     }
-    @include breakpoint('xxlarge') {
+    @include breakpoint('xlarge') {
       &:nth-of-type(2n+2) {
         clear:none;
       }
