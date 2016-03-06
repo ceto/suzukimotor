@@ -7,11 +7,12 @@
 
 .singlepost__lead {
   font-weight: $global-weight-bold;
+  font-size:1.125rem;
   p:last-of-type {
     margin-bottom: 0;
   }
   @include breakpoint('tablet') {
-    //text-align: center;
+    font-size: $lead-font-size;
   }
 }
 .singlepost__title {

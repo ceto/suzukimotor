@@ -1,0 +1,61 @@
+.fityesz {
+  position: fixed;
+  right:-11rem;
+  right:0;
+  top:calc(50% - 1.5rem);
+  width:11rem;
+  color:$white;
+  transition:right .4s ease-in;
+
+}
+
+.fityesz__toggle {
+  display: block;
+  float:left;
+  width:1.5rem;
+  height:5rem;
+  //background-color: $alert-color;
+  background-image: linear-gradient(30deg, transparent 1rem, $warning-color 1rem, $warning-color 50%, transparent 50% ), linear-gradient(150deg, transparent 1rem, $warning-color 1rem, $warning-color 50%, transparent 50% ),
+  linear-gradient(180deg, transparent 1.25rem, $warning-color 1.25rem, $warning-color 3.75rem, transparent 3.75rem )
+  ;
+  transform:translateY(-.25rem);
+  i {
+    margin:1.75rem 0 0 .125rem;
+    display: block;
+    font-size: 1.25rem;
+
+  }
+}
+
+.fityesz__body {
+  width:9.5rem;
+  padding:0 0 .5rem;
+  float:left;
+  background-color: rgba($primary-color, 1);
+  h3 {
+    font-size: 1rem;
+    padding:1rem 1rem .25rem;
+    margin:0;
+    text-transform: uppercase;
+    border-bottom: 1px solid $warning-color;
+
+  }
+  a {
+    display: block;
+    padding:.5rem 1rem .5rem 2.875rem;
+    position: relative;
+    font-weight: $global-weight-extrabold;
+    &:hover ,&:focus {
+      color: $success-color;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid $warning-color;
+    }
+    i {
+      position: absolute;
+      font-size: 1.5em;
+      left:.875rem;
+
+    }
+  }
+}
