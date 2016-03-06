@@ -77,8 +77,9 @@
     margin-right: 5%;
   }
   i {
-    transform: translateY(.175em);
-    display: inline-block;
+    //transform: translateY(-.175em);
+    //display: inline-block;
+    position: absolute;
   }
 }
 
