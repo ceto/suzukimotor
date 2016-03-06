@@ -25,6 +25,8 @@
 
 jQuery(document).foundation();
 
+
+
 $(document).ready(function() {
 
   $('.main').fitVids();

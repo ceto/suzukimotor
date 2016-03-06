@@ -190,6 +190,8 @@
   background-image: linear-gradient(90deg, transparent 0, transparent 50%, $secondary-color 50%);
   box-shadow: 0 2px 3px 1px rgba(#000,.125);
 
+
+
   //border-top: 1px solid $alert-color;
   > .row {
     background-color: #fff;
@@ -198,6 +200,16 @@
     }
   }
 }
+
+.anchornav.anchornav--singleprod {
+  opacity: 0;
+  &.is-stuck {
+    opacity:1;
+  }
+
+}
+
+
 .anchornav__title {
   display: block;
   font-size: 1.333rem;
