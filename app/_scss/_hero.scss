@@ -1,8 +1,12 @@
 .heroes {
   background-color: #000;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
 }
 
 .hero {
+  position: relative;
 
   box-shadow: inset 0px -.125rem .125rem -.125rem rgba(#000,.5), inset 0px .125rem .125rem -.125rem rgba(#000,.5);
 
@@ -12,7 +16,6 @@
   background-position: center top;
   @include breakpoint(tablet) {
     padding:0;
-    display: table;
     width:100%;
     height: calc(100vh - 5rem );
     min-height: 42vw;
@@ -32,25 +35,33 @@
   color:#fff;
   text-align: center;
   text-shadow: 0 0 15px rgba(#000,.5), 3px 3px 3px rgba(#000,.75), -3px -3px 3px rgba(#000,.125), 3px -3px 3px rgba(#000,.125), -3px 3px 3px rgba(#000,.125);
-  padding:0 0;
+  padding:1rem 1rem;
   z-index: 4;
   line-height: 1;
+  background-color: rgba(#000,.5);
   @include breakpoint(tablet) {
-    display: table-cell;
-    vertical-align: bottom;
-    padding: 0;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding: 2vw 1rem 5vw;
     //height:20%;
+  }
+  @include breakpoint(xlarge) {
+    padding: 1.75vw 1rem 4.5vw
+  }
+  @include breakpoint(xxlarge) {
+    padding: 2vw 1rem 4.5vw
   }
 }
 
 .hero__title {
   margin: 0 auto;
   text-transform: uppercase;
-  position: relative;
-  z-index: 1000;
-  background-color: rgba(#000,.5);
+
+
   line-height: 1;
-  padding: .5em 12.5% .25em;
+  padding: 0 12.5% 0;
   @include breakpoint(tablet) {
 
     font-size: 4vw;
@@ -85,19 +96,13 @@
 .hero__discl {
   margin: 0 auto;
   font-weight: $global-weight-extrabold;
-  background-color: rgba(#000,.5);
   line-height: 1;
-  padding: 0 16.666% 1em;
+  padding: .25em 0 0;
   @include breakpoint(tablet) {
-
     font-size: 2.25vw;
   }
 }
 
-.hero__more {
-  margin-bottom: 0;
-  display: none;
-}
 
 
 .hero__carousel {
@@ -120,7 +125,7 @@
         pointer-events:auto;
         border-radius: 0;
         margin:0;
-        padding:1em .5em;
+        padding:1em .5em 1.125em;
         font-size: 4vw;
         line-height: 1;
         background-color: transparent;
@@ -137,5 +142,14 @@
       }
 
     }
+  }
+}
+
+.home__heroes {
+  .button--trapez {
+    position: absolute;
+    bottom:-1px;
+    left:50%;
+    transform:translatex(-50%);
   }
 }

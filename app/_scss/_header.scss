@@ -201,6 +201,34 @@
   }
 }
 
+
+.langsel{
+  clear:both;
+  text-transform: uppercase;
+  font-weight: $global-weight-extrabold;
+  //padding-top: .5rem;
+  padding: 0 0 .5rem 1.333rem;
+  color:$medium-gray;
+  @include breakpoint(tablet) {
+    position: absolute;
+    top:100%;
+    right:.75rem;
+    padding: .5rem 0 0;
+  }
+  a {
+    color:$medium-gray;
+    &.active {
+      color:$light-gray;
+    }
+    &:hover {
+      color:$primary-color;
+    }
+  }
+
+
+
+}
+
 .sitenavs {
   @include clearfix();
   //background-color: #fff;

@@ -2,10 +2,15 @@
   padding:2rem 0;
 
   .tabs {
-    margin-left:50%;
-    transform:translateX(-50%);
+
     margin-bottom: 1rem;
-    display: inline-block; 
+ 
+
+    @include breakpoint('tablet') {
+      display: inline-block; 
+      margin-left:50%;
+      transform:translateX(-50%); 
+    }
   }
 }
 

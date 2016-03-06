@@ -109,9 +109,11 @@
 .stable__head {
 }
 .stable__row {
-  border-bottom: 1px solid $light-gray;
   display:table-row;
   width:100%;
+  &:not(:last-child) {
+    border-bottom: 1px solid $light-gray; 
+  }
 }
 .stable__cell {
   display:table-cell;

@@ -35,3 +35,10 @@
   min-height: 100vh;
   background-image: url('../img/testdrive_portrait.jpg');
 }
+
+.tdclose {
+  position: absolute;
+  font-size: 2rem;
+  right:1rem;
+  top:1rem;
+}

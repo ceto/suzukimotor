@@ -21,9 +21,29 @@
     color:rgba(#fff,.75);
   }
 }
+
+.nldropdown {
+  background-color: $warning-color;
+  label {
+    color:$light-gray;
+    margin-bottom: .25rem;
+    font-size: 1rem;
+  }
+  .input-group {
+    margin-bottom: .5rem;
+  }
+  .button {
+    //background-color: $alert-color;
+    padding:.75rem .666rem;
+  }
+  input[type="email"] {
+    //background-color: $dark-gray;
+  }
+}
 .bottomsidebar {
 
 }
+
 
 
 .sitefooter {
@@ -55,6 +75,10 @@
   float:left;
   @include breakpoint(tablet) {
     margin-right: 5%;
+  }
+  i {
+    transform: translateY(.175em);
+    display: inline-block;
   }
 }
 
