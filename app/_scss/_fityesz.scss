@@ -1,12 +1,14 @@
 .fityesz {
   position: fixed;
-  right:-11rem;
-  right:0;
+  right:-9.5rem;
   top:calc(50% - 1.5rem);
   width:11rem;
   color:$white;
   transition:right .4s ease-in;
 
+  &.is_latszik {
+    right:0;
+  }
 }
 
 .fityesz__toggle {
@@ -23,8 +25,11 @@
     margin:1.75rem 0 0 .125rem;
     display: block;
     font-size: 1.25rem;
-
   }
+  &:hover {
+    color:$success-color;
+  }
+
 }
 
 .fityesz__body {

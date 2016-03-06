@@ -358,6 +358,16 @@ $(document).ready(function() {
   }
 
 
+  $('.fityesz__toggle').click(function(e) {
+    e.preventDefault();
+    $('.fityesz').toggleClass('is_latszik');
+    $('.fityesz').focus();
+  });
+
+  $('.fityesz').focusout(function() {
+    $(this).removeClass('is_latszik');
+  });
+
   /**** Dealers Map *******/
   // $('.onedealer').each(function(index) {
   //   var dealeritem = $(this);

@@ -87,3 +87,13 @@
     }
   }
 }
+
+.home__bottomlogos {
+  text-align: center;
+  img {
+    //display: block;
+    //margin:0 20%;
+    max-width: 80%;
+    margin:.5rem auto;
+  }
+}
