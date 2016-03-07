@@ -15,10 +15,10 @@
   text-align: center;
   color:rgba(#fff,.5);
   border:1px solid currentColor;
-  &:hover, &:focus {
+  &:hover {
     background-color: rgba($success-color,1);
     opacity: .75;
-    color:rgba(#fff,.75);
+    color:rgba(#fff,.75) !important;
   }
 }
 

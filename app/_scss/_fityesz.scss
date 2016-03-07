@@ -9,6 +9,9 @@
   &.is_latszik {
     right:0;
   }
+  .is-off-canvas-open & {
+    display: none;
+  }
 }
 
 .fityesz__toggle {

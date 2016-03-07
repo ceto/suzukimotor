@@ -1,5 +1,7 @@
 .off-canvas-wrapper {
   background-color: $warning-color;
+
+  overflow:hidden;
 }
 .is-open-right {
   @include breakpoint(medium) {
@@ -12,7 +14,9 @@
     transform: translateX(-33.333%);
   }
 }
-
+.off-canvas-content {
+  //position: relative;
+}
 .off-canvas.position-right {
   @include breakpoint(medium) {
     right:-420px;

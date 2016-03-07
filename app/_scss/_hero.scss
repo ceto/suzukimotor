@@ -106,6 +106,9 @@
 
 
 .hero__carousel {
+  .owl-item {
+    //width:100vw !important;
+  }
   .owl-controls {
     margin:0;
     // position: absolute;

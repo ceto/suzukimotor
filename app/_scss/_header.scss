@@ -79,7 +79,7 @@
   &.position-left {
     @include breakpoint(tablet) {
       left:0;
-      width:auto;
+      width:100%;
       position: static;
       max-height: none;
       overflow: hidden;
