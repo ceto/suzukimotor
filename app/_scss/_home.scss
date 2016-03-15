@@ -97,3 +97,25 @@
     margin:.5rem auto;
   }
 }
+
+.homenews {
+  //text-align: center;
+}
+.homenews__title {
+  //float:left;
+}
+
+.homenews__more {
+  margin:0 auto;
+  display: inline-block;
+  font-size: .75rem;
+  line-height: 1;
+  margin-top: .875rem;
+  color:$secondary-color;
+  //font-weight: $global-weight-bold;
+  .icon {
+    display: inline-block;
+    transform:translateY(.2em);
+    font-size:1.5em;
+  }
+}

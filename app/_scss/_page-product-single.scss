@@ -426,10 +426,33 @@
   width: 50%;
 }
 
+
 .prodaccblock {
 
+}
+.relacc-carousel {
+  margin-top: 2rem;
+}
+
+.relacc__more {
+  margin: 2rem 1rem 0;
+  font-size: .875rem;
+  text-align: right;
+  display: inline-block;
+  float:right;
+  color: $success-color;
+  .icon {
+    font-size: 1.75em;
+    display: inline-block;
+    transform: translateY(20%);
+  }
+  &:hover, &:focus {
+    color: $alert-color;
+  }
 }
 
 .prodrelblock {
   padding:4rem 0;
 }
+
+

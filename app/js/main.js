@@ -103,10 +103,10 @@ $(document).ready(function() {
       navigation : false,
       autoHeight: true,
       items : 4,
-      itemsDesktop : [1440,3],
+      itemsDesktop : [1280,3],
       itemsDesktopSmall : [1024,3],
       itemsTablet: [768,2],
-      itemsMobile: [480,1]
+      itemsMobile: [480,2]
   });
 
   $('.prodhero__carousel').owlCarousel({
