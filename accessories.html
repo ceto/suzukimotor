@@ -10,7 +10,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-    <link rel="stylesheet" href="/css/main.499c.css">
+    <link rel="stylesheet" href="/css/main.e0c6.css">
     <!-- endbuild -->
 
   </head>
@@ -18,6 +18,14 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v2.5&appId=197341800418088";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <div id="top" class="off-canvas-wrapper" data-magellan-target="top">
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
         <div class="off-canvas position-left offCanvasLeft ps--inverse" id="offCanvasLeft" data-off-canvas data-position="left">
@@ -47,8 +55,11 @@
 
     </div>
     <div class="columns tablet-4 tablet-text-right sitehead__actions">
-      <a href="#" class="button" data-toggle="offCanvasRight">Tesztvezetés<i class="icon icon--tesztvezetes"></i></a>
-      <a href="dealers.html" class="button">Kereskedők<i class="icon icon--map-marker"></i></a>
+      <div class="sitehead__actions__buttons">
+        <a href="#" class="button" data-toggle="offCanvasRight">Tesztvezetés<i class="icon icon--tesztvezetes"></i></a>
+        <a href="dealers.html" class="button">Kereskedők<i class="icon icon--map-marker"></i></a>
+      </div>
+
       <div class="langsel">
         <a href="#" class="active">En</a>
       </div>
@@ -75,21 +86,24 @@
           <div role="document" class="document">
             <main class="main">
               <header class="butikheader">
-  <div class="banner banner--white">
+<!--   <div class="banner banner--white">
     <h2 class="banner__title">Kiegészítők</h2>
-  </div>
+  </div> -->
   <div class="row">
-    <div class="columns tablet-8 tablet-centered text-center">
+    <div class="columns medium-8 medium-centered tablet-6 text-center">
       <div class="smarthead">
         <h2>Tartozékok</h2><span> | </span><a href="#">Ruházat</a>
       </div>
-      <nav class="butikmaincats">
+      <h1 class="butikfilteredtitle">Tartozékok ebben a kategóriában: <em>GSX S-1000 ABS</em></h1>
+
+
+<!--       <nav class="butikmaincats">
         <ul class="menu menu--innermain">
           <li><a class="active" href="#">Motor</a></li>
           <li><a href="#">Robogó</a></li>
           <li><a href="#">Quad</a></li>
         </ul>
-      </nav>
+      </nav> -->
     </div>
   </div>
 </header>
@@ -129,22 +143,54 @@
                 <li><a href="#">Four</a></li>
               </ul>
             </li>
-            <li><a href="#">Advenure</a></li>
+            <li><a href="#">Adventure</a></li>
             <li><a href="#">Cruiser</a></li>
-            <li><a href="#">Túrasport</a></li>
+            <li>
+              <a href="#">Robogók</a>
+              <ul class="menu vertical nested">
+                <li><a href="#">AN 725 300R</a></li>
+                <li><a href="#">GSF 1250A</a></li>
+                <li><a href="#">Hayabusha S50 ABS</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Quadok</a></li>
           </ul>
         </nav>
       </div>
     </div>
     <div class="columns tablet-9 xlarge-10">
-      <nav aria-label="You are here:" role="navigation">
-        <ul class="breadcrumbs">
-          <li><a href="#">Motor</a></li>
-          <li><a href="#">Túrasport</a></li>
-           <li><a href="#">Hayabusha S 2000 ABS</a></li>
-          <li><span class="show-for-sr">Current: </span> AN-2000</li>
-        </ul>
-      </nav>
+      <div class="row">
+        <div class="columns small-9">
+          <nav aria-label="You are here:" role="navigation">
+            <ul class="breadcrumbs">
+              <li><a href="#">Túrasport</a></li>
+               <li><a href="#">Hayabusha S 2000 ABS</a></li>
+              <li><span class="show-for-sr">Current: </span> AN-2000</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="columns small-3">
+          <div class="accsearch">
+              <a href="#" class="accsearch__toggle" data-toggle="nldropdown">Keresés <i class="icon icon--zoom"></i></a>
+              <div class="dropdown-pane nldropdown" id="nldropdown" data-close-on-click="true" data-v-offset="10" data-h-offset="10" data-dropdown data-auto-focus="true">
+                <form>
+                  <label for="accsearch__search">Kiegészítő keresése</label>
+                  <div class="input-group">
+                    <input id="accsearch__search" name="accsearch__search" class="input-group-field" type="search" placeholder="Mit keres">
+                    <div class="input-group-button">
+                      <input type="submit" class="button" value="Keresés">
+                    </div>
+                  </div>
+                </form>
+             </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
 
       <div class="butiklist isotopegrid">
         <div class="itemsizer"></div>
@@ -157,6 +203,9 @@
   <div class="card__text">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">h3 234.665.</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -168,6 +217,9 @@
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">SNA-2234.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -178,6 +230,9 @@
     <div class="card__text">
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">22-34.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -189,6 +244,9 @@
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">SNA-2234.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -199,6 +257,9 @@
     <div class="card__text">
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">22-34.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -209,6 +270,9 @@
   <div class="card__text">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">h3 234.665.</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -220,6 +284,9 @@
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">SNA-2234.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -230,6 +297,9 @@
     <div class="card__text">
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">22-34.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -240,6 +310,9 @@
   <div class="card__text">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">h3 234.665.</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -251,6 +324,9 @@
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">SNA-2234.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -261,6 +337,9 @@
     <div class="card__text">
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">22-34.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -271,6 +350,9 @@
   <div class="card__text">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">h3 234.665.</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -282,6 +364,9 @@
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">SNA-2234.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -292,6 +377,9 @@
     <div class="card__text">
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">22-34.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -303,6 +391,9 @@
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">SNA-2234.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -313,6 +404,9 @@
     <div class="card__text">
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">22-34.665</span>
+  </footer>
 </div></div>
         <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -323,6 +417,9 @@
   <div class="card__text">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">h3 234.665.</span>
+  </footer>
 </div></div>
       </div>
 

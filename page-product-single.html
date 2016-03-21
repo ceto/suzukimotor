@@ -10,7 +10,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-    <link rel="stylesheet" href="/css/main.499c.css">
+    <link rel="stylesheet" href="/css/main.e0c6.css">
     <!-- endbuild -->
 
   </head>
@@ -18,6 +18,14 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v2.5&appId=197341800418088";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <div id="top" class="off-canvas-wrapper" data-magellan-target="top">
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
         <div class="off-canvas position-left offCanvasLeft ps--inverse" id="offCanvasLeft" data-off-canvas data-position="left">
@@ -47,8 +55,11 @@
 
     </div>
     <div class="columns tablet-4 tablet-text-right sitehead__actions">
-      <a href="#" class="button" data-toggle="offCanvasRight">Tesztvezetés<i class="icon icon--tesztvezetes"></i></a>
-      <a href="dealers.html" class="button">Kereskedők<i class="icon icon--map-marker"></i></a>
+      <div class="sitehead__actions__buttons">
+        <a href="#" class="button" data-toggle="offCanvasRight">Tesztvezetés<i class="icon icon--tesztvezetes"></i></a>
+        <a href="dealers.html" class="button">Kereskedők<i class="icon icon--map-marker"></i></a>
+      </div>
+
       <div class="langsel">
         <a href="#" class="active">En</a>
       </div>
@@ -360,30 +371,30 @@
   <div class="row">
     <div class="columns">
       <h2 class="blocktitle">Műszaki adatok</h2>
-      <div class="row small-up-3 medium-up-6 featprodspec">
+      <div class="row small-up-3 medium-up-3 tablet-up-6 featprodspec">
         <div class="column featprodspec__item">
-          <h4 class="featprodspec__item__name">Fogyasztás</h4>
-          <p class="featprodspec__item__value">4.5<small>liter</small></p>
+          <h4 class="featprodspec__item__name">Motor térfogat</h4>
+          <p class="featprodspec__item__value">1200<small>cm<sup>3</sup></small></p>
         </div>
         <div class="column featprodspec__item">
-          <h4 class="featprodspec__item__name">Gyorsulás</h4>
-          <p class="featprodspec__item__value">132<small>km/h</small></p>
+          <h4 class="featprodspec__item__name">Teljesítmény</h4>
+          <p class="featprodspec__item__value">70<small>lóerő</small></p>
         </div>
         <div class="column featprodspec__item">
-          <h4 class="featprodspec__item__name">Sebesség</h4>
-          <p class="featprodspec__item__value">85.4<small>km/h</small></p>
+          <h4 class="featprodspec__item__name">Nyomaték</h4>
+          <p class="featprodspec__item__value">85.4<small>nM</small></p>
         </div>
         <div class="column featprodspec__item">
-          <h4 class="featprodspec__item__name">Lorem</h4>
-          <p class="featprodspec__item__value">890<small>ipsum</small></p>
+          <h4 class="featprodspec__item__name">Menetkész tömeg</h4>
+          <p class="featprodspec__item__value">890<small>kg</small></p>
         </div>
         <div class="column featprodspec__item">
-          <h4 class="featprodspec__item__name">Sebesség</h4>
-          <p class="featprodspec__item__value">1.24<small>km/h</small></p>
+          <h4 class="featprodspec__item__name">Üzemanyagtank</h4>
+          <p class="featprodspec__item__value">23<small>liter</small></p>
         </div>
         <div class="column featprodspec__item">
-          <h4 class="featprodspec__item__name">Sebesség</h4>
-          <p class="featprodspec__item__value">1.24<small>km/h</small></p>
+          <h4 class="featprodspec__item__name">Ülésmagasság</h4>
+          <p class="featprodspec__item__value">75<small>cm</small></p>
         </div>
       </div>
       <div class="row">
@@ -451,6 +462,9 @@
   <div class="card__text">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">h3 234.665.</span>
+  </footer>
 </div></div>
           <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -462,6 +476,9 @@
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">SNA-2234.665</span>
+  </footer>
 </div></div>
           <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -472,6 +489,9 @@
     <div class="card__text">
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">22-34.665</span>
+  </footer>
 </div></div>
           <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -482,6 +502,9 @@
   <div class="card__text">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">h3 234.665.</span>
+  </footer>
 </div></div>
           <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -493,6 +516,9 @@
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">SNA-2234.665</span>
+  </footer>
 </div></div>
           <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -503,6 +529,9 @@
     <div class="card__text">
     <p>Consectetur adipisicing elit. Corrupti et non, perferendis amet quibusdam ipsum explicabo dicta ea dolorum deleniti quia dolores veniam quisquam consectetur consequuntur porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">22-34.665</span>
+  </footer>
 </div></div>
           <div class="item"><div class="squareacc card">
   <figure class="card__fig">
@@ -513,6 +542,9 @@
   <div class="card__text">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, assumenda, rem. Nobis in, libero. Ratione explicabo ullam ex similique, blanditiis error commodi nobis autem, itaque sit, voluptatibus cupiditate quasi obcaecati.</p>
   </div>
+  <footer class="card__footer">
+    Cikszám: <span class="card__cikkszam">h3 234.665.</span>
+  </footer>
 </div></div>
         </div>
         <a href="accessories.html" class="relacc__more">Még több kiegészítő <i class="icon icon--chevron-circle-right"></i></a>
