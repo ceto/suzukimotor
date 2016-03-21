@@ -92,3 +92,28 @@ blockquote {
 //   display: inline-block;
 //   vertical-align: middle;
 // }
+
+
+.tabs-title {
+  display: inline-block;
+  float:none;
+  > a {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: $global-weight-bold;
+    display: inline-block;
+    &:hover, &:focus {
+      //color:$success-color;
+    }
+  }
+  &:not(:last-child) {
+    &:after {
+      content: '/';
+      font-weight: $global-weight-extrabold;
+    }
+  }
+}
+
+.tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
+  color:$secondary-color;
+}

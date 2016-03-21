@@ -502,11 +502,11 @@ $show-header-for-stacked: false;
 
 $tab-margin: 0;
 $tab-background: $white;
-$tab-background-active: $light-gray;
-$tab-border: $light-gray;
-$tab-item-color: foreground($tab-background, $primary-color);
-$tab-item-background-hover: $white;
-$tab-item-padding: .75rem .75rem;
+$tab-background-active: transparent;
+$tab-border: transparent;
+$tab-item-color: $body-font-color;
+$tab-item-background-hover: $light-gray;
+$tab-item-padding: .25rem .333rem;
 $tab-expand-max: 6;
 $tab-content-background: transparent;
 $tab-content-border: transparent;

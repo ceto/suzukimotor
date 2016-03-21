@@ -370,6 +370,17 @@ $(document).ready(function() {
     $(this).removeClass('is_latszik');
   });
 
+
+  // $('.accsearch__toggle').click(function(e) {
+  //   e.preventDefault();
+  //   $('.accsearch').toggleClass('open');
+  //   $('.accsearch form input').focus();
+  // });
+
+  // $('.accsearch form').focusout(function() {
+  //   $('.accsearch').removeClass('open');
+  // });
+
   /**** Dealers Map *******/
   // $('.onedealer').each(function(index) {
   //   var dealeritem = $(this);

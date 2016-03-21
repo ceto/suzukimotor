@@ -23,6 +23,7 @@
 }
 
 .nldropdown {
+  text-align:left;
   background-color: $warning-color;
   label {
     color:$light-gray;
@@ -73,6 +74,7 @@
   line-height: 1;
   font-size: 1.75rem;
   float:left;
+
   @include breakpoint(tablet) {
     margin-right: 5%;
   }
@@ -94,7 +96,7 @@
   font-size: 1.5rem;
   a {
     &:hover, &:focus {
-      color:$secondary-color;
+      //color:$secondary-color;
     }
   }
 }
@@ -118,7 +120,7 @@
       padding:.4rem 2% .125rem 0;
     }
     &:hover, &:focus {
-      color:$secondary-color;
+      //color:$secondary-color;
     }
   }
 }

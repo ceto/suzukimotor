@@ -2,22 +2,23 @@
   padding:2rem 0;
 
   .tabs {
-
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-align:center;
  
-
-    @include breakpoint('tablet') {
-      display: inline-block; 
-      margin-left:50%;
-      transform:translateX(-50%); 
-    }
   }
 }
 
 .prices__cattitle {
   text-align: center;
+  text-transform:uppercase;
+  margin:0;
 }
+
 .prices__subcattitle {
-  text-align: center !important;
-  display: block;
+  text-align: center;
+  margin:2rem 0 0;
+  color: $dark-gray;
+  font-size:1.5rem;
+  //display:none;
+  
 }

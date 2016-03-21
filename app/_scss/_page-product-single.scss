@@ -365,8 +365,8 @@
 .featprodspec {
   margin-bottom: 2rem;
   padding:2.5rem 0 .5rem;
-  border-bottom: 1px solid $light-gray;
-  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $medium-gray;
+  border-top: 1px solid $medium-gray;
 }
 .featprodspec__item {
   color: $dark-gray;
@@ -375,12 +375,12 @@
 }
 .featprodspec__item__name {
   line-height: 1;
-  font-size: .875rem;
+  font-size: .75rem;
   margin-bottom: 0;
   font-weight: $global-weight-normal;
   text-transform: uppercase;
   @include breakpoint(medium) {
-    font-size: 1rem;
+    font-size: .75rem;
   }
 }
 .featprodspec__item__value {

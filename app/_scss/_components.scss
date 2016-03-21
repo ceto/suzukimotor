@@ -239,10 +239,11 @@
     padding:.125rem 0 1rem 0;
     //display: none;
   }
-  > * last-child {
-    margin-bottom: 0;
+  p:last-child {
+    margin-bottom:0;
   }
 }
+
 
 
 .card__footer {
@@ -250,14 +251,20 @@
   line-height: 1;
   padding:.75rem 1rem;
   // background-color: $medium-gray;
-  color:$dark-gray;
+  color:$light-gray;
   .card--transparent & {
     padding:.125rem 0 1rem;
+    color:$dark-gray;
   }
 }
 
 .card__time {
   display: block;
+  font-variant: small-caps;
+  font-weight: $global-weight-extrabold;
+}
+
+.card__cikkszam {
   font-variant: small-caps;
   font-weight: $global-weight-extrabold;
 }

@@ -20,6 +20,9 @@
   .card__text {
     display: none;
   }
+  .card__footer {
+    display: none;
+  }
 }
 
 
@@ -112,7 +115,7 @@
   display:table-row;
   width:100%;
   &:not(:last-child) {
-    border-bottom: 1px solid $light-gray; 
+    border-bottom: 1px solid $medium-gray;
   }
 }
 .stable__cell {
@@ -123,18 +126,55 @@
 
 
 .stable.pricetable {
+  display: block;
+  margin:1rem 0;
+  @include breakpoint(medium){
+      display: table;
+    }
+  .stable__row {
+    @include clearfix();
+    display: block;
+    padding-bottom: 1rem;
+    @include breakpoint(medium){
+      display: table-row;
+      padding-bottom:0;
+    }
+  }
   .stable__cell {
-    width:65%;
+    width:60%;
+    display: block;
+    float:left;
+    padding-bottom: 0;
+    @include breakpoint(medium){
+      display: table-cell;
+      float:none;
+      padding-bottom: 1rem;
+      width:65%;
+    }
   }
   .stable__cell:first-child {
-    width:15%;
-    min-width:7rem;
+    width:30%;
+    max-width:8rem;
     padding-left: 0;
+    @include breakpoint(medium){
+      width:22%;
+      max-width: none;
+      img {
+         max-width: 8rem;
+      }
+    }
+    // img {
+    //    max-width: 10rem;
+    // }
   }
   .stable__cell:last-child {
-    width:20%;
-    text-align: right;
     padding-right: 0;
+    padding-top: .125rem;
+    @include breakpoint(medium){
+      width:20%;
+      padding-top: 1rem;
+      text-align: right;
+    }
   }
   .badge {
     font-size: .75rem;
@@ -182,7 +222,8 @@
 
 .tableprice {
   white-space: nowrap;
-  //font-weight: $global-weight-extrabold;
-
+  font-size: 1.125rem;
+  font-weight: $global-weight-extrabold;
+  //color:$secondary-color;
 
 }
