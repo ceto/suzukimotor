@@ -13,7 +13,7 @@
     line-height: 1;
     margin:0;
     height:3.666rem;
-    padding:.333rem 1rem 0 2.5rem;
+    padding:.333rem 2.5rem 0 1rem;
     //width:7.3333rem;
     background-color: $warning-color;
     //color:$success-color;
@@ -22,7 +22,7 @@
       display: inline-block;
       font-size: 1.5rem;
       position: absolute;
-      left:.75rem;
+      right:.75rem;
       top:1.125rem;
       //color:$secondary-color;
     }
@@ -31,7 +31,7 @@
     }
   }
   .openmenu {
-    float:left;
+    float:right;
   }
   .dealersmenu {
     background-color: $white;
@@ -47,7 +47,7 @@
 .mobileheadlogo {
   margin:0;
   padding:0;
-  float:right;
+  float:left;
   border-left: 1px solid $medium-gray;
   a {
     display: block;
@@ -155,13 +155,8 @@
       display: block;
     }
   }
-  //text-align: right;
-  //float:right;
-  // position: absolute;
-  // top:0;
-  // bottom:50%;
-  // right:0;
-  //width:17rem;
+
+  
 
   .button {
     position: relative;
@@ -252,7 +247,8 @@
     margin:0;
     padding:0;
     font-size: 1.333rem;
-    //background-color: transparent;
+    height:2.5rem;
+    overflow: hidden;
   }
   > li {
     display: block;
@@ -260,7 +256,7 @@
       float:left;
     }
     > a {
-      padding:.4em .666em .3333em;
+      padding:.5em .666em .4em;
       &:hover, &:focus {
         color:$primary-color;
       }
@@ -290,6 +286,8 @@
     position: static;
     ///background-color: transparent;
     border-top: none;
+    height:2.5rem;
+    overflow:hidden;
   }
   > li {
     display: inline-block;
@@ -300,8 +298,8 @@
     > a {
       padding:.5em .5em .5em;
       @include breakpoint(tablet) {
-        padding:.875em .875em .875em;
-        margin-top: 1px;
+        padding:1em .875em .875em;
+        //margin-top: 1px;
       }
       //color:$white;
       //color:$medium-gray;
