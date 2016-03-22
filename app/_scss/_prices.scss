@@ -1,10 +1,13 @@
+.banner--prices {
+  background-image:url('../img/fejlec/arlista.jpg');
+}
 .priceblock {
   padding:2rem 0;
 
   .tabs {
     margin-bottom: 2rem;
     text-align:center;
- 
+
   }
 }
 
@@ -20,5 +23,5 @@
   color: $dark-gray;
   font-size:1.5rem;
   //display:none;
-  
+
 }

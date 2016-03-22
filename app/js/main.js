@@ -97,18 +97,6 @@ $(document).ready(function() {
       itemsMobile: [480,2]
   });
 
-  // $('.relacc-carousel').owlCarousel({
-  //     slideSpeed : 300,
-  //     paginationSpeed : 800,
-  //     pagination: false,
-  //     navigation : true,
-  //     autoHeight: true,
-  //     items : 4,
-  //     itemsDesktop : [1280,3],
-  //     itemsDesktopSmall : [1024,3],
-  //     itemsTablet: [768,2],
-  //     itemsMobile: [480,2]
-  // });
 
   $('.prodhero__carousel').owlCarousel({
       slideSpeed : 300,
@@ -185,7 +173,7 @@ $(document).ready(function() {
       paginationSpeed : 800,
       singleItem:true,
       pagination: true,
-      navigation : true,
+      navigation : false,
       afterInit: timelinePager,
       afterUpdate: timelinePager,
       afterAction: function(el){

@@ -1,3 +1,7 @@
+.banner--news {
+  background-image:url('../img/fejlec/hirek.jpg');
+}
+
 .singlepost__header {
   //text-align: center;
   .lead {
@@ -41,7 +45,4 @@
 }
 
 .singlepost {
-  .gallery {
-    background-color: $light-gray;
-  }
 }
