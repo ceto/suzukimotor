@@ -10,7 +10,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-    <link rel="stylesheet" href="/css/main.f428.css">
+    <link rel="stylesheet" href="/css/main.a07d.css">
     <!-- endbuild -->
 
   </head>
@@ -96,7 +96,12 @@
 </header> -->
 <section class="dealersblock">
   <div class="row collapse">
-    <div class="columns tablet-5 xlarge-4 xxxlarge-6">
+    <div class="columns tablet-7 xlarge-8 xxxlarge-6">
+      <div class="mapblock">
+        <div id="map"></div>
+      </div>
+    </div>
+    <div class="columns tablet-5 tablet-pull-7 xlarge-4 xlarge-pull-8 xxxlarge-6 xxxlarge-pull-6">
       <div class="dealers">
         <h2>Válassz nárkakereskedőt</h2>
         <ul class="dealerslist">
@@ -107,7 +112,7 @@
               <a class="infocircle" href="#"><i class="icon icon--info-circle"></i></a>
             </div>
             <div class="dealerinfo">
-              <p>6500 Baja, Garibaldi u. 30.<br>
+              <p>6500 Balatonboglár, Garibaldi u. 30.<br>
               Tel.: <a href="tel:+36 79 422 761">+36 79 422 761</a><br>
               Tel.: <a href="tel:+36 79 422 761">+36 30 123 256</a><br>
               Email: <a href="mailto:info@forger.hu">info@forger.hu</a>
@@ -125,12 +130,35 @@
               <a href="tel:003679422761"><i class="icon icon--phone"></i></a>
               <a class="infocircle" href="#"><i class="icon icon--info-circle"></i></a>
             </div>
+            <div class="dealerinfo">
+              <p>4200 Bicske, Garibaldi u. 30.<br>
+              Tel.: <a href="tel:+36 79 422 761">+36 30 123 256</a><br>
+              Email: <a href="mailto:info@forger.hu">info@forger.hu</a>
+              </p>
+              <p><strong>Nyitva tartás</strong><br>
+                Hétköznap 10-18 óráig<br>
+                Szombaton 10-13 óráig
+              </p>
+              <p><small><a href="http://www.forger.hu" target="_blank">Kereskedő honlapja</a></small></p>
+            </div>
           </li>
           <li class="onedealer" data-lat="47.035028" data-lng="19.4304534" data-name="Motor Center Gyulai">
             <h3><a href="#">Budapest <small>Motor Center Gyulai</small></a></h3>
             <div class="actions">
               <a href="tel:003679422761"><i class="icon icon--phone"></i></a>
               <a class="infocircle" href="#"><i class="icon icon--info-circle"></i></a>
+            </div>
+            <div class="dealerinfo">
+              <p>1200 Budapest, Garibaldi u. 30.<br>
+              Tel.: <a href="tel:+36 79 422 761">+36 79 422 761</a><br>
+              Tel.: <a href="tel:+36 79 422 761">+36 30 123 256</a><br>
+              Email: <a href="mailto:info@forger.hu">info@forger.hu</a>
+              </p>
+              <p><strong>Nyitva tartás</strong><br>
+                Hétköznap 10-18 óráig<br>
+                Szombaton 10-13 óráig
+              </p>
+              <p><small><a href="http://www.forger.hu" target="_blank">Kereskedő honlapja</a></small></p>
             </div>
           </li>
           <li class="onedealer">
@@ -184,45 +212,8 @@
           </li>
         </ul>
       </div>
-
     </div>
-    <div class="columns tablet-7 xlarge-8 xxxlarge-6">
-      <div class="mapblock">
-        <div id="map"></div>
-        <script>
-          var map;
-          function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: 47.350280, lng: 19.045346},
-              zoom: 6
-            });
-            var marker = [];
-            var dname = [];
-            var dcont = [];
-            var dealerinfo = [];
-            var dealers = document.querySelectorAll('.onedealer');
 
-            var infowindow = null;
-
-            infowindow = new google.maps.InfoWindow({
-              content: "holding..."
-            });
-
-            for (var i = 0, len = dealers.length; i < len; i++) {
-              if (dealers[i].getAttribute('data-lat') && dealers[i].getAttribute('data-lng')) {
-                dname[i] = dealers[i].getAttribute('data-name');
-                marker[i] = new google.maps.Marker({
-                  position: {lat: Number(dealers[i].getAttribute('data-lat')), lng: Number(dealers[i].getAttribute('data-lng'))},
-                  map: map,
-                  title: dealers[i].getAttribute('data-name')
-                });
-              }
-            }
-          }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsWskVN4oYCTYSEq_cPZj2wtXpqFeEqBU&callback=initMap" async defer="defer"></script>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -351,7 +342,7 @@
 
     <script src="/js/vendor.d8ec.js"></script>
 
-<script src="/js/script.c5cd.js"></script>
+<script src="/js/script.dfe0.js"></script>
 
 
 
