@@ -83,11 +83,12 @@ $(document).ready(function() {
 
 
 
-  $('.relpost-carousel').owlCarousel({
+  $('.relpost-carousel, .relacc-carousel').owlCarousel({
       slideSpeed : 300,
       paginationSpeed : 800,
       pagination: false,
-      navigation : false,
+      navigation : true,
+      navigationText: ['<i class="icon icon--chevron-circle-left"></i>','<i class="icon icon--chevron-circle-right"></i>'],
       autoHeight: true,
       items : 4,
       itemsDesktop : [1280,3],
@@ -96,18 +97,18 @@ $(document).ready(function() {
       itemsMobile: [480,2]
   });
 
-  $('.relacc-carousel').owlCarousel({
-      slideSpeed : 300,
-      paginationSpeed : 800,
-      pagination: false,
-      navigation : false,
-      autoHeight: true,
-      items : 4,
-      itemsDesktop : [1280,3],
-      itemsDesktopSmall : [1024,3],
-      itemsTablet: [768,2],
-      itemsMobile: [480,2]
-  });
+  // $('.relacc-carousel').owlCarousel({
+  //     slideSpeed : 300,
+  //     paginationSpeed : 800,
+  //     pagination: false,
+  //     navigation : true,
+  //     autoHeight: true,
+  //     items : 4,
+  //     itemsDesktop : [1280,3],
+  //     itemsDesktopSmall : [1024,3],
+  //     itemsTablet: [768,2],
+  //     itemsMobile: [480,2]
+  // });
 
   $('.prodhero__carousel').owlCarousel({
       slideSpeed : 300,
@@ -121,22 +122,14 @@ $(document).ready(function() {
     function customPager() {
       $.each(this.owl.userItems, function (i) {
         var titleData = jQuery(this).find('.modelcat__item__title').text();
-        var paginationLinks = jQuery('.modelcat__carousel1 .owl-controls .owl-pagination .owl-page');
-        $(paginationLinks[i]).append(titleData);
-      });
-    }
-
-    function customPager2() {
-      $.each(this.owl.userItems, function (i) {
-        var titleData = jQuery(this).find('.modelcat__item__title').text();
-        var paginationLinks = jQuery('.modelcat__carousel2 .owl-controls .owl-pagination .owl-page');
+        var paginationLinks = jQuery(this).closest('.owl-carousel').find('.owl-pagination .owl-page');
         $(paginationLinks[i]).append(titleData);
       });
     }
 
 
 
-    $('.modelcat__carousel1').owlCarousel({
+    $('.modelcat__carousel').owlCarousel({
 
       slideSpeed : 300,
       paginationSpeed : 800,
@@ -146,29 +139,6 @@ $(document).ready(function() {
       navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
       afterInit: customPager,
       afterUpdate: customPager,
-      afterAction: function(el){
-         this.$owlItems.find('.modelcat__item').removeClass('is_active');
-         this.$owlItems.find('.modelcat__item').removeClass('is_next');
-         this.$owlItems.find('.modelcat__item').removeClass('is_prev');
-
-         this.$owlItems.eq(this.currentItem).find('.modelcat__item').addClass('is_active');
-
-         this.$owlItems.eq(this.currentItem+1).find('.modelcat__item').addClass('is_next');
-
-         this.$owlItems.eq(this.currentItem-1).find('.modelcat__item').addClass('is_prev');
-      }
-
-    });
-
-    $('.modelcat__carousel2').owlCarousel({
-
-      slideSpeed : 300,
-      paginationSpeed : 800,
-      singleItem:true,
-      pagination: true,
-      navigation : false,
-      afterInit: customPager2,
-      afterUpdate: customPager2,
       afterAction: function(el){
          this.$owlItems.find('.modelcat__item').removeClass('is_active');
          this.$owlItems.find('.modelcat__item').removeClass('is_next');
@@ -204,7 +174,7 @@ $(document).ready(function() {
     function timelinePager() {
       $.each(this.owl.userItems, function (i) {
         var titleData = jQuery(this).find('.timeline__date').text();
-        var paginationLinks = jQuery('.timeline__carousel .owl-controls .owl-pagination .owl-page');
+        var paginationLinks = jQuery(this).closest('.owl-carousel').find('.owl-pagination .owl-page');
         $(paginationLinks[i]).append(titleData);
       });
     }
@@ -215,7 +185,7 @@ $(document).ready(function() {
       paginationSpeed : 800,
       singleItem:true,
       pagination: true,
-      navigation : false,
+      navigation : true,
       afterInit: timelinePager,
       afterUpdate: timelinePager,
       afterAction: function(el){
@@ -250,7 +220,7 @@ $(document).ready(function() {
 
 
 
-    /*** Nagyon durva galéria carousel szinronban tartva ******/
+    /*** Galéria carousel szinronban tartva ******/
 
 
   function syncPosition(el){
@@ -280,7 +250,8 @@ $(document).ready(function() {
   var sync2 = $('.thumbs__carousel');
 
   sync1.owlCarousel({
-      navigation : false,
+      navigation : true,
+      navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
       pagination: false,
       paginationSpeed : 400,
       singleItem:true,

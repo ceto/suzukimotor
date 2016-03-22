@@ -14,27 +14,101 @@
   }
 }
 
-.gallery__carousel {
 
+
+
+.gallery__carousel {
   .owl-wrapper-outer {
     @include breakpoint('tablet') {
       overflow:visible;
     }
-    &.autoHeight {
-    }
   }
-
   .owl-wrapper {
     @include breakpoint('tablet') {
       overflow:hidden;
     }
   }
 
-  .item {
+  .owl-controls {
+    margin:0;
+    .owl-pagination {
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 1.125rem;
+      line-height: 1;
+      margin:1.5rem auto 0;
+
+      .owl-page {
+        padding:.25rem .125rem;
+        &:not(:last-child):after {
+          display: inline-block;
+          content:'/';
+          margin:0 .125rem 0 .25rem;
+          color: $primary-color !important;
+        }
+
+        &.active {
+         color: $success-color;
+        }
+        &:hover, &:focus {
+          color:$secondary-color;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .owl-buttons {
+      position: absolute;
+      width:80%;
+      left:10%;
+      @include breakpoint(tablet) {
+        width:100%;
+        left:0;
+      }
+
+      //bottom:49.5%;
+      bottom: 50%;
+      //z-index: -1;
+      pointer-events:none;
+      > div {
+        position: absolute;
+        top:-1em;
+        pointer-events:auto;
+        border-radius: 0;
+        margin:0;
+        padding:1rem 2vw;
+        font-size: 2rem;
+        line-height: 1;
+        background-color: transparent;
+        color:$white;
+        opacity: 1;
+        @include breakpoint(tablet) {
+          font-size: 3rem;
+          top:-1.125em;
+        }
+        &:hover &:focus {
+
+        }
+      }
+      > .owl-prev {
+        //float:left;
+        //padding-right: 1rem;
+        right:100%;
+      }
+      > .owl-next {
+        //float:right;
+        //padding-left: 1rem;
+        left:100%;
+      }
+
+    }
 
   }
-
 }
+
+
 
 .gallery__item{
   display: block;
@@ -97,7 +171,10 @@
     //text-transform: uppercase;
     line-height: 1;
     margin:0;
-    font-size: 1.75vw;
+    font-size: 1rem;
+    @include breakpoint('tablet') {
+      font-size: 1.75vw;
+    }
   }
   .is_active & {
     opacity:1;
