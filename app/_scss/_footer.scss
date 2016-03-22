@@ -2,9 +2,9 @@
   display: block;
   width:1.666em;
   height: 1.666em;
-  background-color: rgba(#000,.333);
-  opacity: .5;
-  color:$white;
+  background-color: rgba(#000 ,.333);
+  opacity: 0;
+  color:#fff;
   font-size: 2rem;
   line-height: 1;
   text-align: center;
@@ -15,10 +15,15 @@
   text-align: center;
   color:rgba(#fff,.5);
   border:1px solid currentColor;
+  transition:opacity .2s linear;
   &:hover {
     background-color: rgba($success-color,1);
     opacity: .75;
     color:rgba(#fff,.75) !important;
+  }
+
+  &.latszik {
+    opacity: .5;
   }
 }
 

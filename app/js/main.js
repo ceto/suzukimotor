@@ -29,6 +29,12 @@ jQuery(document).foundation();
 
 $(document).ready(function() {
 
+
+  // $(document).imagesLoaded( function() {
+
+  // });
+
+
   $('.main').fitVids();
 
   $('.popup-video').magnificPopup({
@@ -327,6 +333,19 @@ $(document).ready(function() {
 
   $('.fityesz').focusout(function() {
     $(this).removeClass('is_latszik');
+  });
+
+  $(function() {
+    var menjfel = $('.tothetop');
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 500) {
+            menjfel.addClass('latszik');
+        } else {
+            menjfel.removeClass('latszik');
+        }
+    });
   });
 
 
