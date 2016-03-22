@@ -372,4 +372,66 @@ $(document).ready(function() {
   // });
 
 
+  if ( $('#map').length > 0 ) {
+    $.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyDsWskVN4oYCTYSEq_cPZj2wtXpqFeEqBU', function(){
+
+
+
+        function initMap() {
+
+          var infowindow = new google.maps.InfoWindow();
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 47.350280, lng: 19.045346},
+            zoom: 8
+          });
+
+          var markers = [];
+
+          function placeMarker(controller, lat, lng, html ) {
+            var latLng = new google.maps.LatLng( lat, lng );
+            var marker = new google.maps.Marker({
+              position : latLng,
+              map      : map
+            });
+            google.maps.event.addListener(marker, 'click', function(){
+              infowindow.close(); // Close previously opened infowindow
+              infowindow.setContent( '<div class="infowindow">'+ html +'</div>');
+              infowindow.open(map, marker);
+              $('.onedealer').removeClass('is-selected');
+              $(controller).addClass('is-selected');
+            });
+            $(controller).find('h3 a, .infocircle').on('click', function(e) {
+              e.preventDefault();
+              google.maps.event.trigger(marker, 'click');
+            });
+
+          }
+
+
+
+          var i = 0;
+          $('.onedealer').each(function() {
+            if (this.getAttribute('data-lat') && this.getAttribute('data-lng')) {
+              placeMarker(
+                this,
+                this.getAttribute('data-lat'),
+                this.getAttribute('data-lng'),
+                '<h3>' + $(this).find('h3 a').html() + '</h3>' + $(this).find('.dealerinfo').html()
+              );
+            }
+          })
+
+        }
+
+
+        initMap();
+
+      });
+
+
+
+  }
+
+
+
 });

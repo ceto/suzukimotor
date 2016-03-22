@@ -88,8 +88,11 @@
   line-height: 1;
   font-size: 9vw;
   @include breakpoint('tablet') {
-    font-size: 6vw;
+    font-size: 5vw;
     margin:0;
+  }
+  @include breakpoint('xxxlarge') {
+    font-size:4rem;
   }
 }
 
@@ -111,6 +114,10 @@
   @include breakpoint('tablet') {
     margin: 5vh 0 0;
 
+  }
+
+  @include breakpoint('xxxlarge') {
+    margin: 6rem 0 0;
   }
   .columns {
 
@@ -206,12 +213,12 @@
   }
 }
 
-// .anchornav.anchornav--singleprod {
-//   opacity: 0;
-//   &.is-stuck {
-//     opacity:1;
-//   }
-// }
+.anchornav.anchornav--singleprod {
+   opacity: 0;
+   &.is-stuck {
+     opacity:1;
+   }
+}
 
 
 .anchornav__title {

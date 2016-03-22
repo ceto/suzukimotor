@@ -16,6 +16,20 @@
     margin: 0 1rem 1rem;
   }
 }
+
+.onedealer.is-selected {
+  border:1px solid rgba($success-color,.25);
+  //background-color: $warning-color;
+  a {
+    //color:$success-color;
+  }
+  .dealerinfo {
+    display: block;
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+}
 .dealerslist {
   margin:0;
   padding:0;
@@ -23,11 +37,12 @@
   > li {
     padding:.5rem 1rem;
     line-height: 1;
+    border:1px solid transparent;
   }
 
   a {
     color:inherit;
-    &:hover, &:focus {
+    &:hover {
       color:$success-color;
       small {
         color:#fff;
@@ -72,7 +87,7 @@
 
 
 .mapblock {
-  height:20rem;
+  height:28rem;
 
   @include breakpoint(tablet) {
     position: absolute;
@@ -95,6 +110,37 @@
 
 #map {
   height:100%;
+}
+
+.infowindow {
+  font-size: .875rem;
+  padding-left: .5rem;
+  h3 {
+    margin:.5rem 0;
+    font-weight: $global-weight-extrabold;
+    font-size: 1rem;
+    line-height: 1;
+    color:$success-color;
+
+    small {
+      display: block;
+      font-size: 150%;
+      line-height: 1;
+      color:$primary-color;
+    }
+  }
+  color:$body-font-color;
+  font-weight: $global-weight-normal;
+  strong {
+    font-weight: $global-weight-bold;
+  }
+  a {
+    color:$success-color;
+  }
+
+  p:last-child {
+    margin-bottom: .5rem;
+  }
 }
 
 

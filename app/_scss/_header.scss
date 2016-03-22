@@ -99,10 +99,10 @@
       max-width:100%;
     }
     @include breakpoint('large') {
-      //max-width:85%;
+      max-width:85%;
     }
     @include breakpoint('xxxlarge') {
-      //max-width:$global-width;
+      max-width:$global-width;
     }
   }
   @include breakpoint(tablet) {

@@ -4,6 +4,7 @@
   height: 1.666em;
   background-color: rgba(#000 ,.333);
   opacity: 0;
+  visibility: hidden;
   color:#fff;
   font-size: 2rem;
   line-height: 1;
@@ -24,6 +25,7 @@
 
   &.latszik {
     opacity: .5;
+    visibility:visible;
   }
 }
 
