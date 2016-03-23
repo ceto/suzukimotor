@@ -150,10 +150,25 @@
     pointer-events: none;
 
   }
-
-
 }
 
+
+.gallery__item img {
+  max-height: 66vmax;
+  @include breakpoint(tablet) {
+    max-height: 57vmax;
+  }
+  @include breakpoint(xlarge) {
+    max-height: 57vmax;
+  }
+  @include breakpoint(xxlarge) {
+    max-height: 52vmax;
+  }
+
+  @include breakpoint(xxxlarge) {
+    max-height: 768px;
+  }
+}
 .gallery__item__text {
   transition:opacity .6s ease-in-out .2s;
   opacity:0;
