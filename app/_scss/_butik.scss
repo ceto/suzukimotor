@@ -1,13 +1,11 @@
 .butikheader {
-  background-color: $primary-color;
-  padding-bottom: 3vw;
-
-
-
+  //background-color: $primary-color;
 }
-
+.butikfej {
+  //background-color: #fff;
+}
 .smarthead {
-  color:$white;
+  color:$secondary-color;
   font-weight: 900;
   margin:3vw 0 0;
   font-size: 2.5rem;
@@ -20,7 +18,7 @@
   a {
     line-height: 1;
     display: inline-block;
-    color:$dark-gray;
+    color:$medium-gray;
     &:hover, &:focus {
       color:$success-color;
     }
@@ -31,16 +29,16 @@
 }
 
 .butikfilteredtitle {
-  color:$light-gray;
+  //color:$light-gray;
   font-size: .875rem;
-  margin:1rem 0 0;
+  margin:.5rem 0 3vw;
  // text-align: left;
  font-weight: $global-weight-normal;
   em {
     display: block;
     font-style: normal;
     font-size: 200%;
-    color:$medium-gray;
+    color:$dark-gray;
     //color:$light-gray;
     font-weight: $global-weight-extrabold;
   }
