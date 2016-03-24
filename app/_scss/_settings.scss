@@ -190,7 +190,7 @@ $input-background-invalid: $alert-color;
 $form-label-color-invalid: $alert-color;
 $input-error-color: $alert-color;
 $input-error-font-size: rem-calc(12);
-$input-error-font-weight: $global-weight-bold;
+$input-error-font-weight: $global-weight-normal;
 
 // 7. Accordion
 // ------------
@@ -336,14 +336,14 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: $dark-gray;
+$form-label-color: $body-font-color;
 $form-label-font-size: rem-calc(14);
 $form-label-font-weight: $global-weight-extrabold;
 $form-label-line-height: 1.8;
 $select-background: $white;
-$select-triangle-color: #333;
+$select-triangle-color: $success-color;
 $select-radius: $global-radius;
-$input-color: $black;
+$input-color: $body-font-color;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-background: $white;
@@ -351,7 +351,7 @@ $input-background-focus: $white;
 $input-background-disabled: $light-gray;
 $input-border: 1px solid $medium-gray;
 $input-border-focus: 1px solid $dark-gray;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
+$input-shadow: inset 0 0 5px rgba($black, 0.2);
 $input-shadow-focus: 0 0 3px $success-color;
 $input-cursor-disabled: default;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
