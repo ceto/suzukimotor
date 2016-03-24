@@ -1,5 +1,5 @@
 .butikheader {
-  //background-color: $primary-color;
+  background-color: $white;
 }
 .butikfej {
   //background-color: #fff;
@@ -42,6 +42,10 @@
     //color:$light-gray;
     font-weight: $global-weight-extrabold;
   }
+}
+
+.butikblock {
+  background-color: $white;
 }
 
 .accsearch {
