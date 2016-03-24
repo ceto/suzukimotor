@@ -1,61 +1,73 @@
 .mobilehead {
-  background-color: $warning-color;
   //border-bottom: 1px solid $black;
-  color:$white;
+  color: $white;
+  background-color: $warning-color;
   a {
-    color:inherit;
+    color: inherit;
   }
   .button {
+    font-size: 1.25rem;
+    //color:$success-color;
+    font-weight: $global-weight-bold;
+    line-height: 1;
+
+    position: relative;
 
     display: block;
-    position: relative;
-    font-size: 1.25rem;
-    line-height: 1;
-    margin:0;
-    height:3.666rem;
-    padding:.333rem 2.5rem 0 1rem;
+
+    height: 3.666rem;
+    margin: 0;
+    padding: .333rem 2.5rem 0 1rem;
     //width:7.3333rem;
+
     background-color: $warning-color;
-    //color:$success-color;
-    font-weight:$global-weight-bold;
     i {
-      display: inline-block;
       font-size: 1.5rem;
+
       position: absolute;
-      right:.75rem;
-      top:1.125rem;
+      top: 1.125rem;
+      right: .75rem;
+
+      display: inline-block;
       //color:$secondary-color;
     }
     &:hover {
-      color:$success-color;
+      color: $success-color;
     }
   }
   .openmenu {
-    float:right;
+    float: right;
   }
   .dealersmenu {
-    background-color: $white;
-    color:$primary-color;
-    float:left;
-    width:auto;
+    float: left;
+
+    width: auto;
+
+    color: $primary-color;
     border-right: 1px solid $medium-gray;
+    background-color: $white;
     //padding-left: 1rem;
     //padding-right: 1rem;
   }
 }
 
 .mobileheadlogo {
-  margin:0;
-  padding:0;
-  float:left;
+  float: left;
+
+  margin: 0;
+  padding: 0;
+
   border-left: 1px solid $medium-gray;
   a {
     display: block;
-    height:3.666rem;
-    width:7.333rem;
-    text-indent: 100%;
-    white-space: nowrap;
     overflow: hidden;
+
+    width: 7.333rem;
+    height: 3.666rem;
+
+    white-space: nowrap;
+    text-indent: 100%;
+
     background-image: url('../img/logodouble_small.jpg');
     background-repeat: no-repeat;
     background-position: left top;
@@ -64,266 +76,291 @@
 }
 
 
-.off-canvas-wrapper-inner {
-  &.is-open-left {
-    @include breakpoint(tablet) {
-      transform: none;
-      .js-off-canvas-exit.is-visible {
-        display: none !important;
-      }
-    }
-  }
-}
-
-.off-canvas {
-  &.position-left {
-    @include breakpoint(tablet) {
-      left:0;
-      width:100%;
-      position: static;
-      max-height: none;
-      overflow: hidden;
-      z-index: 1;
-    }
-  }
-}
-
 .sitehead {
   position: relative;
-  background-color: $warning-color;
-  height: 100vh;
-  min-height: 32rem;
+  height: 0;
+  overflow: hidden;
+  transition:all .4s ease;
+  background-color: $secondary-color;
+
+  &.open {
+    height: 32rem;
+  }
+
+  @include breakpoint(tablet) {
+    height: 5rem;
+
+    //background-image: linear-gradient(0deg, $dark-gray 50%, $alert-color 50%, $alert-color 52%, $secondary-color 52%);
+    background-image: linear-gradient(0deg, $dark-gray 50%,  $secondary-color 50%);
+    &.open {
+      height: 5rem;
+    }
+  }
   .row {
     //background-color: #fff;
     @include breakpoint('tablet') {
-      max-width:100%;
+      max-width: 100%;
     }
     @include breakpoint('large') {
-      max-width:85%;
+      max-width: 85%;
     }
     @include breakpoint('xxxlarge') {
-      max-width:$global-width;
+      max-width: $global-width;
     }
-  }
-  @include breakpoint(tablet) {
-    height:5rem;
-    min-height: 5rem;
-
-    //background-image: linear-gradient(0deg, $dark-gray 50%, $alert-color 50%, $alert-color 52%, $secondary-color 52%);
-
-    background-image: linear-gradient(0deg, $dark-gray 50%,  $secondary-color 50%);
   }
 }
 
 
 
 .headlogo {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
+
   background-color: $white;
+
   @include breakpoint(tablet) {
-    float:left;
+    float: left;
   }
   a {
     display: block;
-    height:3.666rem;
-    width:7.333rem;
-    text-indent: 100%;
-    white-space: nowrap;
     overflow: hidden;
-    background-image: url('../img/logodouble_small.jpg');
 
+    width: 7.333rem;
+    height: 3.666rem;
+
+    white-space: nowrap;
+    text-indent: 100%;
+
+    background-image: url('../img/logodouble_small.jpg');
     background-repeat: no-repeat;
     background-position: left top;
     background-size: auto 100%;
+
     @include breakpoint(tablet) {
+      width: 10rem;
+      height: 5rem;
+
       background-image: url('../img/logodouble.jpg');
-      height:5rem;
-      width:10rem;
     }
   }
 }
 
 .sitehead__actions {
-  background-color: $primary-color;
   position: relative;
+
+  background-color: $primary-color;
+
   @include breakpoint(tablet) {
-    background-color: transparent;
     height: 2.5rem;
+
+    background-color: transparent;
   }
-
-
   .button {
-    position: relative;
-    display: block;
-    float:left;
+    font-size: .875rem;
     //border-right: 1px solid $primary-color;
     font-weight: $global-weight-normal;
-    margin:0 0;
 
+    position: relative;
+
+    display: block;
+    float: left;
     overflow: hidden;
-    padding:.875rem 1.75rem .75rem 1.25rem;
-    font-size: .875rem;
+
+    margin: 0 0;
+    padding: .875rem 1.75rem .75rem 1.25rem;
+
     background-color: $primary-color;
     background-color: transparent;
+
     @include breakpoint(tablet) {
-      float:right;
-      padding:.875rem 1.75rem 0 .333rem;
       font-size: .75rem;
-      height:2.5rem;
 
+      float: right;
+
+      height: 2.5rem;
+      padding: .875rem 1.75rem 0 .333rem;
     }
-
     &:hover, &:focus {
       //background-color: $warning-color;
-      color:$success-color;
+      color: $success-color;
     }
-
     .icon {
-
-      position: absolute;
-      display: block;
-      top:.5rem;
-      right:.333rem;
       font-size: 1.333rem;
       line-height: 1;
+
+      position: absolute;
+      top: .5rem;
+      right: .333rem;
+
+      display: block;
     }
   }
 }
 
 .sitehead__actions__buttons {
-
+  display: none;
   @include breakpoint(tablet) {
-    height: 2.5rem;
-    background-color: transparent;
-    background-image: linear-gradient(120deg, transparent 0, transparent 1.25rem, $primary-color 1.25rem);
     position: relative;
+
     display: inline-block;
+
+    height: 2.5rem;
     padding-left: 1.75rem;
 
+    background-color: transparent;
+    background-image: linear-gradient(120deg, transparent 0, transparent 1.25rem, $primary-color 1.25rem);
     &:after {
-      content: '';
-      background-color: $primary-color;
       position: absolute;
-      left:100%;
-      height:2.5rem;
-      width:300%;
+      left: 100%;
+
       display: block;
+
+      width: 300%;
+      height: 2.5rem;
+
+      content: '';
+
+      background-color: $primary-color;
     }
   }
 }
 
-.langsel{
-  clear:both;
-  text-transform: uppercase;
+.langsel {
+  display: none;
   font-weight: $global-weight-extrabold;
+
+  clear: both;
   //padding-top: .5rem;
+
   padding: 0 0 .5rem 1.333rem;
-  color:$medium-gray;
+
+  text-transform: uppercase;
+
+  color: $medium-gray;
+
   @include breakpoint(tablet) {
+    display: block;
     position: absolute;
-    top:100%;
-    right:.75rem;
+    top: 100%;
+    right: .75rem;
+
     padding: .5rem 0 0;
   }
   a {
-    color:$medium-gray;
+    color: $medium-gray;
     &.active {
-      color:$light-gray;
+      color: $light-gray;
     }
     &:hover {
-      color:$primary-color;
+      color: $primary-color;
     }
   }
-
-
-
 }
 
 .sitenavs {
   @include clearfix();
   //background-color: #fff;
   @include breakpoint(tablet) {
-    float:left;
+    float: left;
   }
 }
 .menu--pri {
-  @include clearfix();
-  //background-color: $white;
-  position: absolute;
-  top:3.666rem;
-
+  font-size: 1.5rem;
   font-weight: $global-weight-extrabold;
-  font-size: 1.75rem;
+  background-color: $dark-gray;
+
+  position: absolute;
+  top: 0;
+  left:0;
+  width:100%;
   //text-transform: uppercase;
-  margin:0 0;
-  padding:12vh .25rem 1rem;
+
+  margin: 0 0;
+  padding: 1rem 0 1.25rem;
+
+  @include clearfix();
   @include breakpoint(tablet) {
-    position: static;
-    margin:0;
-    padding:0;
+    background-color: transparent;
     font-size: 1.25rem;
-    height:2.5rem;
+
+    position: static;
+
     overflow: hidden;
+
+    height: 2.5rem;
+    margin: 0;
+    padding: 0;
   }
   > li {
     display: block;
+
     @include breakpoint(tablet) {
-      float:left;
+      float: left;
     }
     > a {
-      padding:.5em .666em .4em;
+      padding: .5em .666em .4em;
+
+      color: $white;
       &:hover, &:focus {
-        color:$primary-color;
+        color: $primary-color;
       }
     }
-
-
   }
-
-
 }
 
 
 .menu--sec {
-  //background-color: $warning-color;
-  @include clearfix();
-  text-transform: uppercase;
+  font-size: 1.125rem;
   font-weight: $global-weight-normal;
-  font-size: 1rem;
-  padding:1rem 0;
-  margin:0;
+
   position: absolute;
-  bottom:0;
-  border-top: 3px solid $alert-color;
+  top:14.75rem;
+  left:0;
+  width:100%;
+
+  //border-top:.125rem solid $medium-gray;
+
+  margin: 0;
+  padding: 0 0;
+
+  text-transform: uppercase;
+
+
+  @include clearfix();
   @include breakpoint(tablet) {
-    padding: 0 0 0 0;
     font-size: .875rem;
+
     position: static;
+
+    overflow: hidden;
+
+    height: 2.5rem;
+    padding: 0 0 0 0;
+    margin:0;
     ///background-color: transparent;
+
     border-top: none;
-    height:2.5rem;
-    overflow:hidden;
   }
   > li {
-    display: inline-block;
+    display: block;
+
     @include breakpoint(tablet) {
-      float:left;
       display: block;
+      float: left;
     }
     > a {
-      padding:.5em .5em .5em;
+      display: block;
+      padding: 1em 1.125em .875em;
+
+      color: $white;
+
       @include breakpoint(tablet) {
-        padding:1em .875em .875em;
+        padding: 1em .875em .875em;
         //margin-top: 1px;
       }
-      //color:$white;
-      //color:$medium-gray;
       &:hover, &:focus {
         background-color: $primary-color;
       }
     }
-
-
   }
 }

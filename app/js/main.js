@@ -37,6 +37,11 @@ $(document).ready(function() {
 
   $('.main').fitVids();
 
+   $('.openmenu').on('click', function(e){
+    e.preventDefault();
+    $('.sitehead').toggleClass('open');
+   });
+
   $('.popup-video').magnificPopup({
     disableOn: 767,
     type: 'iframe',
