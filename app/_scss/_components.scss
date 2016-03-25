@@ -129,7 +129,7 @@
   border-bottom:1px solid $primary-color;
   text-align: center;
   background-color: $warning-color;
-  padding:3rem 0;
+  padding:4rem 0;
   color:$white;
 }
 .dealerpromo {
@@ -146,20 +146,33 @@
   }
 }
 .promoblock__title {
-  font-size: 2rem;
-  //text-transform: uppercase;
+  //font-size: 2rem;
+  text-transform: uppercase;
   //font-weight: $global-weight-extrabold;
   margin: 0;
+
 }
 .promoblock__info {
   margin:0 0;
 }
 .promoblock__more {
-  margin-top: 1rem;
+  margin-top: 2em;
   margin-bottom: 0;
+  .icon {
+    margin:0 0 0 .5em;
+    transform: scale(1.5);
+    display: inline-block;
+  }
 }
 .card {
   position: relative;
+  background-color: #fff;
+  &.card--transparent {
+    background-color: transparent;
+  }
+  &.card--squarepost {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .card__label {
@@ -181,15 +194,12 @@
     padding:.333em 1.8em .125em .666em;
     transform:translateY(-1.5em);
   }
-}
-.card {
-  background-color: #fff;
-  //padding:0 0 1rem;
-  &.card--transparent {
-    background-color: transparent;
+  .card--squarepost & {
+    font-size: .75rem;
+    padding:.333em 1.666rem .125em 1rem;
+    transform:translateY(-1.5em);
   }
 }
-
 
 
 .card__fig {
@@ -231,6 +241,10 @@
       color:$alert-color;
     }
   }
+  .card--squarepost & {
+    padding-bottom: 0;
+    min-height: 3.75rem;
+  }
   .card--transparent &{
     padding:.75rem 0 0;
   }
@@ -258,6 +272,9 @@
   color:$light-gray;
   .card--transparent & {
     padding:.125rem 0 1rem;
+    color:$dark-gray;
+  }
+  .card--squarepost & {
     color:$dark-gray;
   }
 }

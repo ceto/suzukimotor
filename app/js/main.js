@@ -35,6 +35,15 @@ $(document).ready(function() {
   // });
 
 
+  /**** Kieg popup *****/
+
+  $('.butikblock .squareacc a').magnificPopup({
+    type:'image',
+    removalDelay: 300,
+    mainClass: 'mfp-fade'
+  });
+
+
   $('.main').fitVids();
 
    $('.openmenu').on('click', function(e){
