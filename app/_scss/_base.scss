@@ -63,13 +63,18 @@ blockquote {
   position: relative;
   margin:0;
   background-color: transparent;
-  padding-top: 1em;
+  padding-top: .75em;
+  padding-bottom: .666em;
+  padding-left: 1.666em;
+  padding-right: 1.5em;
   z-index: 1;
+  color:$body-font-color;
   &:hover, &:focus {
     background-color: transparent;
+    color:$secondary-color;
     &:before {
-      background-color: $success-color;
-      border:1px solid $secondary-color;
+      background-color: $light-gray;
+      border:1px solid $light-gray;
     }
   }
 
@@ -78,9 +83,9 @@ blockquote {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -1;
-    background-color: $warning-color;
+    background-color: #fff;
     transform: perspective(.25em) rotateX(1deg) scale(1.0125) translateY(-.125em);
-    border:1px solid $primary-color;
+    border:1px solid #fff;
   }
 }
 

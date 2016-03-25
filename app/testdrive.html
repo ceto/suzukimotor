@@ -23,25 +23,28 @@ title: Suzuki motor hírlevél
         <fieldset>
           <legend>Személyes adatok megadása</legend>
 
-          <div class="row">
-            <div class="columns">
+
               <label for="testdrive__name">Név
                 <input name="testdrive__name" id="testdrive__name" type="text" placeholder="Adja meg nevét" required>
                 <span class="form-error">Kötelező megadni!</span>
               </label>
-            </div>
-          </div>
+
+              <label for="testdrive__name">Lakóhely
+                <input name="testdrive__location" id="testdrive__location" type="text" placeholder="Település neve" required>
+                <span class="form-error">Kötelező megadni!</span>
+              </label>
+
 
           <div class="row">
             <div class="tablet-6 columns">
               <label for="testdrive__email">E-mail
-                <input name="testdrive__email" id="testdrive__email" type="email" placeholder="E-mail címét" required>
+                <input name="testdrive__email" id="testdrive__email" type="email" placeholder="E-mail cím" required>
                 <span class="form-error">Kötelező megadni!</span>
               </label>
             </div>
             <div class="tablet-6 columns">
               <label for="testdrive__tel">Telefon
-                <input name="testdrive__tel" id="testdrive__tel" type="tel" placeholder="Telefonszámát" required>
+                <input name="testdrive__tel" id="testdrive__tel" type="tel" placeholder="Telefonszám" required>
                 <span class="form-error">Kötelező megadni!</span>
               </label>
             </div>
@@ -70,6 +73,10 @@ title: Suzuki motor hírlevél
               <option value="4">Pécs - Red Motormadness</option>
             </select>
           </label>
+
+
+
+
         </fieldset>
         <input id="checkbox1" type="checkbox" required><label for="checkbox1">Elolvastam és elfogadom a Felhasználási feltételeket.</label>
         <br><br>

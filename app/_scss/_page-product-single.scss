@@ -7,6 +7,7 @@
     width:100%;
     padding:7vh 0 0;
     z-index: 1;
+    text-shadow: 0 1px 1px rgba(#fff,.25), 0 -1px 1px rgba(#fff,.25), 1px 0 1px rgba(#fff,.25), -1px 0 1px rgba(#fff,.25);
   }
 }
 .prodhead__yearselect {
@@ -53,10 +54,12 @@
     a {
       display: block;
       position:relative;
-      background-image:linear-gradient(120deg, $secondary-color 53%, $primary-color 58%);
-      width:2.875rem;
-      height:2.75rem;
+      background-image:linear-gradient(90deg, $secondary-color 53%, $primary-color 58%);
+      width:2.5rem;
+      height:2.5rem;
       border:.125rem solid $light-gray;
+      border-radius:50%;
+      transform:rotate(45deg);
 
       &:hover {
         border:.125rem solid $dark-gray;
@@ -71,12 +74,12 @@
         top:0;left:0;
         width:100%;
         height: 100%;
-        background-image:linear-gradient(120deg, transparent 29%, rgba(#fff,.6) 45%, transparent 45%);
+        background-image:linear-gradient(90deg, transparent 29%, rgba(#fff,.6) 45%, transparent 45%);
       }
     }
   }
   > li:last-child a {
-      background-image:linear-gradient(120deg, $alert-color 50%, #000 50%);
+      background-image:linear-gradient(90deg, $alert-color 50%, #000 50%);
   }
 }
 
