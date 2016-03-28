@@ -10,7 +10,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-    <link rel="stylesheet" href="/css/main.6868.css">
+    <link rel="stylesheet" href="/css/main.ee9c.css">
     <!-- endbuild -->
 
   </head>
@@ -83,14 +83,9 @@
 </header> -->
 <section class="dealersblock">
   <div class="row collapse">
-    <div class="columns tablet-7 xlarge-8 xxxlarge-6">
-      <div class="mapblock">
-        <div id="map"></div>
-      </div>
-    </div>
-    <div class="columns tablet-5 tablet-pull-7 xlarge-4 xlarge-pull-8 xxxlarge-6 xxxlarge-pull-6">
-      <div class="dealers">
-        <h2>Válassz nárkakereskedőt</h2>
+    <div class="columns tablet-5 xlarge-4 xxxlarge-6">
+      <div class="dealers" data-magellan>
+        <h2>Válassz márkakereskedőt</h2>
         <ul class="dealerslist">
           <li class="onedealer" data-lat="47.350280" data-lng="19.045346" data-name="Full Gas">
             <h3><a href="#">Balatonboglár <small>Full Gas</small></a></h3>
@@ -104,6 +99,7 @@
               Tel.: <a href="tel:+36 79 422 761">+36 30 123 256</a><br>
               Email: <a href="mailto:info@forger.hu">info@forger.hu</a>
               </p>
+              <p class="hide-for-tablet"><small><a href="#map">Mutasd a térképen</a></small></p>
               <p><strong>Nyitva tartás</strong><br>
                 Hétköznap 10-18 óráig<br>
                 Szombaton 10-13 óráig
@@ -122,6 +118,7 @@
               Tel.: <a href="tel:+36 79 422 761">+36 30 123 256</a><br>
               Email: <a href="mailto:info@forger.hu">info@forger.hu</a>
               </p>
+              <p class="hide-for-tablet"><small><a href="#map">Mutasd a térképen</a></small></p>
               <p><strong>Nyitva tartás</strong><br>
                 Hétköznap 10-18 óráig<br>
                 Szombaton 10-13 óráig
@@ -141,6 +138,7 @@
               Tel.: <a href="tel:+36 79 422 761">+36 30 123 256</a><br>
               Email: <a href="mailto:info@forger.hu">info@forger.hu</a>
               </p>
+              <p class="hide-for-tablet"><small><a href="#map">Mutasd a térképen</a></small></p>
               <p><strong>Nyitva tartás</strong><br>
                 Hétköznap 10-18 óráig<br>
                 Szombaton 10-13 óráig
@@ -198,6 +196,11 @@
             </div>
           </li>
         </ul>
+      </div>
+    </div>
+    <div class="columns tablet-7 xlarge-8 xxxlarge-6">
+      <div class="mapblock">
+        <div id="map" data-magellan-target="map"></div>
       </div>
     </div>
 
@@ -261,7 +264,7 @@
     </div>
     <script src="/js/vendor.6d8d.js"></script>
 
-<script src="/js/script.eafa.js"></script>
+<script src="/js/script.950b.js"></script>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
