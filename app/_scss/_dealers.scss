@@ -6,7 +6,9 @@
   @include breakpoint(tablet) {
     min-height:75vh;
   }
-
+  > .row {
+    //position: relative;
+  }
 }
 
 .dealers {
@@ -103,7 +105,7 @@
   }
 
   @include breakpoint(xxxlarge) {
-    width:50%;
+    width:47%;
   }
 }
 
