@@ -124,6 +124,16 @@
   }
 }
 
+.banner--newsletter {
+  background-image: url('../img/fejlec/hirlevel.jpg');
+}
+.banner--testdrive {
+  background-image: url('../img/fejlec/tesztvezetes.jpg');
+}
+.banner--accessories {
+  background-image: url('../img/fejlec/kiegeszitok.jpg');
+}
+
 .promoblock {
   border-top:1px solid $primary-color;
   border-bottom:1px solid $primary-color;

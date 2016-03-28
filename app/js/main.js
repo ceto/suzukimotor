@@ -363,28 +363,6 @@ $(document).ready(function() {
   });
 
 
-  // $('.accsearch__toggle').click(function(e) {
-  //   e.preventDefault();
-  //   $('.accsearch').toggleClass('open');
-  //   $('.accsearch form input').focus();
-  // });
-
-  // $('.accsearch form').focusout(function() {
-  //   $('.accsearch').removeClass('open');
-  // });
-
-  /**** Dealers Map *******/
-  // $('.onedealer').each(function(index) {
-  //   var dealeritem = $(this);
-  //   if (dealeritem.attr('data-lat')!=='') {
-  //     var marker = new google.maps.Marker({
-  //       position: {lat: dealeritem.attr('data-lat'), lng: dealeritem.attr('data-lng') },
-  //       map: map,
-  //       title: dealeritem.attr('data-name')
-  //     });
-  //   }
-  // });
-
 
   if ( $('#map').length > 0 ) {
     $.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyDsWskVN4oYCTYSEq_cPZj2wtXpqFeEqBU', function(){
@@ -408,14 +386,17 @@ $(document).ready(function() {
               map      : map
             });
             google.maps.event.addListener(marker, 'click', function(){
+
               infowindow.close(); // Close previously opened infowindow
               infowindow.setContent( '<div class="infowindow">'+ html +'</div>');
               infowindow.open(map, marker);
+
               $('.onedealer').removeClass('is-selected');
               $(controller).addClass('is-selected');
             });
             $(controller).find('h3 a, .infocircle').on('click', function(e) {
               e.preventDefault();
+              google.maps.event.trigger(map, 'resize');
               google.maps.event.trigger(marker, 'click');
             });
 

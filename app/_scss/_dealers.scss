@@ -26,7 +26,7 @@
   .dealerinfo {
     display: block;
     @include breakpoint(tablet) {
-      display: none;
+      //display: none;
     }
   }
 }
@@ -140,6 +140,9 @@
 
   p:last-child {
     margin-bottom: .5rem;
+  }
+  .hide-for-tablet {
+    display: none;
   }
 }
 
