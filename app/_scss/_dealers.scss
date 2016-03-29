@@ -1,13 +1,16 @@
+.banner--dealers {
+}
 .dealersblock {
   position: relative;
   background-color: $primary-color;
   background-image: linear-gradient(180deg, $warning-color 0%, $primary-color 100%);
   color:$white;
-  @include breakpoint(tablet) {
-    min-height:75vh;
-  }
+
   > .row {
-    //position: relative;
+    position: relative;
+    @include breakpoint(tablet) {
+      min-height:75vh;
+    }
   }
 }
 
@@ -92,21 +95,28 @@
   height:28rem;
 
   @include breakpoint(tablet) {
-    position: absolute;
-    right:0;
-    top:0;
-    bottom:0;
-    width:56%;
-    height:auto;
+    //position: absolute;
+    //right:0;
+    //top:0;
+    //bottom:0;
+    //width:56%;
+    //height:auto;
+    width:100%;
+    height:35rem;
+    min-height: 75vh;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
   }
 
   @include breakpoint(xlarge) {
-    width:62.5%;
+    //width:62.5%;
+
   }
 
-  @include breakpoint(xxxlarge) {
-    width:47%;
-  }
+  // @include breakpoint(xxxlarge) {
+  //   width:47%;
+  // }
 }
 
 
