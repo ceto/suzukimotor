@@ -122,7 +122,6 @@
 .sidenav {
   h3 {
     font-size: 1.25rem;
-    color:$medium-gray;
     text-transform: uppercase;
     margin:.125rem 0 2.5rem;
   }
@@ -130,7 +129,7 @@
     margin:.25rem 0 0;
     font-size: .75rem;
     line-height: 1.2;
-    color:$medium-gray;
+    
     text-transform: uppercase;
 
   }
@@ -138,6 +137,7 @@
 }
 .menu--innerside {
   a {
+    //color:$secondary-color;
     &:hover {
       color:$success-color !important;
     }
@@ -145,32 +145,33 @@
   > li {
     > a {
       text-transform: uppercase;
-      font-weight: 900;
+      font-weight: $global-weight-extrabold;
       font-size: 1.125rem;
     }
   }
 
   > li > .submenu {
+    padding-bottom:1rem;
     > li {
       > a {
         text-transform: uppercase;
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: $global-weight-extrabold;
         padding:.5em 0;
-        color:#fff;
-        color:$medium-gray;
+        //color:$dark-gray;
       }
     }
   }
 
   > li > .submenu > li > .submenu {
+    padding-bottom:.5rem;
     > li {
       > a {
         font-size: .875rem;
-        font-weight: 900;
+        font-weight: $global-weight-normal;
         text-transform: uppercase;
-        padding:.5em 0;
-        color:$medium-gray;
+        padding:.4em 0;
+        //color:$dark-gray;
       }
     }
   }
@@ -186,7 +187,7 @@
     //text-align: inherit;
     margin:0 0 .5rem;
     li {
-      color: $dark-gray;
+      color: $body-font-color;
       //float:none;
       //display: inline-block;
     }
@@ -196,7 +197,7 @@
     }
 
     a {
-      color:$medium-gray;
+      color:$dark-gray;
       &:hover, &:focus {
         color:$success-color;
         text-decoration:none;
