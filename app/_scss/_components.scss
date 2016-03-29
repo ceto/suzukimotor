@@ -175,6 +175,7 @@
   }
 }
 .card {
+  @include clearfix();
   position: relative;
   background-color: #fff;
   &.card--transparent {

@@ -182,6 +182,22 @@
 .prodhead__jogsi {
   font-weight: $global-weight-extrabold;
 }
+
+.jogsi {
+  display: inline-block;
+  background-color: $light-gray;
+  border:1px solid $medium-gray;
+  color:$dark-gray;
+  text-align: center;
+  font-size: .875rem;
+  font-weight: $global-weight-extrabold;
+  padding:.5em .5em .333em;
+  margin:1em .125em .125em;
+  text-transform: uppercase;
+  line-height: 1;
+  border-radius:2px;
+
+}
 .sticky-container {
   //background-color: $dark-gray;
   //background-image: linear-gradient(90deg, transparent 0, transparent 50%, $secondary-color 50%);

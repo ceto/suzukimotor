@@ -25,7 +25,11 @@
   }
 }
 
-
+.relpost-carousel {
+  .card__footer {
+    display:block;
+  }
+}
 
 .squareacc.card {
   background-color: $dark-gray;
