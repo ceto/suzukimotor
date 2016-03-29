@@ -140,11 +140,12 @@ $(document).ready(function() {
     $('.modelcat__carousel').owlCarousel({
 
       slideSpeed : 300,
-      paginationSpeed : 800,
+      paginationSpeed : 300,
       singleItem:true,
       pagination: true,
       navigation : true,
       navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
+      rewindSpeed:100,
       afterInit: customPager,
       afterUpdate: customPager,
       afterAction: function(el){
@@ -193,7 +194,9 @@ $(document).ready(function() {
       paginationSpeed : 800,
       singleItem:true,
       pagination: true,
-      navigation : false,
+      navigation : true,
+      navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
+      autoHeight:true,
       afterInit: timelinePager,
       afterUpdate: timelinePager,
       afterAction: function(el){

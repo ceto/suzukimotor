@@ -58,7 +58,7 @@
   // position: absolute;
   // right:0;
   display: block;
-  padding:0 0 0 2rem;
+  padding:0 0 0 1.75rem;
   float:right;
   height:2.5rem;
   overflow:hidden;
@@ -69,21 +69,26 @@
     position: relative;
     height:2.5rem;
     float:left;
-    color:$white;
-    font-size: .875rem;
+    font-size: 0;
+    color:transparent;
     line-height: 1;
     text-transform: uppercase;
-    //font-weight: $global-weight-extrabold;
-    padding: .75rem 2.125rem .75em 1em;
-    //border-right:1px solid white;
+    padding: .875rem 1.75rem .75em .75em;
+    min-width: 2.25rem;
+    @include breakpoint(large) {
+      font-size: .75rem;
+      color:$white;
+    }
+
     &:hover, &:focus {
       background-color:$success-color;
     }
     i {
+      color:$white;
       position: absolute;
-      right:.333rem;
+      right:.25rem;
       top:.4rem;
-      font-size: 1.75em;
+      font-size: 1.5rem;
     }
   }
 }

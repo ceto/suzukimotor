@@ -263,6 +263,12 @@
 //   border-top:1px solid $medium-gray;
 // }
 
+.prodfeatmore {
+  @include breakpoint(xxlarge) {
+    font-size: 87.5%;
+  }
+}
+
 .prodspecblock {
 }
 

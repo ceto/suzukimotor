@@ -17,17 +17,14 @@
 
 
 .gallery__carousel {
-  .item {
-    text-align: center;
-  }
   .owl-wrapper-outer {
     @include breakpoint('tablet') {
-      //overflow:visible;
+      overflow:visible;
     }
   }
   .owl-wrapper {
     @include breakpoint('tablet') {
-      //overflow:hidden;
+      overflow:hidden;
     }
   }
 
@@ -113,13 +110,12 @@
 
 
 .gallery__item{
-  display: inline-block;
-  margin:0 auto;
+  display: block;
   position: relative;
   opacity: .333;
-  text-align: left;
-  //border-right: 1px solid #000;
+  border-right: 1px solid #000;
   transition: opacity .4s ease;
+
   &.is_active {
     opacity: 1;
     &:after {
@@ -156,9 +152,6 @@
   }
 }
 
-.gallery__item--video {
-  display: block;
-}
 
 .gallery__item img {
   max-height: 66vmax;

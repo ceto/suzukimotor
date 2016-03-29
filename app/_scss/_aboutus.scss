@@ -19,7 +19,7 @@
   padding-top: 3rem;
   .owl-wrapper-outer {
     @include breakpoint('tablet') {
-      overflow:visible;
+      //overflow:visible;
     }
   }
 
@@ -56,6 +56,53 @@
         }
       }
     }
+
+    .owl-buttons {
+      position: absolute;
+      width:80%;
+      left:10%;
+      @include breakpoint(tablet) {
+        width:100%;
+        left:0;
+      }
+
+      //bottom:49.5%;
+      bottom: 42%;
+      //z-index: -1;
+      pointer-events:none;
+      > div {
+        position: absolute;
+        top:-1em;
+        pointer-events:auto;
+        border-radius: 0;
+        margin:0;
+        padding:1rem 2vw;
+        font-size: 2rem;
+        line-height: 1;
+        background-color: transparent;
+        color:$success-color;
+        opacity: 1;
+        @include breakpoint(tablet) {
+          font-size: 3rem;
+          top:-1.125em;
+        }
+        &:hover &:focus {
+
+        }
+      }
+      > .owl-prev {
+        //float:left;
+        //padding-right: 1rem;
+        right:100%;
+      }
+      > .owl-next {
+        //float:right;
+        //padding-left: 1rem;
+        left:100%;
+      }
+
+    }
+
   }
 
 }
