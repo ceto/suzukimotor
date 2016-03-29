@@ -1,7 +1,7 @@
 .mobilehead {
   //border-bottom: 1px solid $black;
   color: $white;
-  background-color: $warning-color;
+  background-color: $secondary-color;
   a {
     color: inherit;
   }
@@ -10,33 +10,41 @@
     //color:$success-color;
     font-weight: $global-weight-bold;
     line-height: 1;
+    float:right;
 
     position: relative;
 
     display: block;
 
     height: 3.666rem;
+    width:3.666rem;
     margin: 0;
-    padding: .333rem 2.5rem 0 1rem;
+    padding: .125rem;
     //width:7.3333rem;
 
-    background-color: $warning-color;
+    //background-color: red;
     i {
       font-size: 1.5rem;
 
       position: absolute;
       top: 1.125rem;
-      right: .75rem;
+      right: 1rem;
 
       display: inline-block;
       //color:$secondary-color;
+    }
+    span {
+      font-size: .875rem;
+      line-height: 1;
+      display: block;
+      margin-top: 1.25rem;
     }
     &:hover {
       color: $success-color;
     }
   }
   .openmenu {
-    float: right;
+    //float: right;
   }
   .dealersmenu {
     float: left;
