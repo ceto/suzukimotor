@@ -34,13 +34,23 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'suzuki';
+    src:
+        url('../fonts/suzuki.ttf?sq3t7m') format('truetype'),
+        url('../fonts/suzuki.woff?sq3t7m') format('woff'),
+        url('../fonts/suzuki.svg?sq3t7m#suzuki') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 @font-face {
     font-family: 'suzuki';
     src:
-        url('../fonts/suzuki.ttf') format('truetype'),
-        url('../fonts/suzuki.woff') format('woff'),
-        url('../fonts/suzuki.svg#suzuki') format('svg');
+        url('../fonts/suzuki.ttf?4bcs2h') format('truetype'),
+        url('../fonts/suzuki.woff?4bcs2h') format('woff'),
+        url('../fonts/suzuki.svg?4bcs2h#suzuki') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -60,6 +70,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon--play-circle-outline:before {
+    content: "\e921";
+}
+.icon--play-circle:before {
+    content: "\e923";
+}
 .icon--hamburger:before {
     content: "\e900";
 }
@@ -96,7 +112,7 @@
 .icon--chevron-right:before {
     content: "\e90b";
 }
-.icon--chevron-down2:before {
+.icon--arrow-down:before {
     content: "\e90c";
 }
 .icon--arrow-up:before {
@@ -108,16 +124,16 @@
 .icon--arrow-right:before {
     content: "\e90f";
 }
-.icon--triangle:before {
+.icon--triangle-down-ol:before {
     content: "\e910";
 }
-.icon--icon-42:before {
+.icon--trinagle-up-ol:before {
     content: "\e911";
 }
-.icon--icon-43:before {
+.icon--triangle-left-ol:before {
     content: "\e912";
 }
-.icon--icon-44:before {
+.icon--triangle-right-ol:before {
     content: "\e913";
 }
 .icon--triangle-down:before {
@@ -156,29 +172,17 @@
 .icon--chevron-circle-right:before {
     content: "\e91f";
 }
-.icon--traingle-circle-down:before {
+.icon--triangle-circle-down:before {
     content: "\e920";
 }
-.icon--traingle-circle-down:before {
-    content: "\e921";
-}
-.icon--traingle-circle-up:before {
+.icon--triangle-circle-up:before {
     content: "\e922";
 }
-.icon--traingle-circle-up:before {
-    content: "\e923";
-}
-.icon--traingle-circle-left:before {
+.icon--triangle-circle-left:before {
     content: "\e924";
 }
-.icon--traingle-circle-left:before {
-    content: "\e925";
-}
-.icon--traingle-circle-right:before {
+.icon--triangle-circle-right:before {
     content: "\e926";
-}
-.icon--traingle-circle-right:before {
-    content: "\e927";
 }
 .icon--download-circle:before {
     content: "\e928";
@@ -225,6 +229,12 @@
 .icon--icon0-16:before {
     content: "\e936";
 }
+.icon--close-circle-outline:before {
+    content: "\e925";
+}
+.icon--close-circle:before {
+    content: "\e927";
+}
 .icon--plus-circle:before {
     content: "\e937";
 }
@@ -258,36 +268,14 @@
 .icon--facebook-circle-outline:before {
     content: "\e941";
 }
-.icon--youtube-outline:before {
+.icon--youtube-circle-outline:before {
     content: "\e942";
 }
-.icon--youtube-outline:before {
-    content: "\e943";
-    margin-left: -1em;
-}
-.icon--youtube-outline:before {
-    content: "\e944";
-}
-.icon--youtube-outline:before {
-    content: "\e945";
-}
-.icon--youtube:before {
+.icon--youtube-circle:before {
     content: "\e946";
-}
-.icon--youtube:before {
-    content: "\e947";
-}
-.icon--youtube .path3:before {
-    content: "\e948";
 }
 .icon--youtube-typo-outline:before {
     content: "\e949";
-}
-.icon--youtube-typo-circle:before {
-    content: "\e94a";
-}
-.icon--youtube-typo-circle:before {
-    content: "\e94b";
 }
 .icon--zoom:before {
     content: "\e94c";
@@ -709,7 +697,4 @@
 .icon--icon-66:before {
     content: "\e9d7";
 }
-
-
-
 
