@@ -51,6 +51,7 @@ $(document).ready(function() {
     $('.sitehead').toggleClass('open');
    });
 
+
   $('.popup-video').magnificPopup({
     disableOn: 767,
     type: 'iframe',

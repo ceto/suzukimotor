@@ -7,7 +7,7 @@
     content:'';
     display: block;
     margin:.333em auto 0 auto;
-    width:5%;
+    width:1em;
     height:.25rem;
     background-color: $secondary-color;
   }
@@ -174,10 +174,88 @@
     display: inline-block;
   }
 }
+.videogrid {
+  .mediatile {
+    margin-bottom: 1.5rem;
+  }
+}
+.mediatile {
+  @include clearfix();
+  position: relative;
+  background-color: #fff;
+  text-align: left;
+}
+.mediatile__fig {
+  margin:0;
+  padding:0;
+  border-bottom: 2px solid $alert-color;
+
+  a {
+    display: block;
+    position: relative;
+    .mediatile--video &:after {
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translateX(-50%) translateY(-50%);
+      content:'>';
+      display: block;
+      font-size: 3rem;
+      line-height: 1.5;
+      width:1.5em;
+      height:1.5em;
+      text-align: center;
+      color:rgba($light-gray,1);
+      text-shadow: 0 0 .5em #000;
+      opacity: 0.333;
+      transition:opacity .4s ease;
+    }
+    .mediatile--video & {
+      &:hover, &:focus {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.mediatile__label {
+  position: absolute;
+  left:0;
+  text-transform: uppercase;
+  color:$light-gray;
+  font-size: .75rem;
+  line-height: 1;
+  font-weight: $global-weight-extrabold;
+  font-size: .75rem;
+  padding:.333em 1.666rem .125em 1rem;
+  transform:translateY(-1.5em);
+  display: inline-block;
+  //background-color:$alert-color;
+  background-image:linear-gradient(-120deg, transparent 1.333em, rgba($alert-color,.666) 1.333em);
+}
+
+
+.mediatile__title {
+  padding:.5rem;
+  font-size: 1.125rem;
+  margin:0;
+  padding:1rem 1rem 1rem;
+}
+
+
+
+.mediatile__footer {
+  font-size: .875rem;
+  line-height: 1;
+  padding:0 1rem .75rem 1rem;
+  color:$dark-gray;
+}
 .card {
   @include clearfix();
   position: relative;
   background-color: #fff;
+  text-align: left;
   &.card--transparent {
     background-color: transparent;
   }
@@ -301,8 +379,8 @@
   }
 }
 
-.card__time {
-  display: block;
+.card__time, .mediatile__time {
+  display: inline-block;
   font-variant: small-caps;
   font-weight: $global-weight-extrabold;
 }

@@ -120,7 +120,18 @@
 }
 
 .homenews {
-  //text-align: center;
+  text-align: center;
+}
+
+.homenews__grid {
+  .column:nth-of-type(n+5) {
+    display: none;
+  }
+  @include breakpoint(xxlarge) {
+    .column:nth-of-type(n+5) {
+      display: block;
+    }
+  }
 }
 .homenews__title {
   //float:left;
@@ -129,7 +140,7 @@
 .homenews__more {
   margin:0 auto;
   display: inline-block;
-  font-size: .75rem;
+  font-size: .875rem;
   line-height: 1;
   margin-top: .875rem;
   color:$secondary-color;
