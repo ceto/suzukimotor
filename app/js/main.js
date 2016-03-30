@@ -90,7 +90,10 @@ $(document).ready(function() {
     pagination: false,
     navigation : true,
     autoHeight: true,
-    navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>']
+    navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
+    afterAction: function(current) {
+        current.find('video').get(0).play();
+    }
   });
   $('.promo__carousel').owlCarousel({
     slideSpeed : 300,
