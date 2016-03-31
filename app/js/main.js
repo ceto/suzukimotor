@@ -384,6 +384,12 @@ $(document).ready(function() {
 
 
   if ( $('#map').length > 0 ) {
+
+    $('.infoclose').on('click', function(e) {
+      e.preventDefault();
+      $(this).closest('.onedealer').toggleClass('is-selected');
+    });
+
     $.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyDsWskVN4oYCTYSEq_cPZj2wtXpqFeEqBU', function(){
 
 

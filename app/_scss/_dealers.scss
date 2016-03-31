@@ -21,7 +21,9 @@
     margin: 0 1rem 1rem;
   }
 }
-
+.dealerslist .actions a.infoclose {
+  display: none;
+}
 .onedealer.is-selected {
   border:1px solid rgba($success-color,.25);
   //background-color: $warning-color;
@@ -33,6 +35,13 @@
     @include breakpoint(tablet) {
       //display: none;
     }
+  }
+
+  .actions a.infocircle {
+    display:none;
+  }
+  .actions a.infoclose {
+    display: inline-block;
   }
 }
 .dealerslist {
@@ -155,6 +164,10 @@
   }
   .hide-for-tablet {
     display: none;
+  }
+
+  p {
+    display:none;
   }
 }
 

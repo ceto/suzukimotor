@@ -68,6 +68,37 @@
 }
 
 
+.homepromofej {
+  padding:4rem 1rem 0;
+  margin-bottom: 1rem;
+  @include breakpoint(tablet) {
+      margin-bottom: -2rem;
+
+  }
+  .blocktitle {
+    margin-bottom: 0;
+  }
+}
+
+.homepromolab {
+  text-align: center;
+  padding:0 1rem 4rem;
+  @include breakpoint(tablet) {
+      margin-top: -2rem;
+  }
+  a {
+    font-size: .875rem;
+    //color:$success-color;
+    .icon {
+      display: inline-block;
+      font-size: 1.25em;
+      transform: translateY(.125em);
+    }
+    &:hover, &:focus {
+      color:$success-color;
+    }
+  }
+}
 
 .promo__carousel {
   .owl-controls {
@@ -120,7 +151,7 @@
 }
 
 .homenews {
-  text-align: center;
+  //text-align: center;
 }
 
 .homenews__grid {

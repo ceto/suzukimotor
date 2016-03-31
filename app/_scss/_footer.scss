@@ -103,8 +103,10 @@
 
 .sitefooter__socialnav {
   float:right;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  line-height: 1;
   a {
+    display:inline-block;
     &:hover, &:focus {
       //color:$secondary-color;
     }
