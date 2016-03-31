@@ -194,11 +194,24 @@
     display: block;
     position: relative;
     .mediatile--video &:after {
+          /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'suzuki' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\e923';
       position: absolute;
       top:50%;
       left:50%;
       transform: translateX(-50%) translateY(-50%);
-      content:'>';
+
       display: block;
       font-size: 3rem;
       line-height: 1.5;

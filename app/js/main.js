@@ -91,8 +91,20 @@ $(document).ready(function() {
     navigation : true,
     autoHeight: true,
     navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
-    afterAction: function(current) {
+    afterInit: function(current) {
         current.find('video').get(0).play();
+        current.find('.hero--video').addClass('is-playing');
+        current.find('video').on('click', function(e) {
+          e.preventDefault();
+          current.find('.hero--video').toggleClass('is-playing');
+          if (this.paused == false) {
+              this.pause();
+              current.find('.hero--video').removeClass('is-playing');
+          } else {
+              this.play();
+              current.find('.hero--video').addClass('is-playing');
+          }
+        });
     }
   });
   $('.promo__carousel').owlCarousel({
