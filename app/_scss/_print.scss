@@ -1,0 +1,55 @@
+.printonly {
+  display: none;
+  @media print {
+    display:inherit;
+  }
+}
+
+.mobilehead, .sitehead, .sitefooter, .fityesz, .gallery, .modelcatblock, .prodaccblock, .anchornav {
+  @media print {
+    display: none;
+  }
+}
+
+
+/**** product single print styles ***/
+.prodhead, .prodhero, .prodlead, .prodfeatblock, .kepviszony {
+  @media print {
+    display: none;
+  }
+}
+
+@media print {
+
+  .featprodspec {
+    margin-bottom: 0;
+    padding: 1rem 0 .875rem;
+    .column.featprodspec__item {
+      margin-bottom: 0;
+      width: 16.6666666667%;
+      &:nth-of-type(3n+1) {
+        clear:none;
+      }
+    }
+
+    .featprodspec__item__value {
+      margin-bottom: 0;
+    }
+
+  }
+
+  .prodspec {
+    font-size: 8pt;
+    margin-top: 0;
+
+    dt {
+      padding: .75em 1em .5em 0;
+      margin-bottom: 0.25em;
+    }
+    dd {
+      padding: .75em 0 .5em 1em;
+      margin-bottom: 0.25em;
+    }
+  }
+
+}
