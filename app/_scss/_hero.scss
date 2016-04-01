@@ -102,7 +102,7 @@
     right:0;
     bottom:0;
     padding: 2vw 1rem 5vw;
-    transition: bottom .8s ease-in .2s;
+    transition: bottom .4s ease-in .2s;
     .hero--video.is-playing & {
       bottom:-12rem;
     }
@@ -179,12 +179,13 @@
     .owl-buttons {
       position: absolute;
       width:100%;
-
-      //bottom:49.5%;
-      //bottom: calc( 50% - 2rem);
       bottom: 0;
-      //z-index: -1;
       pointer-events:none;
+      transition: bottom .4s ease-in .2s;
+      &.movieisplaying {
+        bottom:-12rem;
+      }
+
       > div {
         pointer-events:auto;
         border-radius: 0;
@@ -207,7 +208,11 @@
 
     }
   }
+
+
 }
+
+
 
 .home__heroes {
   .button--trapez {

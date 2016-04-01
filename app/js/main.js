@@ -91,18 +91,27 @@ $(document).ready(function() {
     navigation : true,
     autoHeight: true,
     navigationText: ['<i class="icon icon--chevron-left"></i>','<i class="icon icon--chevron-right"></i>'],
+    afterAction : function(current) {
+      current.closest('.hero__carousel').find('video').get(0).pause();
+      current.closest('.hero__carousel').find('.hero--video').removeClass('is-playing');
+      current.closest('.hero__carousel').find('.owl-buttons').removeClass('movieisplaying');
+    },
     afterInit: function(current) {
         current.find('video').get(0).play();
         current.find('.hero--video').addClass('is-playing');
+        current.closest('.hero__carousel').find('.owl-buttons').addClass('movieisplaying');
         current.find('video').on('click', function(e) {
           e.preventDefault();
           current.find('.hero--video').toggleClass('is-playing');
+          current.closest('.hero__carousel').find('.owl-buttons').toggleClass('movieisplaying');
           if (this.paused == false) {
               this.pause();
               current.find('.hero--video').removeClass('is-playing');
+              current.closest('.hero__carousel').find('.owl-buttons').removeClass('movieisplaying');
           } else {
               this.play();
               current.find('.hero--video').addClass('is-playing');
+              current.closest('.hero__carousel').find('.owl-buttons').addClass('movieisplaying');
           }
         });
     }
