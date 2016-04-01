@@ -151,7 +151,11 @@
 }
 
 .homenews {
-  //text-align: center;
+  text-align: center;
+}
+
+.home_fb {
+  text-align: center;
 }
 
 .homenews__grid {
@@ -169,17 +173,19 @@
 }
 
 .homenews__more {
-  margin:0 auto;
-  display: inline-block;
-  font-size: .875rem;
-  line-height: 1;
-  margin-top: .875rem;
-  color:$secondary-color;
+  margin:1rem auto;
+  // display: inline-block;
+  // font-size: .875rem;
+  // line-height: 1;
+  // margin-top: .875rem;
+  // color:$secondary-color;
   //font-weight: $global-weight-bold;
+  //padding-top: .25em;
   .icon {
     display: inline-block;
     transform:translateY(.2em);
     font-size:1.5em;
+    display:none;
   }
 }
 
@@ -197,9 +203,16 @@
   @include breakpoint(xxlarge) {
     height:28.5rem;
   }
+  @include breakpoint(xxxlarge) {
+    height:30.5rem;
+  }
 
   span {
     height:100% !important;
+    display: block;
+    iframe {
+      height:100% !important;
+    }
   }
 }
 
