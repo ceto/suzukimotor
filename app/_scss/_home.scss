@@ -183,6 +183,25 @@
   }
 }
 
+.fb-page {
+  overflow: hidden;
+  @include breakpoint(tablet) {
+    height:32.666rem;
+  }
+  @include breakpoint(large) {
+    height:31rem;
+  }
+  @include breakpoint(xlarge) {
+    height:35.5rem;
+  }
+  @include breakpoint(xxlarge) {
+    height:28.5rem;
+  }
+
+  span {
+    height:100% !important;
+  }
+}
 
 // .fb_iframe_widget {
 //   width:100%;
