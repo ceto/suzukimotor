@@ -415,9 +415,17 @@ $(document).ready(function() {
 
           function placeMarker(controller, lat, lng, html ) {
             var latLng = new google.maps.LatLng( lat, lng );
+            var markerimg = {
+              url: 'img/map-marker@2x.png',
+              size: new google.maps.Size(50, 76),
+              scaledSize: new google.maps.Size(50, 76),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(25, 76),
+            };
             var marker = new google.maps.Marker({
               position : latLng,
-              map      : map
+              map      : map,
+              icon     : markerimg
             });
             google.maps.event.addListener(marker, 'click', function(){
 

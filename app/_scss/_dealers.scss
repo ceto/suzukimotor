@@ -2,9 +2,9 @@
 }
 .dealersblock {
   position: relative;
-  background-color: $primary-color;
-  background-image: linear-gradient(180deg, $warning-color 0%, $primary-color 100%);
-  color:$white;
+  background-color: $white;
+  //background-image: linear-gradient(180deg, $warning-color 0%, $primary-color 100%);
+  //color:$body-font-color;
 
   > .row {
     position: relative;
@@ -59,7 +59,7 @@
     &:hover {
       color:$success-color;
       small {
-        color:#fff;
+        //color:$secondary-color;
       }
     }
   }
@@ -67,7 +67,7 @@
   h3 {
     display: inline-block;
     margin:0;
-    color:$dark-gray;
+    //color:$success-color;
     text-transform: uppercase;
     font-weight: 900;
 
@@ -78,7 +78,7 @@
       color:$white;
       font-size: 95%;
       display: inline-block;
-      color:$light-gray;
+      color:inherit;
       //margin-left: .125em;
     }
   }
