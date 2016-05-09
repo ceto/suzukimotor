@@ -12,6 +12,9 @@
     background-color: $secondary-color;
   }
 }
+.blocktitle--nobottom {
+  margin-bottom:0;
+}
 
 .decorlined {
 
@@ -40,15 +43,15 @@
     clear:left;
     width:33.333%;
     max-width: 20rem;
-    padding:1.25rem 1rem .75rem 0;
-    margin-bottom: $paragraph-margin-bottom/3;
+    padding:.6rem 1rem .25rem 0;
+    margin-bottom: $paragraph-margin-bottom/4;
     border-top: 1px solid $medium-gray;
   }
   dd {
     width:66.666%;
     float:left;
-    padding:1.25rem 0 .75rem 1rem;
-    margin-bottom: $paragraph-margin-bottom/3;
+    padding:.6rem 0 .25rem 1rem;
+    margin-bottom: $paragraph-margin-bottom/4;
     border-top: 1px solid $medium-gray;
   }
   dt:first-of-type, dd:first-of-type  {
@@ -73,6 +76,7 @@
 
 .banner {
   @include clearfix();
+  overflow:hidden;
   text-align: center;
   background-color: $primary-color;
   background-image: linear-gradient(180deg, $warning-color 0%, $primary-color 100%);
@@ -161,6 +165,9 @@
   //font-weight: $global-weight-extrabold;
   margin: 0;
 
+}
+.promoblock__subtitle {
+  margin: 1.5rem 0 0;
 }
 .promoblock__info {
   margin:0 0;
