@@ -45,7 +45,6 @@
 }
 
 .promo {
-
 }
 
 .promo__title {
@@ -65,6 +64,25 @@
 
 .promo__more {
   margin-bottom: 0;
+  //font-style:italic;
+  font-weight:$global-weight-bold;
+  color:$secondary-color;
+  &:hover, &:focus {
+    color:$success-color;
+  }
+  .icon {
+    display:inline-block;
+    transform: translateY(.125em);
+    margin-left:.125em;
+  }
+}
+
+.promo__imglink {
+  display: block;
+  transition: transform .2s linear .2s;
+  &:hover, &.focus {
+    transform:scale(1.0875);
+  }
 }
 
 

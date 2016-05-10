@@ -86,18 +86,6 @@
   @include breakpoint(tablet) {
       margin-top: -2rem;
   }
-  a {
-    font-size: .875rem;
-    //color:$success-color;
-    .icon {
-      display: inline-block;
-      font-size: 1.25em;
-      transform: translateY(.125em);
-    }
-    &:hover, &:focus {
-      color:$success-color;
-    }
-  }
 }
 
 .promo__carousel {

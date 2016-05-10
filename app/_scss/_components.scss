@@ -516,5 +516,10 @@
   }
 }
 
+fieldset {
+  @include fieldset;
+}
 
-
+select {
+ font-weight: $global-weight-normal;
+}
