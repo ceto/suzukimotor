@@ -336,6 +336,24 @@
   width: 50%;
 }
 
+.dlcatalog {
+  display: inline-block;
+  float:right;
+  margin: 2rem 0;
+  //font-size: 1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color:$secondary-color;
+  .icon {
+    display: inline-block;
+    transform: scale(2.5);
+    margin-left: 1.5em;
+  }
+  &:hover, &:focus {
+    color:$success-color;
+  }
+}
+
 
 .prodaccblock {
 

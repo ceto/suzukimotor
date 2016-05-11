@@ -38,6 +38,7 @@
 }
 
 .deflist {
+  @include clearfix();
   dt {
     float:left;
     clear:left;
@@ -148,6 +149,8 @@
 }
 .dealerpromo {
   background-image: url('../img/findadealer.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 .pricepromo {
   background-image: url('../img/pricebg.jpg');

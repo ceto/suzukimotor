@@ -10,7 +10,7 @@
 
   box-shadow: inset 0px -.125rem .125rem -.125rem rgba(#000,.5), inset 0px .125rem .125rem -.125rem rgba(#000,.5);
 
-  padding:40vw 0 0;
+  padding:0 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -32,7 +32,6 @@
 }
 
 .hero--video {
-  padding:0;
   &:after {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'suzuki' !important;
@@ -88,6 +87,12 @@
   object-fit: cover;
 }
 
+
+.hero img {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
 .hero__text {
   color:#fff;
   text-align: center;
@@ -95,14 +100,15 @@
   padding:1rem 1rem;
   z-index: 4;
   line-height: 1;
-  background-color: rgba(#000,.5);
+  background-color: $primary-color;
   @include breakpoint(tablet) {
+    background-color: rgba(#000,.5);
     position: absolute;
     left:0;
     right:0;
     bottom:0;
     padding: 2vw 1rem 5vw;
-    transition: bottom .4s ease-in .2s;
+    transition: bottom .4s ease-in 3s;
     .hero--video.is-playing & {
       bottom:-12rem;
     }
@@ -181,7 +187,7 @@
       width:100%;
       bottom: 0;
       pointer-events:none;
-      transition: bottom .4s ease-in .2s;
+      transition: bottom .4s ease-in 3s;
       &.movieisplaying {
         bottom:-12rem;
       }
