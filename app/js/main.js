@@ -97,9 +97,11 @@ $(document).ready(function() {
       current.closest('.hero__carousel').find('.owl-buttons').removeClass('movieisplaying');
     },
     afterInit: function(current) {
-        current.find('video').get(0).play();
-        current.find('.hero--video').addClass('is-playing');
-        current.closest('.hero__carousel').find('.owl-buttons').addClass('movieisplaying');
+        if ( current.find('video')[0].hasAttribute('autoplay') ) {
+          current.find('video').get(0).play();
+          current.find('.hero--video').addClass('is-playing');
+          current.closest('.hero__carousel').find('.owl-buttons').addClass('movieisplaying');
+        }
         current.find('video').on('click', function(e) {
           e.preventDefault();
           current.find('.hero--video').toggleClass('is-playing');

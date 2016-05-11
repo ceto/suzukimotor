@@ -11,7 +11,7 @@
   //
   background-color: $dark-gray;
   background-image: linear-gradient(90deg, transparent 0, transparent 50%, $secondary-color 50%);
-  box-shadow: 0 2px 3px 1px rgba(#000,.125);
+  box-shadow: 0 2px 13px -2px rgba(#000,.125);
 
 
 
@@ -21,23 +21,41 @@
     > .columns {
       @include clearfix();
     }
+
+    // @include breakpoint('tablet') {
+    //   max-width: 100%;
+    // }
+    // @include breakpoint('large') {
+    //   max-width: 85%;
+    // }
+    // @include breakpoint('xxxlarge') {
+    //   max-width: $global-width;
+    // }
   }
 }
 
-
+.anchornav__homelogo {
+  display: block;
+  height:2.5rem;
+  width:5rem;
+  float:left;
+  img {
+    display: block;
+  }
+}
 
 .anchornav__title {
   display: block;
   font-size: 1.333rem;
   line-height: 1;
-  padding:.5666rem .666rem .875rem 1rem;
+  padding:.5666rem 1.666rem .875rem .666rem;
   height:2.5rem;
   overflow: hidden;
   margin:0;
   float:left;
   //border-right:1px solid $medium-gray;
   background-color: $dark-gray;
-  //background-image: linear-gradient(-75deg, $light-gray 0, $light-gray .666rem, $dark-gray .666rem);
+  background-image: linear-gradient(-60deg, #fff 0, #fff 1.25rem, $dark-gray 1.25rem);
   color:$white;
   small {
     display: inline-block;
@@ -100,7 +118,7 @@
   float:left;
   height:2.5rem;
   overflow:hidden;
-  margin-left: .5rem;
+  //margin-left: .5rem;
   //font-weight: $global-weight-normal;
   > li {
     display: block;

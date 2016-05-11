@@ -2,6 +2,7 @@
   //border-bottom: 1px solid $black;
   color: $white;
   background-color: $secondary-color;
+  box-shadow: 0 4px 15px -4px rgba(#000,.125);
   a {
     color: inherit;
   }
@@ -90,6 +91,7 @@
   overflow: hidden;
   transition:all .4s ease;
   background-color: $secondary-color;
+   box-shadow: 0 4px 15px -4px rgba(#000,.125);
 
   &.open {
     height: 32rem;
@@ -106,15 +108,15 @@
   }
   .row {
     //background-color: #fff;
-    @include breakpoint('tablet') {
-      max-width: 100%;
-    }
-    @include breakpoint('large') {
-      max-width: 85%;
-    }
-    @include breakpoint('xxxlarge') {
-      max-width: $global-width;
-    }
+    // @include breakpoint('tablet') {
+    //   max-width: 100%;
+    // }
+    // @include breakpoint('large') {
+    //   max-width: 85%;
+    // }
+    // @include breakpoint('xxxlarge') {
+    //   max-width: $global-width;
+    // }
   }
 }
 
