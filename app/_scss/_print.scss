@@ -5,7 +5,13 @@
   }
 }
 
-.mobilehead, .sitehead, .sitefooter, .fityesz, .gallery, .modelcatblock, .prodaccblock, .anchornav {
+.dontprint {
+  @media print {
+    display:none;
+  }
+}
+
+.mobilehead, .sitehead, .sitefooter, .fityesz, .gallery, .modelcatblock, .prodaccblock, .anchornav, .dlcatalog {
   @media print {
     display: none;
   }
@@ -13,13 +19,28 @@
 
 
 /**** product single print styles ***/
-.prodhead, .prodhero, .prodlead, .prodfeatblock, .kepviszony {
+.prodhead, .prodhero, .prodlead, .prodfeatblock {
   @media print {
     display: none;
   }
 }
 
 @media print {
+
+  .kepviszony {
+    width:40%;
+    float:left;
+  }
+
+  .pkbal {
+    float:right;
+    width:60%;
+  }
+
+  .wollogo {
+    width: 5em;
+    margin-bottom: .5em;
+  }
 
   .featprodspec {
     margin-bottom: 0;
@@ -37,6 +58,8 @@
     }
 
   }
+
+
 
   .prodspec {
     font-size: 8pt;
