@@ -146,11 +146,13 @@
   background-color: $warning-color;
   padding:4rem 0;
   color:$white;
-}
-.dealerpromo {
-  background-image: url('../img/findadealer.jpg');
+
   background-size:cover;
   background-repeat:no-repeat;
+}
+
+.dealerpromo {
+  background-image: url('../img/findadealer_light.jpg');
 }
 .pricepromo {
   background-image: url('../img/pricebg.jpg');

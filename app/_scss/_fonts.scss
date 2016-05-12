@@ -44,17 +44,6 @@
     font-style: normal;
 }
 
-
-@font-face {
-    font-family: 'suzuki';
-    src:
-        url('../fonts/suzuki.ttf?4bcs2h') format('truetype'),
-        url('../fonts/suzuki.woff?4bcs2h') format('woff'),
-        url('../fonts/suzuki.svg?4bcs2h#suzuki') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .icon {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'suzuki' !important;
@@ -262,17 +251,20 @@
 .icon--twitter-circle-outline:before {
     content: "\e93f";
 }
+.icon--envelope-circle:before {
+    content: "\e943";
+}
 .icon--facebook-circle:before {
     content: "\e940";
+}
+.icon--youtube-circle:before {
+    content: "\e946";
 }
 .icon--facebook-circle-outline:before {
     content: "\e941";
 }
 .icon--youtube-circle-outline:before {
     content: "\e942";
-}
-.icon--youtube-circle:before {
-    content: "\e946";
 }
 .icon--youtube-typo-outline:before {
     content: "\e949";
@@ -697,4 +689,5 @@
 .icon--icon-66:before {
     content: "\e9d7";
 }
+
 

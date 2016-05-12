@@ -108,15 +108,15 @@
   }
   .row {
     //background-color: #fff;
-    // @include breakpoint('tablet') {
-    //   max-width: 100%;
-    // }
-    // @include breakpoint('large') {
-    //   max-width: 85%;
-    // }
-    // @include breakpoint('xxxlarge') {
-    //   max-width: $global-width;
-    // }
+    @include breakpoint('tablet') {
+      max-width: 100%;
+    }
+    @include breakpoint('large') {
+      max-width: 85%;
+    }
+    @include breakpoint('xxxlarge') {
+      max-width: $global-width;
+    }
   }
 }
 
