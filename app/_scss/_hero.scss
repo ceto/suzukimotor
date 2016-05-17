@@ -108,9 +108,11 @@
     right:0;
     bottom:0;
     padding: 2vw 1rem 5vw;
-    transition: bottom .4s ease-in 3s;
+    transition: bottom .4s ease-in;
+
     .hero--video.is-playing & {
       bottom:-12rem;
+      transition-delay: 3s;
     }
   }
   @include breakpoint(xlarge) {

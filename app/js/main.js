@@ -184,7 +184,9 @@ $(document).ready(function() {
 
          this.$owlItems.eq(this.currentItem+1).find('.modelcat__item').addClass('is_next');
 
-         this.$owlItems.eq(this.currentItem-1).find('.modelcat__item').addClass('is_prev');
+         if (this.currentItem>0) {
+          this.$owlItems.eq(this.currentItem-1).find('.modelcat__item').addClass('is_prev');
+         }
       }
 
     });
