@@ -516,10 +516,10 @@ $tab-content-padding: 0;
 // 32. Thumbnail
 // -------------
 
-$thumbnail-border: solid 4px $white;
+$thumbnail-border: solid 4px transparent;
 $thumbnail-margin-bottom: $global-margin;
-$thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
-$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
+$thumbnail-shadow: 0 0 0 1px $secondary-color;
+$thumbnail-shadow-hover: 0 0 6px 1px $success-color;
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
 

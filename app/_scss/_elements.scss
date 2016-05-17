@@ -252,5 +252,10 @@
 }
 
 .callout.success {
-  background-color: $light-gray;
+  background-color: $primary-color;
+  color:$white;
+}
+.callout.alert {
+  background-color: $alert-color;
+  color:$white;
 }
